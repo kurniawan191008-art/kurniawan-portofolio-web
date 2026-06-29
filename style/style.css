@@ -1,20 +1,13 @@
-.main-parent, 
-.header, 
-.sidebar,
-.nav-bar,
-.editor,
-.main-content,
-.tab-bar,
-.status-bar 
-{
-    border: 1px solid;
-}
+
 
 .main-parent{
+    width: min(95vw, 1920px);
+    height: min(95vh, 1080px);
     display: grid;
     grid-template-columns: 350px 1fr;
-    grid-template-rows: 58px 1fr 58px;
-    height: 100vh;
+    grid-template-rows: 50px 1fr 50px;
+
+    margin: 0 auto;
 }
 .header{
     display: flex;

@@ -1,0 +1,19 @@
+.main-parent, 
+.header, 
+.sidebar,
+.nav-bar,
+.editor,
+.main-content,
+.tab-bar,
+.status-bar,
+.profile,
+.name-n-bio,
+.explorer
+{
+    border: 1px solid;
+}
+img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
