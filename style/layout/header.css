@@ -1,0 +1,24 @@
+.green, .red, .blue {
+    border-radius: 50%;
+}
+.green{
+    height:30px;
+    width: 30px;
+    background-color: green;
+}
+.red{
+    height:30px;
+    width: 30px;
+    background-color: red;
+}
+.blue{
+    height:30px;
+    width: 30px;
+    background-color: blue;
+}
+.three-dots{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-right: 10px;
+}
