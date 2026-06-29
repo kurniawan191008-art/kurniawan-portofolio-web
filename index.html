@@ -5,16 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kurniawan</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/base/reset.css">
+    <link rel="stylesheet" href="style/base/typography.css">
+    <link rel="stylesheet" href="style/layout/header.css">
+    <link rel="stylesheet" href="style/layout/sidebar.css">
+    <link rel="stylesheet" href="style/layout/footer.css">
 </head>
 
 <body>
+    <!-- main parent -->
     <div class="main-parent" id="main-parent">
-        <header class="header" id="header"></header>
-        <nav class="tab-bar" id="tab-bar">
-            
-        </nav>
-        <nav class="sidebar" id="sidebar"></nav>
-        <main class="editor" id="editor"></main>
+        <!-- header -->
+        <header class="header" id="header">
+            <h1>PORTFOLIO</h1>
+            <div class="three-dots">
+                <div class="green"></div>
+                <div class="blue"></div>
+                <div class="red"></div>
+            </div>
+
+        </header>
+        <!-- end header -->
+        <!-- sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <section class="profile">
+                <img src="https://avatars.githubusercontent.com/u/1103287?v=4" alt="Profile Picture"
+                    class="profile-pic">
+                <div class="name-n-bio">
+                    <h1>KURNIAWAN</h1>
+                    <p>Computer And Network Engineering student</p>
+                </div>
+            </section>
+            <h3 class="explorer">EXPLORER</h3>
+            <nav class="nav-bar" id="nav-bar">
+                <ul>
+                    <li><a href="index.html">home page</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="skills.html">skills</a></li>
+                    <li><a href="project.html">projects</a></li>
+                    <ul class="project-category">
+                        <li><a href="project.html">Web Development</a></li>
+                        <li><a href="project.html">Networking</a></li>
+                        <li><a href="project.html">Other</a></li>
+                    </ul>
+                    <li><a href="experience.html">
+                            experience
+                        </a></li>
+                </ul>
+
+            </nav>
+        </aside>
+        <!-- end sidebar -->
+        <!-- main content -->
+        <main class="editor" id="editor">
+            <nav class="tab-bar" id="tab-bar">
+                <!-- build in javascript -->
+            </nav>
+            <article class="main-content" id="main-content">
+                <!-- build in javascript -->
+            </article>
+        </main>
+        <!-- end main content -->
         <footer class="status-bar" id="status-bar"></footer>
     </div>
 </body>
