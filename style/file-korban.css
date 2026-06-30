@@ -8,12 +8,8 @@
 .status-bar,
 .profile,
 .name-n-bio,
-.explorer
+.explorer, li, a
 {
     border: 1px solid;
 }
-img{
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-}
+
