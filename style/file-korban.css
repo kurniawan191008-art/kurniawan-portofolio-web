@@ -8,7 +8,7 @@
 .status-bar,
 .profile,
 .name-n-bio,
-.explorer, li, a
+.explorer, li, a, .icon, p, span
 {
     /* border: 1px solid; */
 }

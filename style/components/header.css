@@ -1,11 +1,22 @@
 .header{
     border-bottom: 1px solid;
 }
+.header-name{
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: center; */
+    justify-content: flex-start;
+    gap: 5px;
+    padding-left: 45px;
+    /* border: 1px solid; */
+}
 .header p{
     font: var(--heading-font);
-    padding: 0 0 0 45px;
 }
-
+.header-icon{
+    height: 35px;
+    width: 35px;
+}
 .green,
 .red,
 .blue {

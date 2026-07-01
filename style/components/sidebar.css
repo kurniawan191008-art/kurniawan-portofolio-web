@@ -51,12 +51,11 @@
 .nav-bar {
   width: 100%;
   font: var(--navbar-font);
+  /* color: #fbf1c7; */
 }
 
 .nav-bar ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .folder-btn {
@@ -66,7 +65,7 @@
   width: 100%;
   box-sizing: border-box;
 
-  padding: 13px 0 13px 65px;
+  padding: 13px 0 13px 35px;
   cursor: pointer;
 }
 
@@ -77,6 +76,13 @@
 }
 
 .project-category a {
-  padding-left: 95px;
+  padding-left: 105px;
   /* background-color: #f0f0f0; */
+}
+
+.icon, .chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #000000;
 }
