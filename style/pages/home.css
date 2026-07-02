@@ -1,0 +1,10 @@
+.home-content {
+    font: var(--editor-content-font);
+    color: var(--primary-text-color);
+
+    margin: auto 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+

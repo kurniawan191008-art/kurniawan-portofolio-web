@@ -110,3 +110,26 @@
   flex-shrink: 0;
   color: var(--primary-text-color);
 }
+
+.project-category{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    transition:
+        max-height .19s ease,
+        opacity .19s ease;
+}
+
+.folder.show .project-category{
+    max-height: 300px;
+    opacity: 1;
+}
+
+.chevron{
+    transition: transform .19s ease;
+}
+
+.folder.show .chevron{
+    transform: rotate(90deg);
+}

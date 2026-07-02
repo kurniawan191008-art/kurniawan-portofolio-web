@@ -33,4 +33,5 @@
     --profile-bio-font: 400 .9rem 'jetbrains mono', monospace;
     --explorer-font: 400 1.19rem 'jetbrains mono', monospace;
     --footer-font: 100 .9rem 'jetbrains mono', monospace;
+    --editor-content-font: 400 1.2rem 'ibmplex mono', monospace;
 }
