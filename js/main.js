@@ -1,6 +1,8 @@
 import { initNavigation } from "./navigation.js";
-import { loadPage } from "./router.js";
+import { handleLocationChange, navigate } from "./router.js";
 
 initNavigation();
+handleLocationChange();
+// navigate("home");
 
-loadPage("home");
+console.log("anjayy jalan cuy")

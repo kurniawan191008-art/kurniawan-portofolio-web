@@ -1,4 +1,4 @@
-import { loadPage } from "./router.js";
+import { navigate } from "./router.js";
 
 export function initNavigation() {
 
@@ -19,7 +19,7 @@ export function initNavigation() {
 
         event.preventDefault();
 
-        loadPage(link.dataset.page);
+        navigate(link.dataset.page);
 
     });
 

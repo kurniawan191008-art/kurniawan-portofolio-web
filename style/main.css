@@ -9,6 +9,6 @@
 @import "components/tab-bar.css";
 @import "layout.css";
 
-@import "pages/home.css";
-@import "pages/about.css";
-@import "pages/experience.css";
+@import "pages-style/home-style.css";
+@import "pages-style/about-style.css";
+@import "pages-style/experience-style.css";
