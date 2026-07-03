@@ -9,9 +9,9 @@ export function initNavigation() {
         folder.classList.toggle("show");
     });
 
-    const menu = document.querySelector(".menu-list");
+    // const menu = document.querySelector(".menu-list");
 
-    menu.addEventListener("click", (event) => {
+    document.addEventListener("click", (event) => {
 
         const link = event.target.closest("[data-page]");
 
