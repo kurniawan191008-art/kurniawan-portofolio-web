@@ -4,8 +4,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   box-sizing: border-box;
-
-  border-right: 1px var(--primary-border-color) solid;
+  /* box-shadow: 0 1px 50px 1px black ; */
 }
 
 .sidebar .profile {
@@ -68,6 +67,7 @@
 }
 
 .nav-bar ul {
+
   list-style: none;
 }
 
@@ -88,6 +88,8 @@
   display: block;
   padding: 10px 0 10px 90px;
   text-decoration: none;
+      /* border-bottom: 1px solid var(--primary-border-color); */
+  /* border-start-end-radius: ; */
 }
 
 .project-category a {

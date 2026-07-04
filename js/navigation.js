@@ -1,4 +1,4 @@
-import { navigate } from "./router.js";
+import { handleLocationChange, navigate } from "./router.js";
 
 export function initNavigation() {
 
@@ -22,5 +22,5 @@ export function initNavigation() {
         navigate(link.dataset.page);
 
     });
-
+    window.addEventListener("popstate", handleLocationChange)
 }
