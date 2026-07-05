@@ -32,18 +32,25 @@
   align-items: flex-start;
   justify-content: center;
   gap: 5px;
-  padding: 0 15px 0 15px;
+  /* padding: 0 15px 0 15px; */
 
 }
 
 .profile .name-n-bio h1 {
+  margin-left: 15px;
   font: var(--profile-name-font);
   color: var(--primary-heading-color);
 }
 
 .profile .name-n-bio p {
+  margin-left: 15px;
   font: var(--profile-bio-font);
   color: var(--primary-text-color);
+}
+.profile .name-n-bio span{
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-border-color);
 }
 
 .explorer {

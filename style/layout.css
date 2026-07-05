@@ -39,3 +39,8 @@
     background-color: var(--secondary-bg-color);
 
 }
+
+.main-content {
+    overflow-y: auto;
+    height: 100%;
+}

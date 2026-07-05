@@ -1,2 +1,3 @@
 # kurniawan-portofolio-web
-this is a private project 
+ini adalah project pertama yang akan saya publikasi
+

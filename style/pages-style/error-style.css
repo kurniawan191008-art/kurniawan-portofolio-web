@@ -1,0 +1,113 @@
+.error-content {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 60px 80px;
+    font: var(--editor-content-font);
+    color: var(--primary-text-color);
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 600px;
+    width: 100%;
+    background-color: #1a1c1d;
+    border: 1px solid var(--primary-border-color);
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.error-container .code-line {
+    display: flex;
+    gap: 20px;
+    font-family: 'jetbrains mono', monospace;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--primary-border-color);
+    padding-bottom: 15px;
+}
+
+.error-container .line-number {
+    color: #fb4934;
+    font-weight: bold;
+    user-select: none;
+}
+
+.code-error {
+    color: #fb4934;
+    font-style: italic;
+}
+
+.error-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.error-image {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* Hide image if src is empty or not set to avoid broken image icon */
+.error-image[src=""], .error-image:not([src]) {
+    display: none;
+}
+
+.error-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: 'jetbrains mono', monospace;
+    color: var(--primary-heading-color);
+    line-height: 1.2;
+}
+
+.error-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--primary-text-color);
+    opacity: 0.9;
+}
+
+.error-actions {
+    margin-top: 10px;
+}
+
+.btn-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 26px;
+    font-family: 'jetbrains mono', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: var(--primary-heading-color);
+    color: var(--secondary-bg-color) !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+}
+
+.btn-home:hover {
+    background-color: transparent;
+    border-color: var(--primary-heading-color);
+    color: var(--primary-heading-color) !important;
+    box-shadow: 0 0 15px rgba(254, 128, 25, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-arrow {
+    font-weight: bold;
+}
