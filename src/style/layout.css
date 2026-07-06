@@ -1,10 +1,12 @@
 .main-parent {
     /* max-height: 90vh; */
-    width: min(90vw, 1920px);
-    height: min(90vh, 1080px);
+    width: min(95vw, 1440px);
+    height: min(95vh, 900px);
     display: grid;
     grid-template-columns: 365px 1fr;
     grid-template-rows: 60px 1fr 60px;
+
+    /* border: 1px solid red; */
 
     margin: 0 auto;
 
@@ -30,7 +32,6 @@
 }
 
 .editor {
-    max-height: 90vh;
     display: grid;
     grid-template-rows: 35px 1fr;
     background-color: var(--primary-bg-color);
@@ -46,6 +47,7 @@
 
 .main-content {
     overflow-y: auto;
+    scrollbar-width: none;
     height: 100%;
     scroll-behavior: smooth;
 }

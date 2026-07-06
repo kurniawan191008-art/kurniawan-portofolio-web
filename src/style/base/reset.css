@@ -14,5 +14,5 @@ body{
   align-items: center;
   min-height: 100vh;
 
-  background-color: var(--primary-text-color);
+  background-color: var(--canvas-color);
 }

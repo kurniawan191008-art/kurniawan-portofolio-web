@@ -4,7 +4,7 @@
     box-sizing: border-box;
     padding: 60px 80px;
     font: var(--editor-content-font);
-    color: var(--primary-text-color);
+    color: var(--primary-bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@
     gap: 25px;
     max-width: 600px;
     width: 100%;
-    background-color: #1a1c1d;
+    background-color: var(--primary-bg-color);
     border: 1px solid var(--primary-border-color);
     border-radius: 8px;
     padding: 40px;

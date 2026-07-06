@@ -40,6 +40,7 @@
 .profile .name-n-bio h1 {
   margin-left: 15px;
   font: var(--profile-name-font);
+  font-weight: 700;
   color: var(--primary-heading-color);
 }
 
@@ -117,6 +118,7 @@
 .chevron {
   width: 25px;
   height: 25px;
+  
   flex-shrink: 0;
   color: var(--primary-text-color);
 }
