@@ -1,7 +1,7 @@
-:root{
+:root {
     --canvas-color: #f9f5d7;
-    --primary-bg-color: #ebdbb2;
-    --secondary-bg-color: #d5c4a1;
+    --primary-bg-color: #fbf1c7;
+    --secondary-bg-color: #ebdbb2;
 
     --primary-border-color: #bdae93;
     --secondary-border-color: #d65d0e;
@@ -11,6 +11,8 @@
 
     --primary-heading-color: #d65d0e;
     --secondary-heading-color: #fe8019;
+    --tertiary-heading-color: #98971a;
+
 
     --primary-social-color: #83a598;
 }

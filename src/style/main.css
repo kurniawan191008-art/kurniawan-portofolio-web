@@ -10,6 +10,7 @@
 @import "components/footer.css";
 @import "components/tab-bar.css";
 @import "layout.css";
+@import "animation/bg-animation.css";
 
 @import "pages-style/home-style.css";
 @import "pages-style/about-style.css";

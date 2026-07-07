@@ -1,4 +1,5 @@
-.home-content {
+.home-content, about-web {
+    overflow: scroll;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -7,10 +8,11 @@
     /* overflow: auto; */
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* z-index: 1000; */
 }
 
@@ -70,7 +72,7 @@
     font-size: 2rem;
     font-weight: 900;
     font-family: 'jetbrains mono', monospace;
-    color: var(--secondary-heading-color);
+    color: var(--primary-text-color);
     line-height: .8;
     margin-bottom: 12px;
 }
@@ -88,7 +90,6 @@
     display: flex;
     gap: 20px;
     margin-top: 15px;
-    margin-left: 45px;
 }
 
 .cta-btn {
@@ -102,27 +103,20 @@
     text-decoration: none;
     border-radius: 6px;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid transparent;
-}
-
-.btn-about {
+    border: 2px solid var(--primary-border-color);
+        backdrop-filter: blur(1.5px);
+            border-color: var(--primary-text-color);
     background-color: transparent;
-    border-color: var(--primary-border-color);
     color: var(--primary-text-color) !important;
-}
 
+
+}
 .btn-about:hover {
     background-color: transparent;
     border-color: var(--primary-heading-color);
     color: var(--primary-heading-color) !important;
     box-shadow: 0 0 15px rgba(254, 128, 25, 0.3);
     transform: translateY(-2px);
-}
-
-.btn-project {
-    background-color: transparent;
-    border-color: var(--primary-border-color);
-    color: var(--primary-text-color) !important;
 }
 
 .btn-project:hover {
@@ -132,10 +126,6 @@
     transform: translateY(-2px);
 }
 
-.btn-arrow,
-.btn-brackets {
-    font-weight: bold;
-}
 
 
 /* .scroll-indicator {
