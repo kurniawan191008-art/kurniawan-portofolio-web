@@ -3,7 +3,6 @@ const mainContent = document.getElementById("main-content");
 const FALLBACK_404_HTML = "<h1>404 - Page Not Found</h1>";
 async function notFound() {
     const notFoundRoute = routes["404"];
-    // kalo 404
     if (notFoundRoute) {
         try {
             const response = await fetch(notFoundRoute.file);
@@ -15,7 +14,6 @@ async function notFound() {
             console.error(error);
         }
     }
-    // kalo 404 gak ada
     mainContent.innerHTML = FALLBACK_404_HTML;
 
 }

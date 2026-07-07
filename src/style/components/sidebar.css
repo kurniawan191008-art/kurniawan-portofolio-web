@@ -1,4 +1,5 @@
 .sidebar {
+  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -32,18 +33,26 @@
   align-items: flex-start;
   justify-content: center;
   gap: 5px;
-  padding: 0 15px 0 15px;
+  /* padding: 0 15px 0 15px; */
 
 }
 
 .profile .name-n-bio h1 {
+  margin-left: 15px;
   font: var(--profile-name-font);
+  font-weight: 700;
   color: var(--primary-heading-color);
 }
 
 .profile .name-n-bio p {
+  margin-left: 15px;
   font: var(--profile-bio-font);
   color: var(--primary-text-color);
+}
+.profile .name-n-bio span{
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-border-color);
 }
 
 .explorer {
@@ -109,6 +118,7 @@
 .chevron {
   width: 25px;
   height: 25px;
+  
   flex-shrink: 0;
   color: var(--primary-text-color);
 }

@@ -1,0 +1,9 @@
+.editor{
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    /* padding:; */
+    /* border: 5px solid red;  */
+}

@@ -1,0 +1,16 @@
+:root{
+    --canvas-color: #f9f5d7;
+    --primary-bg-color: #ebdbb2;
+    --secondary-bg-color: #d5c4a1;
+
+    --primary-border-color: #bdae93;
+    --secondary-border-color: #d65d0e;
+
+    --primary-text-color: #282828;
+    --secondary-text-color: #d79921;
+
+    --primary-heading-color: #d65d0e;
+    --secondary-heading-color: #fe8019;
+
+    --primary-social-color: #83a598;
+}
