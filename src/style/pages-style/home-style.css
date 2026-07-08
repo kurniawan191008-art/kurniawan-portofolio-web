@@ -38,6 +38,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+
 }
 
 .grtng-layout {
@@ -105,29 +107,22 @@
     font-weight: bold;
     text-decoration: none;
     border-radius: 6px;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid var(--primary-border-color);
+    transition: all 0.25s ease-in-out;
     backdrop-filter: blur(1.5px);
-    border-color: var(--primary-text-color);
-    background-color: transparent;
+    background-color: var(--tertiary-heading-color);
     color: var(--primary-text-color) !important;
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.377);
+
 
 
 }
 
 .btn-about:hover {
-    background-color: transparent;
-    border-color: var(--primary-heading-color);
-    color: var(--primary-heading-color) !important;
-    box-shadow: 0 0 15px rgba(254, 128, 25, 0.3);
-    transform: translateY(-2px);
+    transform: scale(1.07);
 }
 
 .btn-web:hover {
-    border-color: var(--secondary-heading-color);
-    color: var(--secondary-heading-color) !important;
-    box-shadow: 0 0 15px rgba(215, 153, 33, 0.2);
-    transform: translateY(-2px);
+    transform: scale(1.07);
 }
 
 
@@ -139,7 +134,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-     gap: 1rem;
+    gap: 1rem;
 
 }
 
@@ -153,16 +148,43 @@
     color: var(--tertiary-heading-color);
     line-height: .9;
 }
-.a-digital{
+
+.a-digital {
     line-height: .9;
     color: var(--primary-heading-color);
 }
-.sub-heading-garden{
+
+.sub-heading-garden {
     font-weight: 600;
     font-size: 1.7rem;
+    color: var(--tertiary-text-color);
 }
-.description-garden{
+
+.description-garden {
     font-size: .9rem;
+    color: var(--tertiary-text-color);
+
+}
+
+.closing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* gap: 1rem; */
+    box-sizing: border-box;
+    min-height: 100%;
+    text-align: center;
+}
+
+.hubungi-saya {
+    font-size: 5rem;
+    color: var(--primary-heading-color);
+    /* letter-spacing: 1px; */
+
+
+
 }
 
 /* .scroll-indicator {

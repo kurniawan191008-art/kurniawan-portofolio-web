@@ -18,4 +18,7 @@ export const routes = {
         path: "/404",
         file: "src/pages/404.html"
     },
+    // aboutweb: {
+    //     path: /
+    // },
 };
