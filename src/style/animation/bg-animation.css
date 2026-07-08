@@ -1,0 +1,46 @@
+/* Pastikan #main-content sekarang gak punya background grid lagi.
+   Biarkan dia transparan atau pakai warna dasar gelap lu (#1e1e1e).
+*/
+
+/* --- CLASS AJAIB (Bisa ditaruh di elemen mana aja) --- */
+.grid-glow-container {
+    position: relative;
+    background-color: #fbf1c7; /* Background pastel orange */
+    
+    /* Layer 1: Grid Default (Redup) */
+    /* background-image: 
+        linear-gradient(#fbf1c7, transparent 1px),
+        linear-gradient(90deg, #, transparent 1px);
+    background-size: 40px 40px; */
+    
+    overflow: hidden;
+    isolation: isolate; /* Amanin teks biar gak ketimpa */
+}
+
+/* Layer 2: Grid Terang (Glow) */
+.grid-glow-container::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* Otomatis penuhi container (top, left, right, bottom: 0) */
+    z-index: -1;
+    pointer-events: none;
+
+    /* Grid Terangnya */
+    background-image: 
+        linear-gradient(rgba(255, 140, 0, 0.952) 1px, transparent 5px),
+        linear-gradient(90deg, rgba(255, 140, 0, 0.9) 1px, transparent 5px);
+    background-size: 40px 40px;
+
+    /* Masking Bulat Mengikuti Kursor */
+    -webkit-mask-image: radial-gradient(300px circle at var(--x, 50%) var(--y, 50%), black, transparent);
+    mask-image: radial-gradient(300px circle at var(--x, 50%) var(--y, 50%), black, transparent);
+
+    /* KUNCI: Sembunyikan secara default */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* KUNCI: Cuma muncul kalau container ini di-hover */
+.grid-glow-container:hover::before {
+    opacity: 1;
+}

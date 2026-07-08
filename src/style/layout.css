@@ -1,7 +1,7 @@
 .main-parent {
     /* max-height: 90vh; */
-    width: min(95vw, 1440px);
-    height: min(95vh, 900px);
+    width: min(100%, 1440px);
+    height: min(100vw, 700px);
     display: grid;
     grid-template-columns: 365px 1fr;
     grid-template-rows: 60px 1fr 60px;
@@ -9,7 +9,7 @@
 
     margin: 0 auto;
 
-    overflow-y: auto;
+    /* overflow-y: auto; */
 
 }
 
@@ -31,6 +31,7 @@
 .editor {
     height: 100%;
     background-color: var(--primary-bg-color);
+    min-height: 0;
 
 }
 

@@ -1,6 +1,6 @@
 .header{
     border-bottom: 1px var(--primary-border-color) solid;
-    border-radius: 10px 10px 0 0;
+    /* border-radius: 10px 10px 0 0; */
 }
 
 .header-name{
