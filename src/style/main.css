@@ -16,3 +16,6 @@
 @import "pages-style/about-style.css";
 @import "pages-style/experience-style.css";
 @import "pages-style/error-style.css";
+
+/* Media queries last so they override all other styles */
+@import "base/media.css";

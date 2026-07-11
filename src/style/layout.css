@@ -1,17 +1,13 @@
 .main-parent {
-    /* max-height: 90vh; */
     width: min(100%, 1440px);
-    height: min(100vw, 700px);
+    height: 100dvh;
+    max-height: 100dvh;
     display: grid;
     grid-template-columns: 365px 1fr;
     grid-template-rows: 60px 1fr 60px;
 
-
     margin: 0 auto;
-    box-shadow: 15px 10px 30px 1px rgba(0, 0, 0, 0.329);
-
-    /* overflow-y: auto; */
-
+    box-shadow: 15px 15px var(--primary-text-color);
 }
 
 .header {
@@ -25,7 +21,7 @@
 
 .sidebar {
     background-color: var(--secondary-bg-color);
-    border-right: 1px var(--primary-border-color) solid;
+    border-right: 2px var(--primary-border-color) solid;
 
 }
 
