@@ -96,7 +96,7 @@
 
 .cta-btn {
     display: inline-flex;
-    align-items: center
+    align-items: center;
     gap: 12px;
     padding: 10px 20px;
     font-family: 'jetbrains mono', monospace;
