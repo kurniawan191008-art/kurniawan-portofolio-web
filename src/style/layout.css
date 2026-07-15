@@ -1,13 +1,12 @@
 .main-parent {
     width: min(100%, 1440px);
-    height: 100dvh;
-    max-height: 100dvh;
+    height: min(90dvh, 900px);
+    /* max-height: 100dvh; */
     display: grid;
     grid-template-columns: 365px 1fr;
     grid-template-rows: 60px 1fr 60px;
 
     margin: 0 auto;
-    box-shadow: 15px 15px var(--primary-text-color);
 }
 
 .header {
