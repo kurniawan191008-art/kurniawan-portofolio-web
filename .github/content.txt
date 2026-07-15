@@ -1,0 +1,655 @@
+## Website architecture overview
+
+The portfolio is a lightweight single-page-style site with a fixed desktop shell in [index.html](index.html). The main content area is swapped dynamically by the router, while the header, sidebar, and footer remain persistent.
+
+### Core structure
+- Shell container: [index.html](index.html)
+  - Header
+  - Sidebar
+  - Editor/main content area
+  - Footer
+- Page content is loaded from [src/pages/home.html](src/pages/home.html), [src/pages/about.html](src/pages/about.html), and [src/pages/404.html](src/pages/404.html)
+- Styling is assembled from [src/style/main.css](src/style/main.css)
+- Page rendering is controlled by [src/js/main.js](src/js/main.js), [src/js/router.js](src/js/router.js), [src/js/navigation.js](src/js/navigation.js), and [src/js/pages.js](src/js/pages.js)
+
+---
+
+## 1) Home page structure
+
+### Shell from [index.html](index.html)
+The page is built around a main wrapper:
+
+- `.main-parent`
+  - `.header`
+  - `.sidebar`
+  - `.editor`
+    - `.main-content`
+  - `.footer`
+
+This creates a desktop-style IDE-like layout with a top bar, left navigation panel, main content panel, and bottom footer.
+
+### Page content from [src/pages/home.html](src/pages/home.html)
+The home page content is structured as a vertical landing experience:
+
+- `.home-content`
+  - `.home-hero`
+    - `.slogan`
+    - `.home-title`
+      - `.grtng-layout`
+        - `.greeting.selamat`
+        - `.greeting.datang`
+      - `.subtitle`
+    - `.cta-container`
+      - `.cta-btn`
+  - `.about-web`
+    - `.about-section`
+      - `.digital-garden`
+      - `.sub-heading-garden`
+      - `.description-garden`
+      - `.cta-container`
+  - `.closing`
+    - `.hubungi-saya`
+    - `.description-garden`
+    - `.cta-container`
+
+### Class naming conventions
+The project uses a custom, flat naming pattern rather than strict BEM.
+
+Examples:
+- `.home-content`
+- `.home-hero`
+- `.about-web`
+- `.cta-container`
+- `.digital-garden`
+
+Pattern characteristics:
+- Mostly lowercase, kebab-case
+- Descriptive, component/section-based names
+- Some combined classes such as `.greeting.selamat` and `.greeting.datang`
+- No formal BEM prefixes like `.block__element--modifier`
+
+---
+
+## 2) CSS architecture
+
+### Global import structure
+The main stylesheet in [src/style/main.css](src/style/main.css) imports:
+
+- reset styles
+- design tokens
+- typography
+- component styles
+- layout styles
+- animations
+- page-specific styles
+
+### Design token system
+The design tokens are defined in [src/style/base/variables.css](src/style/base/variables.css).
+
+#### Colors
+- Canvas/background:
+  - `--canvas-color`: warm cream
+  - `--primary-bg-color`: pale yellow
+  - `--secondary-bg-color`: muted tan
+
+- Borders:
+  - `--primary-border-color`
+  - `--secondary-border-color`
+
+- Text:
+  - `--primary-text-color`
+  - `--secondary-text-color`
+  - `--tertiary-text-color`
+
+- Headings:
+  - `--primary-heading-color`
+  - `--secondary-heading-color`
+  - `--tertiary-heading-color`
+
+- Social/icon accent:
+  - `--primary-social-color`
+
+- Extra palette:
+  - `--red`
+  - `--purple`
+  - `--strong-purple`
+  - `--aqua`
+  - `--strong-aqua`
+  - `--blue`
+  - `--strong-blue`
+
+#### Typography tokens
+Defined in [src/style/base/typography.css](src/style/base/typography.css):
+- `--heading-font`
+- `--navbar-font`
+- `--profile-name-font`
+- `--profile-bio-font`
+- `--explorer-font`
+- `--footer-font`
+- `--editor-content-font`
+
+#### Spacing patterns
+There are no spacing tokens defined. Spacing is mostly hard-coded using values like:
+- `45px`
+- `80px`
+- `15px`
+- `20px`
+- `10rem`
+- `1rem`
+
+This makes the system feel more “hand-authored” than token-driven.
+
+### Layout patterns
+The core layout uses CSS Grid in [src/style/layout.css](src/style/layout.css):
+
+- `.main-parent`
+  - grid with:
+    - 2 columns: sidebar + editor
+    - 3 rows: header + content + footer
+- `.header` uses flex
+- `.sidebar` uses flex column
+- `.editor` uses full-height container
+- `.main-content` uses overflow-y auto with hidden scrollbar
+
+### Component styles
+The component files are:
+- [src/style/components/header.css](src/style/components/header.css)
+- [src/style/components/sidebar.css](src/style/components/sidebar.css)
+- [src/style/components/footer.css](src/style/components/footer.css)
+
+Current patterns:
+- Header: simple flex row with icon and text
+- Sidebar: vertical profile area + nav list + folder dropdown
+- Footer: row of social icons and metadata
+
+The following component files are present but currently empty:
+- [src/style/components/button.css](src/style/components/button.css)
+- [src/style/components/editor.css](src/style/components/editor.css)
+- [src/style/components/tab-bar.css](src/style/components/tab-bar.css)
+
+### Page-specific styling
+The home page styles are defined in [src/style/pages-style/home-style.css](src/style/pages-style/home-style.css). They create:
+- full-page vertical landing sections
+- large typographic hero titles
+- CTA button styling
+- section spacing and alignment
+
+### Animation patterns
+Animation is mostly handled in [src/style/animation/bg-animation.css](src/style/animation/bg-animation.css) and [src/js/animation.js](src/js/animation.js).
+
+Patterns used:
+- Grid glow effect using CSS background gradients
+- Cursor-aware glow using a custom `--x` and `--y` CSS variable
+- Hover transition on buttons with `transform: scale(1.07)`
+- Smooth scrolling behavior
+
+### Responsive breakpoints
+There are no active responsive breakpoints in the current CSS. The file [src/style/base/media.css](src/style/base/media.css) is empty, so the site is currently designed as a desktop-first layout with no media-query-based adaptation yet.
+
+---
+
+## 3) JavaScript architecture
+
+### Main initialization
+[src/js/main.js](src/js/main.js) initializes three things:
+- `initGlow()`
+- `initNavigation()`
+- `handleLocationChange()`
+
+### Routing mechanism
+[src/js/pages.js](src/js/pages.js) defines the route table:
+
+- `/` → home
+- `/about` → about
+- `/experience` → experience
+- `/404` → 404 fallback
+
+### Router behavior
+[src/js/router.js](src/js/router.js) does the following:
+- Looks up the requested route
+- Fetches the page HTML from the route file
+- Inserts it into `#main-content`
+- Falls back to a 404 page if the route is invalid or the file is missing
+
+### Navigation behavior
+[src/js/navigation.js](src/js/navigation.js) handles:
+- click events on elements with `data-page`
+- SPA navigation via `navigate()`
+- anchor links like `#about-web` by scrolling smoothly to the target section
+- the folder dropdown toggle for the portfolio submenu
+
+---
+
+## 4) About page status
+
+The about page exists at [src/pages/about.html](src/pages/about.html), but it is currently minimal.
+
+Current content:
+- a main wrapper `.about-me`
+- a `.hero-section`
+- a `.profile-picture` placeholder
+- a hero heading saying “haii... nama saya kurniawan”
+
+The stylesheet for it, [src/style/pages-style/about-style.css](src/style/pages-style/about-style.css), is currently empty.
+
+---
+
+## 5) Typography hierarchy
+
+The site uses a mono-space visual language with strong editorial emphasis.
+
+### Typography scale from home page
+- Large hero title:
+  - `.greeting.selamat` → `4.9rem`
+  - `.greeting.datang` → `6.9rem`
+- Subtitle → `2rem`
+- Section heading → `6rem`
+- Supporting text → `.9rem` to `1.7rem`
+
+### Font families
+- `jetbrains mono`
+- `ibmplex mono`
+
+These are defined in [src/style/base/typography.css](src/style/base/typography.css).
+
+---
+
+## 6) Full file contents requested
+
+### [src/style/base/variables.css](src/style/base/variables.css)
+```css
+:root {
+    --canvas-color: #f9f5d7;
+    --primary-bg-color: #fbf1c7;
+    --secondary-bg-color: #ebdbb2;
+
+    --primary-border-color: #bdae93;
+    --secondary-border-color: #d65d0e;
+
+    --primary-text-color: #282828;
+    --secondary-text-color: #d79921;
+    --tertiary-text-color:#7c6f64;
+
+    --primary-heading-color: #d65d0e;
+    --secondary-heading-color: #fe8019;
+    --tertiary-heading-color: #98971a;
+
+
+    --primary-social-color: #83a598;
+
+    /* other color */
+    --red: #cc241d;
+    --purple: #b16286;
+    --strong-purple:#8f3f71;
+    --aqua:#689d6a;
+    --strong-aqua:#427b58;
+    --blue:#458588;
+    --strong-blue:#076678;
+    
+}
+```
+
+### [src/style/pages-style/home-style.css](src/style/pages-style/home-style.css)
+```css
+.home-content {
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font: var(--editor-content-font);
+    color: var(--primary-text-color);
+    /* overflow: auto; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 10rem;
+    align-items: center;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* border: 1px solid red; */
+    /* z-index: 1000; */
+}
+
+.home-hero,
+.about-web {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-height: 100%;
+}
+
+
+.code-comment {
+    color: var(--primary-border-color);
+    font-style: italic;
+}
+
+.home-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+
+}
+
+.grtng-layout {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+}
+
+.greeting.selamat {
+    display: inline-block;
+    text-align: center;
+    padding-top: 0;
+    height: 5.5rem;
+    width: 25rem;
+    background-color: var(--primary-heading-color);
+    font-size: 4.9rem;
+    font-weight: 800;
+    font-family: 'jetbrains mono', monospace;
+    color: var(--primary-bg-color);
+
+    line-height: 1.2;
+    text-shadow: 0 0 20px rgba(155, 82, 22, 0.15);
+}
+
+.greeting.datang {
+    font-size: 6.9rem;
+    color: var(--primary-heading-color);
+    line-height: 1.2;
+
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'jetbrains mono', monospace;
+    color: var(--primary-text-color);
+    line-height: .8;
+    margin-bottom: 12px;
+}
+
+.site-desc {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--primary-text-color);
+    opacity: 0.9;
+    max-width: 680px;
+    margin-left: 45px;
+}
+
+.cta-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    font-family: 'jetbrains mono', monospace;
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-decoration: none;
+    /* border-radius: 6px; */
+    transition: all 0.25s ease-in-out;
+    backdrop-filter: blur(1.5px);
+    background-color: var(--tertiary-heading-color);
+    color: var(--primary-text-color) !important;
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.377);
+
+
+
+}
+
+.btn-about:hover {
+    transform: scale(1.07);
+}
+
+.btn-web:hover {
+    transform: scale(1.07);
+}
+
+
+.about-section {
+    box-sizing: border-box;
+    min-height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.digital-garden {
+    font-size: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.garden {
+    color: var(--tertiary-heading-color);
+    line-height: .9;
+}
+
+.a-digital {
+    line-height: .9;
+    color: var(--primary-heading-color);
+}
+
+.sub-heading-garden {
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--tertiary-text-color);
+}
+
+.description-garden {
+    font-size: .9rem;
+    color: var(--tertiary-text-color);
+
+}
+
+.closing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* gap: 1rem; */
+    box-sizing: border-box;
+    min-height: 100%;
+    text-align: center;
+}
+
+.hubungi-saya {
+    font-size: 5rem;
+    color: var(--primary-heading-color);
+    /* letter-spacing: 1px; */
+
+
+
+}
+
+/* .scroll-indicator {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 60px;
+    margin-left: 45px;
+    text-decoration: none;
+    color: var(--primary-border-color);
+    transition: color 0.3s ease;
+    animation: bounce 2s infinite;
+    align-self: flex-start;
+}
+
+.scroll-indicator:hover {
+    color: var(--secondary-heading-color);
+}
+
+.scroll-text {
+    font-size: 0.95rem;
+    font-family: 'jetbrains mono', monospace;
+    opacity: 0.8;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+}
+
+
+.read-more-section {
+    max-width: 800px;
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 45px;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-title {
+    font-size: 1.6rem;
+    color: var(--secondary-heading-color);
+    font-family: 'jetbrains mono', monospace;
+    font-weight: 700;
+}
+
+.info-desc {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--primary-text-color);
+    opacity: 0.9;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tech-list li {
+    font-size: 1.15rem;
+    color: var(--primary-text-color);
+    opacity: 0.9;
+}
+
+.tech-bracket {
+    color: var(--primary-heading-color);
+    font-weight: bold;
+}  */
+```
+
+### [src/style/layout.css](src/style/layout.css)
+```css
+.main-parent {
+    /* max-height: 90vh; */
+    width: min(100%, 1440px);
+    height: min(100vw, 700px);
+    display: grid;
+    grid-template-columns: 365px 1fr;
+    grid-template-rows: 60px 1fr 60px;
+
+
+    margin: 0 auto;
+    box-shadow: 15px 10px 30px 1px rgba(0, 0, 0, 0.329);
+
+    /* overflow-y: auto; */
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1 / 3;
+    background-color: var(--secondary-bg-color);
+}
+
+.sidebar {
+    background-color: var(--secondary-bg-color);
+    border-right: 1px var(--primary-border-color) solid;
+
+}
+
+.editor {
+    height: 100%;
+    background-color: var(--primary-bg-color);
+    min-height: 0;
+
+}
+
+.footer {
+    grid-column: 1 / 3;
+    background-color: var(--secondary-bg-color);
+
+}
+
+.main-content {
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+```
+
+### [src/style/main.css](src/style/main.css)
+```css
+@import "base/reset.css";
+@import "base/variables.css";
+@import "base/typography.css";
+
+
+
+@import "components/header.css";
+@import "components/sidebar.css";
+@import "components/editor.css";
+@import "components/footer.css";
+@import "components/tab-bar.css";
+@import "layout.css";
+@import "animation/bg-animation.css";
+
+/* @import "pages-style/home-style.css"; */
+@import "pages-style/about-style.css";
+@import "pages-style/experience-style.css";
+@import "pages-style/error-style.css";
+```
+
+---
+
+## Bottom line
+
+This codebase is a handcrafted, desktop-inspired personal website with:
+- a custom mono-space visual identity
+- a fixed IDE-like shell
+- a simple client-side router
+- mostly custom CSS classes
+- strong use of flex/grid layout
+- a cursor-reactive “grid glow” animation
+- a home page that serves as the main reference pattern for future pages
+
+If you want, I can next turn this into a concise implementation plan for extending the about page or refactoring the styles into a more scalable structure.

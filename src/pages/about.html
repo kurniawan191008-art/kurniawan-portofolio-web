@@ -1,4 +1,241 @@
-<section class="about-content" id="about-content">
-    <h1>KURNIAWAN</h1>
-    <p>Computer And Network Engineering student</p>
-</section>
+<main class="about-page" id="about-page">
+    <section class="profile-hero" id="profile-hero" aria-labelledby="profile-title">
+        <div class="profile-hero__visual">
+            <div class="profile-hero__photo-wrapper">
+                <img 
+                    class="profile-hero__photo" 
+                    src="/assets/image/profile.svg" 
+                    alt="Foto profil Kurniawan"
+                    loading="eager"
+                >
+                <div class="profile-hero__accent-border"></div>
+            </div>
+        </div>
+        <div class="profile-hero__content">
+            <header class="profile-hero__header">
+                <h1 id="profile-title" class="profile-hero__name">Hai... nama saya Kurniawan</h1>
+                <p class="profile-hero__subtitle">Siswa Teknik Komputer dan Jaringan</p>
+            </header>
+            <div class="profile-hero__meta">
+                <div class="profile-hero__location">
+                    <svg class="icon icon--sm" aria-hidden="true"><use href="/assets/icon/sprite.svg#location-icon"></use></svg>
+                    <span>Bandung, Indonesia</span>
+                </div>
+            </div>
+            <p class="profile-hero__description">
+                Siswa TKJ yang suka bermain dengan kode & jaringan. Suasana belajar di Linux, suka debugging routing, 
+                dan belajar UI/UX di sela-sela praktek jaringan.
+            </p>
+            <div class="profile-hero__cta">
+                <a href="#" data-page="overview" class="btn btn--primary">
+                    <svg class="icon icon--sm" aria-hidden="true"><use href="/assets/icon/sprite.svg#github-icon"></use></svg>
+                    GitHub
+                </a>
+                <a href="mailto:kurniawan@example.com" class="btn btn--secondary">
+                    <svg class="icon icon--sm" aria-hidden="true"><use href="/assets/icon/sprite.svg#mail-icon"></use></svg>
+                    Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="skill-section" id="skill-section" aria-labelledby="skill-title">
+        <header class="section-header">
+            <h2 id="skill-title" class="section-header__title">Skill</h2>
+            <div class="section-header__divider"></div>
+        </header>
+        <div class="skill-grid" role="list">
+            <article class="skill-card" role="listitem">
+                <div class="skill-card__number">01</div>
+                <div class="skill-card__icon-wrapper">
+                    <svg class="icon skill-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#code-icon"></use></svg>
+                </div>
+                <header class="skill-card__header">
+                    <h3 class="skill-card__title">Front-end Development</h3>
+                </header>
+                <ul class="skill-card__list" role="list">
+                    <li class="skill-card__item">Basic UI/UX Design</li>
+                    <li class="skill-card__item">Layouting</li>
+                    <li class="skill-card__item">Responsive Design</li>
+                    <li class="skill-card__item">HTML</li>
+                    <li class="skill-card__item">CSS</li>
+                    <li class="skill-card__item">JavaScript</li>
+                </ul>
+                <a href="#" data-page="project" class="skill-card__link btn btn--ghost">
+                    Lihat Proyek
+                    <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#arrow-right-icon"></use></svg>
+                </a>
+            </article>
+
+            <article class="skill-card" role="listitem">
+                <div class="skill-card__number">02</div>
+                <div class="skill-card__icon-wrapper">
+                    <svg class="icon skill-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#server-icon"></use></svg>
+                </div>
+                <header class="skill-card__header">
+                    <h3 class="skill-card__title">Network Engineering</h3>
+                </header>
+                <ul class="skill-card__list" role="list">
+                    <li class="skill-card__item">Addressing</li>
+                    <li class="skill-card__item">Subnetting</li>
+                    <li class="skill-card__item">Routing</li>
+                    <li class="skill-card__item">Switching</li>
+                    <li class="skill-card__item">Troubleshooting</li>
+                </ul>
+                <a href="#" data-page="overview" class="skill-card__link btn btn--ghost">
+                    Lihat Detail
+                    <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#arrow-right-icon"></use></svg>
+                </a>
+            </article>
+
+            <article class="skill-card" role="listitem">
+                <div class="skill-card__number">03</div>
+                <div class="skill-card__icon-wrapper">
+                    <svg class="icon skill-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#brain-icon"></use></svg>
+                </div>
+                <header class="skill-card__header">
+                    <h3 class="skill-card__title">Problem Solving</h3>
+                </header>
+                <p class="skill-card__description">
+                    Kemampuan analisis dan pemecahan masalah secara sistematis. 
+                    Terbiasa memecah masalah kompleks menjadi bagian-bagian kecil, 
+                    mengidentifikasi akar masalah, dan menyusun solusi logis.
+                </p>
+                <a href="#" class="skill-card__link btn btn--ghost">
+                    Baca Lebih
+                    <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#arrow-right-icon"></use></svg>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <section class="tech-stack-section" id="tech-stack-section" aria-labelledby="tech-stack-title">
+        <header class="section-header">
+            <h2 id="tech-stack-title" class="section-header__title">Tech Stack</h2>
+            <div class="section-header__divider"></div>
+        </header>
+        <div class="chip-group" role="list" aria-label="Teknologi yang digunakan">
+            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#html-icon"></use></svg> HTML</span>
+            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#css-icon"></use></svg> CSS</span>
+            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#js-icon"></use></svg> JavaScript</span>
+            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#git-icon"></use></svg> Git</span>
+            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#github-icon"></use></svg> GitHub</span>
+            <span class="chip" role="listitem">Responsive Design</span>
+            <span class="chip" role="listitem">Layouting</span>
+            <span class="chip" role="listitem">UI/UX Design</span>
+            <span class="chip" role="listitem">Linux</span>
+            <span class="chip" role="listitem">VS Code</span>
+        </div>
+    </section>
+
+    <section class="tools-section" id="tools-section" aria-labelledby="tools-title">
+        <header class="section-header">
+            <h2 id="tools-title" class="section-header__title">Tools</h2>
+            <div class="section-header__divider"></div>
+        </header>
+        <div class="tool-categories">
+            <article class="tool-category">
+                <header class="tool-category__header">
+                    <svg class="icon tool-category__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#code-icon"></use></svg>
+                    <h3 class="tool-category__title">Development</h3>
+                </header>
+                <ul class="tool-category__list" role="list">
+                    <li class="tool-category__item" role="listitem">
+                        <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#vscode-icon"></use></svg>
+                        VS Code
+                    </li>
+                    <li class="tool-category__item" role="listitem">
+                        <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#linux-icon"></use></svg>
+                        Linux
+                    </li>
+                    <li class="tool-category__item" role="listitem">
+                        <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#git-icon"></use></svg>
+                        Git
+                    </li>
+                </ul>
+            </article>
+
+            <article class="tool-category">
+                <header class="tool-category__header">
+                    <svg class="icon tool-category__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#penpot-icon"></use></svg>
+                    <h3 class="tool-category__title">Design</h3>
+                </header>
+                <ul class="tool-category__list" role="list">
+                    <li class="tool-category__item" role="listitem">
+                        <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#penpot-icon"></use></svg>
+                        Penpot
+                    </li>
+                </ul>
+            </article>
+
+            <article class="tool-category">
+                <header class="tool-category__header">
+                    <svg class="icon tool-category__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#zap-icon"></use></svg>
+                    <h3 class="tool-category__title">AI Tools</h3>
+                </header>
+                <ul class="tool-category__list" role="list">
+                    <li class="tool-category__item" role="listitem">
+                        <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#opencode-icon"></use></svg>
+                        OpenCode
+                    </li>
+                    <li class="tool-category__item" role="listitem">
+                        <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#codex-icon"></use></svg>
+                        Codex
+                    </li>
+                    <li class="tool-category__item" role="listitem">
+                        <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#aider-icon"></use></svg>
+                        Aider
+                    </li>
+                    <li class="tool-category__item" role="listitem">
+                        <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#chatgpt-icon"></use></svg>
+                        ChatGPT
+                    </li>
+                    <li class="tool-category__item" role="listitem">
+                        <svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#gemini-icon"></use></svg>
+                        Gemini CLI
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="learning-section" id="learning-section" aria-labelledby="learning-title">
+        <header class="section-header">
+            <h2 id="learning-title" class="section-header__title">Yang Sedang Dipelajari</h2>
+            <div class="section-header__divider"></div>
+        </header>
+        <div class="learning-grid">
+            <article class="learning-card">
+                <div class="learning-card__icon-wrapper">
+                    <svg class="icon learning-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#js-icon"></use></svg>
+                </div>
+                <h3 class="learning-card__title">JavaScript (Advanced)</h3>
+                <p class="learning-card__description">Menguasai konsep lanjutan, async patterns, dan ekosistem modern</p>
+            </article>
+
+            <article class="learning-card">
+                <div class="learning-card__icon-wrapper">
+                    <svg class="icon learning-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#server-icon"></use></svg>
+                </div>
+                <h3 class="learning-card__title">Backend Development</h3>
+                <p class="learning-card__description">Node.js, API design, database, dan arsitektur server-side</p>
+            </article>
+
+            <article class="learning-card">
+                <div class="learning-card__icon-wrapper">
+                    <svg class="icon learning-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#zap-icon"></use></svg>
+                </div>
+                <h3 class="learning-card__title">AI Automation</h3>
+                <p class="learning-card__description">Integrasi LLM, agent workflows, dan otomasi pengembangan</p>
+            </article>
+
+            <article class="learning-card">
+                <div class="learning-card__icon-wrapper">
+                    <svg class="icon learning-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#palette-icon"></use></svg>
+                </div>
+                <h3 class="learning-card__title">UI/UX Design</h3>
+                <p class="learning-card__description">Design system, prototyping, dan user research methodology</p>
+            </article>
+        </div>
+    </section>
+</main>

@@ -42,4 +42,21 @@
     --space-padding-sm: clamp(15px, 3vw, 45px);
     --space-gap-sm: clamp(10px, 2vw, 20px);
     --space-gap-md: clamp(15px, 4vw, 70px);
+
+    /* spacing tokens */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+    --space-5xl: 8rem;
+
+    /* container */
+    --container-max: 1200px;
+    --container-padding-desktop: 4rem;
+    --container-padding-tablet: 2.5rem;
+    --container-padding-mobile: 1.5rem;
 }
