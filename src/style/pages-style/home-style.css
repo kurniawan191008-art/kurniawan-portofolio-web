@@ -1,26 +1,23 @@
 .home-content {
     overflow: scroll;
+    overflow-x: hidden;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     font: var(--editor-content-font);
     color: var(--primary-text-color);
-    /* overflow: auto; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     gap: 10rem;
     align-items: center;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    /* border: 1px solid red; */
-    /* z-index: 1000; */
 }
 
 .home-hero,
 .about-web {
-    position: relative; /* KUNCI 1: Biar pohon ga kabur dari kotak ini */
-    overflow: hidden;   /* KUNCI 2: Biar akar pohon ga nembus ke section bawah */
+    position: relative;
+    overflow: hidden;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,13 +27,11 @@
     min-height: 100%;
 }
 
-
 .home-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
-
 }
 
 .grtng-layout {
@@ -52,26 +47,24 @@
     text-align: center;
     padding-top: 0;
     height: 5.5rem;
-    width: 25rem;
+    width: min(25rem, 90vw);
     background-color: var(--primary-heading-color);
-    font-size: 4.9rem;
+    font-size: clamp(2rem, 5vw, 4.9rem);
     font-weight: 800;
     font-family: 'jetbrains mono', monospace;
     color: var(--primary-bg-color);
-
     line-height: 1.2;
     box-shadow: 7px 7px var(--primary-text-color);
 }
 
 .greeting.datang {
-    font-size: 6.9rem;
+    font-size: clamp(2.5rem, 7vw, 6.9rem);
     color: var(--primary-heading-color);
     line-height: 1.2;
-
 }
 
 .subtitle {
-    font-size: 2rem;
+    font-size: clamp(1rem, 2.5vw, 2rem);
     font-weight: 900;
     font-family: 'jetbrains mono', monospace;
     color: var(--primary-heading-color);
@@ -80,7 +73,7 @@
 }
 
 .site-desc {
-    font-size: 1.15rem;
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
     line-height: 1.7;
     color: var(--primary-text-color);
     opacity: 0.9;
@@ -118,10 +111,9 @@
     transform: scale(1.07);
 }
 
-
 .about-section {
-    position: relative; /* KUNCI 3: Syarat mutlak biar z-index berfungsi */
-    z-index: 10;        /* KUNCI 4: Paksa teks & tombol maju paling depan! */
+    position: relative;
+    z-index: 10;
     box-sizing: border-box;
     min-height: 100%;
     width: 80%;
@@ -131,8 +123,9 @@
     justify-content: center;
     gap: 1rem;
 }
+
 .digital-garden {
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 6vw, 6rem);
     display: flex;
     flex-direction: column;
 }
@@ -156,7 +149,6 @@
 .description-garden {
     font-size: 1rem;
     color: var(--tertiary-text-color);
-
 }
 
 .closing {
@@ -168,94 +160,9 @@
     box-sizing: border-box;
     min-height: 100%;
     border: 1px solid;
-    /* text-align: center; */
 }
 
 .mari-berkolaborasi {
-    font-size: 4.8rem;
+    font-size: clamp(1.8rem, 5vw, 4.8rem);
     color: var(--primary-heading-color);
-    /* letter-spacing: 1px; */
 }
-
-
-/* .scroll-indicator {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin-top: 60px;
-    margin-left: 45px;
-    text-decoration: none;
-    color: var(--primary-border-color);
-    transition: color 0.3s ease;
-    animation: bounce 2s infinite;
-    align-self: flex-start;
-}
-
-.scroll-indicator:hover {
-    color: var(--secondary-heading-color);
-}
-
-.scroll-text {
-    font-size: 0.95rem;
-    font-family: 'jetbrains mono', monospace;
-    opacity: 0.8;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-8px); }
-    60% { transform: translateY(-4px); }
-}
-
-
-.read-more-section {
-    max-width: 800px;
-    width: 100%;
-    margin-top: 100px;
-    padding-bottom: 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin-left: 45px;
-}
-
-.info-block {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.info-title {
-    font-size: 1.6rem;
-    color: var(--secondary-heading-color);
-    font-family: 'jetbrains mono', monospace;
-    font-weight: 700;
-}
-
-.info-desc {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: var(--primary-text-color);
-    opacity: 0.9;
-}
-
-.tech-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.tech-list li {
-    font-size: 1.15rem;
-    color: var(--primary-text-color);
-    opacity: 0.9;
-}
-
-.tech-bracket {
-    color: var(--primary-heading-color);
-    font-weight: bold;
-}  */

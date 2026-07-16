@@ -43,7 +43,6 @@
     border-radius: 6px;
 }
 
-/* Hide image if src is empty or not set to avoid broken image icon */
 .error-image[src=""], .error-image:not([src]) {
     display: none;
 }
@@ -90,4 +89,3 @@
     box-shadow: 0 0 15px rgba(254, 128, 25, 0.3);
     transform: translateY(-2px);
 }
-

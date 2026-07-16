@@ -11,28 +11,43 @@ export function initNavigation() {
         });
     }
 
-    document.addEventListener("click", (event) => {
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.getElementById("sidebar");
 
-        // 1. Handle link untuk pindah halaman SPA (Router)
+    if (hamburger && sidebar) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            sidebar.classList.toggle("show");
+        });
+
+        sidebar.querySelectorAll("a[data-page]").forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                sidebar.classList.remove("show");
+            });
+        });
+    }
+
+    document.addEventListener("click", (event) => {
+        if (sidebar && sidebar.classList.contains("show") && !sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+            hamburger.classList.remove("active");
+            sidebar.classList.remove("show");
+        }
+
         const pageLink = event.target.closest("[data-page]");
         if (pageLink) {
             event.preventDefault();
             navigate(pageLink.dataset.page);
-            return; // Berhenti di sini, jangan lanjut ke bawah
+            return;
         }
 
-        // 2. Handle link untuk dropdown / scroll section (Anchor / Hashtag)
         const anchorLink = event.target.closest('a[href^="#"]');
         if (anchorLink) {
-            event.preventDefault(); // Nahan URL biar nggak berubah ditambahin #
-            
-            // Ambil ID target (misal "#about-web" jadi "about-web")
+            event.preventDefault();
             const targetId = anchorLink.getAttribute("href").substring(1);
-            
-            if (targetId) { // Pastikan href nya nggak cuma "#" kosong
+            if (targetId) {
                 const targetElement = document.getElementById(targetId);
                 if (targetElement) {
-                    // Scroll mulus ke target elemennya
                     targetElement.scrollIntoView({ behavior: "smooth" });
                 }
             }

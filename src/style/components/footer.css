@@ -5,9 +5,7 @@
     align-items: center;
     gap: 70px;
     padding: 0 45px 0 45px;
-    /* border-top: 1px solid; */
     border-top: 1px var(--primary-border-color) solid;
-    /* border-radius: 0 0 10px 10px; */
 }
 
 .social-links {
@@ -17,7 +15,6 @@
     align-items: center;
     gap: 15px;
     padding: 10px 0 10px 0;
-
 }
 
 .social-icon {
@@ -27,11 +24,9 @@
     align-items: center;
     width: 40px;
     height: 40px;
-
     color: var(--primary-text-color);
-
-    /* border: 1px solid cyan; */
 }
+
 .copyright, .powered {
     display: flex;
     flex-direction: row;
@@ -41,4 +36,3 @@
     color: var(--primary-text-color);
     font-size: .9rem;
 }
-

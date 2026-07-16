@@ -1,0 +1,468 @@
+/* ===========================
+   GLOBAL / ROOT
+   =========================== */
+@media (max-width: 1024px) {
+    :root {
+        --container-padding-desktop: 2.5rem;
+        --space-4xl: 4rem;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --container-padding-desktop: 1.5rem;
+        --space-4xl: 3rem;
+        --space-5xl: 5rem;
+    }
+
+    body {
+        align-items: stretch;
+        overflow-x: hidden;
+    }
+
+    .main-parent {
+        overflow-x: hidden;
+    }
+}
+
+/* ===========================
+   LAYOUT
+   =========================== */
+@media (max-width: 1024px) {
+    .main-parent {
+        grid-template-columns: 80px 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-parent {
+        grid-template-columns: 1fr;
+        height: 100dvh;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100dvh;
+        z-index: 300;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        border-right: 2px var(--primary-border-color) solid;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+@media (max-width: 1024px) {
+    .header-name p {
+        display: none;
+    }
+
+    .header-name {
+        padding-left: 10px;
+    }
+
+    .three-dots {
+        margin-right: 10px;
+    }
+
+    .green, .red, .blue {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .header-name {
+        padding-left: 10px;
+    }
+
+    .header-icon {
+        height: 28px;
+        width: 28px;
+    }
+
+    .header-name p {
+        display: none;
+    }
+
+    .green, .red, .blue {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+/* ===========================
+   SIDEBAR
+   =========================== */
+@media (max-width: 1024px) {
+    .sidebar .profile {
+        padding: 30px 0;
+    }
+
+    .profile img {
+        width: 50px;
+        height: 50px;
+        margin: 0 0 0 15px;
+    }
+
+    .profile .name-n-bio {
+        display: none;
+    }
+
+    .explorer {
+        padding: 15px 0 0 0;
+        text-align: center;
+        font-size: 0.65rem;
+        margin: 15px 0 5px 0;
+    }
+
+    .nav-bar {
+        padding: 15px 0 0 0;
+        align-items: center;
+    }
+
+    .nav-bar a {
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .folder-btn {
+        padding: 10px 0;
+        justify-content: center;
+    }
+
+    .folder-btn span,
+    .menu-item a span {
+        display: none;
+    }
+
+    .project-category a {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar .profile {
+        padding: 40px 20px;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .profile img {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
+
+    .profile .name-n-bio {
+        display: flex;
+    }
+
+    .profile .name-n-bio h1 {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+
+    .profile .name-n-bio p {
+        margin-left: 0;
+        font-size: 0.75rem;
+    }
+
+    .explorer {
+        text-align: left;
+        padding: 0 0 0 20px;
+        font-size: 0.8rem;
+        margin: 20px 0 10px 0;
+    }
+
+    .nav-bar {
+        padding: 15px 0 0 0;
+        align-items: stretch;
+    }
+
+    .nav-bar a {
+        padding: 12px 20px;
+        justify-content: flex-start;
+    }
+
+    .folder-btn {
+        padding: 12px 20px;
+        justify-content: flex-start;
+    }
+
+    .folder-btn span,
+    .menu-item a span {
+        display: inline;
+    }
+
+    .folder-btn .chevron {
+        display: none;
+    }
+
+    .project-category a {
+        padding-left: 50px;
+    }
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+@media (max-width: 1024px) {
+    .footer {
+        gap: 30px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .copyright, .powered {
+        font-size: 0.75rem;
+    }
+}
+
+/* ===========================
+   HOME PAGE
+   =========================== */
+@media (max-width: 1024px) {
+    .home-content {
+        gap: 5rem;
+    }
+
+    .greeting.selamat {
+        width: auto;
+        max-width: 25rem;
+        height: auto;
+        padding: 5px 15px;
+    }
+
+    .site-desc {
+        margin-left: 20px;
+    }
+
+    .about-section,
+    .closing {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-content {
+        gap: 3rem;
+        padding: 0 15px;
+        overflow-x: hidden;
+    }
+
+    .grtng-layout {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .greeting.selamat {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        padding: 8px 12px;
+        font-size: 1.8rem;
+        box-shadow: 4px 4px var(--primary-text-color);
+    }
+
+    .greeting.datang {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .site-desc {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .home-title {
+        width: 95%;
+    }
+
+    .about-section,
+    .closing {
+        width: 95%;
+        min-height: auto;
+        padding: 20px 0;
+    }
+
+    .digital-garden {
+        font-size: 2rem;
+    }
+
+    .mari-berkolaborasi {
+        font-size: 1.6rem;
+    }
+
+    .sub-heading-garden {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===========================
+   ABOUT PAGE
+   =========================== */
+@media (max-width: 1024px) {
+    .about-page {
+        padding: var(--space-4xl) var(--container-padding-tablet);
+    }
+
+    .profile-hero {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+        text-align: center;
+    }
+
+    .profile-hero__visual {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-hero__photo-wrapper {
+        width: 240px;
+        height: 280px;
+    }
+
+    .profile-hero__content {
+        max-width: 100%;
+    }
+
+    .profile-hero__meta {
+        justify-content: center;
+    }
+
+    .profile-hero__cta {
+        justify-content: center;
+    }
+
+    .interest-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hobby-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-page {
+        padding: var(--space-4xl) var(--container-padding-mobile);
+        padding-bottom: var(--space-4xl);
+    }
+
+    .section-header__title {
+        font-size: 1.75rem;
+    }
+
+    .profile-hero {
+        gap: var(--space-xl);
+        margin-bottom: var(--space-4xl);
+        padding-bottom: var(--space-3xl);
+    }
+
+    .profile-hero__name {
+        font-size: 2.2rem;
+    }
+
+    .profile-hero__photo-wrapper {
+        width: 200px;
+        height: 240px;
+    }
+
+    .profile-hero__cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .profile-hero__cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .interest-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-list {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.9rem;
+    }
+}
+
+/* ===========================
+   ERROR PAGE
+   =========================== */
+@media (max-width: 767px) {
+    .error-content {
+        padding: 30px 15px;
+    }
+
+    .error-container {
+        padding: 25px 20px;
+    }
+
+    .error-title {
+        font-size: 1.6rem;
+    }
+
+    .error-desc {
+        font-size: 0.9rem;
+    }
+
+    .btn-home {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
