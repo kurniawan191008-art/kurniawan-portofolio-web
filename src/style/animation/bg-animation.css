@@ -6,7 +6,7 @@
     background-image: 
         linear-gradient(#a3a31f41, transparent 1px),
         linear-gradient(90deg, #98981a3d, transparent 1px);
-    background-size: 40px 40px; 
+    background-size: 50px 50px; 
     
     overflow: hidden;
     isolation: isolate; 
@@ -17,15 +17,15 @@
 /* --- CLASS UNTUK KOTAK JEJAK (DI-INJECT VIA JS) --- */
 .grid-trail-box {
     position: absolute;
-    width: 39px; 
-    height: 39px;
+    width: 49px; 
+    height: 49px;
     background-color: var(--neo-pink); 
     
     z-index: -1;
     pointer-events: none;
     
     /* Jalankan animasi fadeOut selama 0.6 detik */
-    animation: fadeOutBox 0.6s ease-out forwards;
+    animation: fadeOutBox 0.9s ease-out forwards;
 }
 
 /* Animasi memudar dan sedikit menyusut */

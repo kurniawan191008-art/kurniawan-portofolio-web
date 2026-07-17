@@ -72,6 +72,7 @@
     font-family: 'jetbrains mono', monospace;
     color: var(--neo-black);
     background: var(--neo-white);
+    scroll-behavior: smooth;
 }
 
 @media (max-width: 1024px) {
@@ -283,6 +284,7 @@
 /* ===== PROFILE INFO SECTION ===== */
 .profile-section {
     margin-bottom: var(--space-5xl);
+    height: 100%;
 }
 
 .profile-info {

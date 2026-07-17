@@ -3,7 +3,7 @@
 export function initGlow() {
     let lastClientX = 0;
     let lastClientY = 0;
-    const gridSize = 40; 
+    const gridSize = 50; 
     
     // Variabel buat nyimpen kotak mana yang terakhir dilewatin
     let lastBoxX = null;
