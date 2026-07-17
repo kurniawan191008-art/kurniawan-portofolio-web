@@ -67,7 +67,7 @@
     height: 100%;
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 20px 20px 0px 20px;
+    padding: 0px 20px 50px 40px;
     /* padding: var(--space-5xl) var(--container-padding-desktop); */
     font-family: 'jetbrains mono', monospace;
     color: var(--neo-black);
@@ -120,7 +120,7 @@
 
 /* ===== ICONS ===== */
 
-.icon--xs { width: 14px; height: 14px; }
+.icon--xs { width: 24px; height: 24px; }
 .icon--sm { width: 18px; height: 18px; }
 .icon--md { width: 22px; height: 22px; }
 .icon--lg { width: 28px; height: 28px; }
@@ -136,7 +136,7 @@
     margin-bottom: var(--space-5xl);
     padding-bottom: var(--space-4xl);
     border-bottom: var(--neo-border-thick);
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .profile-hero__visual {
@@ -167,7 +167,7 @@
 }
 
 .profile-hero__content {
-    max-width: 60ch;
+    max-width: 66ch;
 }
 
 .profile-hero__name {
