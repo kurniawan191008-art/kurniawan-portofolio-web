@@ -1,9 +1,8 @@
-.header{
-    border-bottom: 2px var(--primary-border-color) solid;
-    /* border-radius: 10px 10px 0 0; */
+.header {
+    border-bottom: var(--neo-border-thick);
 }
 
-.header-name{
+.header-name {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -11,38 +10,44 @@
     gap: 5px;
     padding-left: 45px;
 }
-.header p{
+
+.header p {
     font: var(--heading-font);
-    color: var(--primary-heading-color);
+    color: var(--neo-black);
+    background: var(--neo-white);
+    padding: 2px 10px;
+    border: var(--neo-border);
 }
-.header-icon{
+
+.header-icon {
     height: 35px;
     width: 35px;
-    color: var(--primary-heading-color);
+    color: var(--neo-black);
 }
+
 .green,
 .red,
 .blue {
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    height: 26px;
+    width: 26px;
+    border: 2px solid var(--neo-black);
 }
 
 .green {
-    background-color: rgb(0, 255, 0);
+    background-color: var(--neo-green);
 }
 
 .red {
-    background-color: rgb(255, 0, 0);
+    background-color: var(--neo-red);
 }
 
 .blue {
-    background-color: rgb(0, 247, 255);
+    background-color: var(--neo-blue);
 }
 
 .three-dots {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 6px;
     margin-right: 45px;
 }

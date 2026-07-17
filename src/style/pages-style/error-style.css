@@ -4,7 +4,7 @@
     box-sizing: border-box;
     padding: 60px 80px;
     font: var(--editor-content-font);
-    color: var(--primary-bg-color);
+    color: var(--neo-black);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,14 +16,14 @@
     gap: 25px;
     max-width: 600px;
     width: 100%;
-    background-color: var(--primary-bg-color);
-    border-radius: 8px;
+    background-color: var(--neo-white);
+    border: var(--neo-border-thick);
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--neo-shadow-lg);
 }
 
 .code-error {
-    color: #fb4934;
+    color: var(--neo-red);
     font-style: italic;
 }
 
@@ -40,10 +40,9 @@
     max-width: 100%;
     max-height: 200px;
     object-fit: contain;
-    border-radius: 6px;
+    border: var(--neo-border);
 }
 
-/* Hide image if src is empty or not set to avoid broken image icon */
 .error-image[src=""], .error-image:not([src]) {
     display: none;
 }
@@ -52,15 +51,19 @@
     font-size: 2.2rem;
     font-weight: 700;
     font-family: 'jetbrains mono', monospace;
-    color: var(--primary-heading-color);
+    color: var(--neo-black);
     line-height: 1.2;
+    background: var(--neo-red);
+    padding: 4px 16px;
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow-sm);
 }
 
 .error-desc {
     font-size: 1.05rem;
     line-height: 1.6;
-    color: var(--primary-text-color);
-    opacity: 0.9;
+    color: var(--neo-black);
+    font-weight: 600;
 }
 
 .error-actions {
@@ -76,18 +79,14 @@
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 6px;
-    background-color: var(--primary-heading-color);
-    color: var(--secondary-bg-color) !important;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid transparent;
+    background-color: var(--neo-orange);
+    color: var(--neo-white) !important;
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow);
+    transition: all 0.15s ease;
 }
 
 .btn-home:hover {
-    background-color: transparent;
-    border-color: var(--primary-heading-color);
-    color: var(--primary-heading-color) !important;
-    box-shadow: 0 0 15px rgba(254, 128, 25, 0.3);
-    transform: translateY(-2px);
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--neo-black);
 }
-

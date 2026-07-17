@@ -1,42 +1,41 @@
-
+/* Container utama tetep sama persis */
 .grid-glow-container {
     position: relative;
-    background-color: #fbf1c7; /* Background pastel orange */
+    background-color: #fbf1c7; 
     
-    /* Layer 1: Grid Default (Redup) */
     background-image: 
-        linear-gradient(#98971a, transparent 1px),
-        linear-gradient(90deg, #98971a, transparent 1px);
-    background-size: 40px 40px;
+        linear-gradient(#a3a31f41, transparent 1px),
+        linear-gradient(90deg, #98981a3d, transparent 1px);
+    background-size: 50px 50px; 
     
     overflow: hidden;
-    isolation: isolate;
+    isolation: isolate; 
 }
 
-/* Layer 2: Grid Terang (Glow) */
-.grid-glow-container::before {
-    content: "";
+/* HAPUS .grid-glow-container::before yang lama */
+
+/* --- CLASS UNTUK KOTAK JEJAK (DI-INJECT VIA JS) --- */
+.grid-trail-box {
     position: absolute;
-    inset: 0;
+    width: 49px; 
+    height: 49px;
+    background-color: var(--neo-pink); 
+    
     z-index: -1;
     pointer-events: none;
-
-    /* Grid Terangnya */
-    background-image: 
-        linear-gradient(rgba(255, 140, 0, 0.952) 1px, transparent 15px),
-        linear-gradient(90deg, rgba(255, 140, 0, 0.9) 1px, transparent 15px);
-    background-size: 40px 40px;
-
-    /* Masking Bulat Mengikuti Kursor */
-    -webkit-mask-image: radial-gradient(450px circle at var(--x, 100%) var(--y, 100%), black, transparent);
-    mask-image: radial-gradient(450px circle at var(--x, 100%) var(--y, 100%), black, transparent);
-
-    /* KUNCI: Sembunyikan secara default */
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    
+    /* Jalankan animasi fadeOut selama 0.6 detik */
+    animation: fadeOutBox 0.9s ease-out forwards;
 }
 
-/* KUNCI: Cuma muncul kalau container ini di-hover */
-.grid-glow-container:hover::before {
-    opacity: 1;
+/* Animasi memudar dan sedikit menyusut */
+@keyframes fadeOutBox {
+    0% { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: scale(0.8); /* Menyusut dikit biar smooth */
+    }
 }

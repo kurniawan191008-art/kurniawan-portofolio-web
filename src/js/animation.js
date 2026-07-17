@@ -1,42 +1,70 @@
 // File: js/animation.js
 
 export function initGlow() {
-    // 1. Simpan koordinat kursor terakhir secara global di dalam modul ini
     let lastClientX = 0;
     let lastClientY = 0;
+    const gridSize = 50; 
+    
+    // Variabel buat nyimpen kotak mana yang terakhir dilewatin
+    let lastBoxX = null;
+    let lastBoxY = null;
 
-    // 2. Bikin fungsi terpisah untuk menghitung dan update posisi glow
+    // Fungsi buat nyiptain dan ngehapus kotak jejak
+    const createTrailBox = (container, x, y) => {
+        const box = document.createElement('div');
+        box.className = 'grid-trail-box';
+        
+        // +1px biar warnanya pas di dalam garis kotak
+        box.style.left = `${x + 1}px`;
+        box.style.top = `${y + 1}px`;
+        
+        container.appendChild(box);
+
+        // Hapus elemen dari DOM setelah 600ms (sesuai durasi animasi CSS)
+        // Biar nggak menuhin memori (Anti nge-lag)
+        setTimeout(() => {
+            box.remove();
+        }, 600); 
+    };
+
     const updateGlowPosition = (clientX, clientY) => {
-        // Cari elemen yang tepat berada di bawah koordinat kursor saat ini
         const elementAtPoint = document.elementFromPoint(clientX, clientY);
         if (!elementAtPoint) return;
 
-        // Cek apakah elemen tersebut atau parent-nya punya class grid-glow-container
         const target = elementAtPoint.closest('.grid-glow-container');
-        if (!target) return;
+        if (!target) {
+            // Kalau kursor keluar dari container, reset lastBox
+            lastBoxX = null;
+            lastBoxY = null;
+            return;
+        }
 
-        // Hitung ulang posisi kursor relatif terhadap elemen setelah di-scroll
         const rect = target.getBoundingClientRect();
         const x = clientX - rect.left;
         const y = clientY - rect.top;
 
-        // Tembak variabel CSS terbarunya
-        target.style.setProperty('--x', `${x}px`);
-        target.style.setProperty('--y', `${y}px`);
+        // Bikin koordinatnya nge-snap (nempel) ke ukuran kotak grid
+        const boxX = Math.floor(x / gridSize) * gridSize;
+        const boxY = Math.floor(y / gridSize) * gridSize;
+
+        // CUMA bikin elemen kotak baru KALAU kursor pindah ke kotak yang beda
+        if (boxX !== lastBoxX || boxY !== lastBoxY) {
+            createTrailBox(target, boxX, boxY);
+            
+            // Update kotak terakhir ke kotak yang baru ini
+            lastBoxX = boxX;
+            lastBoxY = boxY;
+        }
     };
 
-    // 3. Jalankan fungsi saat kursor bergerak (seperti biasa)
+    // Event listener pergerakan kursor
     document.addEventListener('mousemove', (e) => {
-        // Rekam posisi kursor terbaru setiap kali bergerak
         lastClientX = e.clientX;
         lastClientY = e.clientY;
-        
         updateGlowPosition(lastClientX, lastClientY);
     });
 
-    // 4. TAMBAHAN BARU: Jalankan juga fungsi saat halaman di-scroll
-    // 'capture: true' digunakan agar mendeteksi scroll di container mana pun di dalam SPA
-    // 'passive: true' digunakan agar performa scroll tetap mulus tanpa delay
+    // Event listener waktu scroll
     document.addEventListener('scroll', () => {
         updateGlowPosition(lastClientX, lastClientY);
     }, { capture: true, passive: true });

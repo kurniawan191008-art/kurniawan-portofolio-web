@@ -59,4 +59,21 @@
     --container-padding-desktop: 4rem;
     --container-padding-tablet: 2.5rem;
     --container-padding-mobile: 1.5rem;
+
+    /* neobrutalism */
+    --neo-black: #282828;
+    --neo-white: #f9f5d7;
+    --neo-yellow: #d79921;
+    --neo-blue: #458588;
+    --neo-pink: #b16286;
+    --neo-green: #689d6a;
+    --neo-orange: #d65d0e;
+    --neo-purple: #8f3f71;
+    --neo-red: #cc241d;
+
+    --neo-border: 3px solid var(--neo-black);
+    --neo-border-thick: 4px solid var(--neo-black);
+    --neo-shadow: 5px 5px 0px var(--neo-black);
+    --neo-shadow-sm: 3px 3px 0px var(--neo-black);
+    --neo-shadow-lg: 7px 7px 0px var(--neo-black);
 }

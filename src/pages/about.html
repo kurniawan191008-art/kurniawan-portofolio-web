@@ -1,8 +1,9 @@
 <main class="about-page" id="about-page">
     <section class="profile-hero" id="profile-hero" aria-labelledby="profile-title">
         <div class="profile-hero__visual">
-            <div class="profile-hero__photo-wrapper">
-                <img class="profile-hero__photo" src="/assets/image/1783701079450.png" alt="Foto profil Kurniawan" loading="eager">
+            <div class="profile-hero__photo-wrapper grid-glow-container">
+                <img class="profile-hero__photo" src="/src/assets/image/hero-image-removebg-preview.png"
+                    alt="Foto profil Kurniawan" loading="eager">
                 <div class="profile-hero__accent-border"></div>
             </div>
         </div>
@@ -13,162 +14,109 @@
             </header>
             <div class="profile-hero__meta">
                 <div class="profile-hero__location">
-                    <span>Bandung, Indonesia</span>
+                    <span>Subang, Indonesia</span>
                 </div>
             </div>
             <p class="profile-hero__description">
-                Siswa TKJ yang suka bermain dengan kode & jaringan. Suasana belajar di Linux, suka debugging routing,
-                dan belajar UI/UX di sela-sela praktek jaringan.
+                Awalnya saya cuma iseng colok kabel UTP di lab jaringan. Sekarang?
+                Ketagihan debug routing jam 3 pagi dan ngeces layout CSS sambil dengerin lo-fi.
+                Percaya atau tidak, setiap network error punya cerita — dan saya suka jadi orang yang menemukan cerita
+                itu.
             </p>
             <div class="profile-hero__cta">
                 <a href="#" data-page="overview" class="btn btn--primary">GitHub</a>
-                <a href="mailto:kurniawan@example.com" class="btn btn--secondary">Email</a>
+                <a href="mailto:kurniawan191008v2@gmail.com" class="btn btn--secondary">Email</a>
             </div>
         </div>
     </section>
 
-    <section class="skill-section" id="skill-section" aria-labelledby="skill-title">
+    <section class="profile-section" id="profile-section" aria-labelledby="profile-title">
         <header class="section-header">
-            <h2 id="skill-title" class="section-header__title">Skill</h2>
+            <h2 id="profile-title" class="section-header__title">Profil</h2>
             <div class="section-header__divider"></div>
         </header>
-        <div class="skill-grid" role="list">
-            <article class="skill-card" role="listitem">
-                <div class="skill-card__number">01</div>
-                <header class="skill-card__header">
-                    <svg class="icon skill-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#code-icon"></use></svg>
-                    <h3 class="skill-card__title">Front-end Development</h3>
-                </header>
-                <ul class="skill-card__list" role="list">
-                    <li class="skill-card__item">Basic UI/UX Design</li>
-                    <li class="skill-card__item">Layouting</li>
-                    <li class="skill-card__item">Responsive Design</li>
-                    <li class="skill-card__item">HTML</li>
-                    <li class="skill-card__item">CSS</li>
-                    <li class="skill-card__item">JavaScript</li>
-                </ul>
-                <a href="#" data-page="project" class="skill-card__link btn btn--ghost">Lihat Proyek</a>
-            </article>
-
-            <article class="skill-card" role="listitem">
-                <div class="skill-card__number">02</div>
-                <header class="skill-card__header">
-                    <svg class="icon skill-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#network-icon"></use></svg>
-                    <h3 class="skill-card__title">Network Engineering</h3>
-                </header>
-                <ul class="skill-card__list" role="list">
-                    <li class="skill-card__item">Addressing</li>
-                    <li class="skill-card__item">Subnetting</li>
-                    <li class="skill-card__item">Routing</li>
-                    <li class="skill-card__item">Switching</li>
-                    <li class="skill-card__item">Troubleshooting</li>
-                </ul>
-                <a href="#" data-page="overview" class="skill-card__link btn btn--ghost">Lihat Detail</a>
-            </article>
-
-            <article class="skill-card" role="listitem">
-                <div class="skill-card__number">03</div>
-                <header class="skill-card__header">
-                    <svg class="icon skill-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#terminal-icon"></use></svg>
-                    <h3 class="skill-card__title">Problem Solving</h3>
-                </header>
-                <p class="skill-card__description">
-                    Kemampuan analisis dan pemecahan masalah secara sistematis.
-                    Terbiasa memecah masalah kompleks menjadi bagian-bagian kecil,
-                    mengidentifikasi akar masalah, dan menyusun solusi logis.
-                </p>
-            </article>
+        <div class="profile-info">
+            <div class="profile-info__item">
+                <span class="profile-info__label">Nama</span>
+                <span class="profile-info__value">Kurniawan</span>
+            </div>
+            <div class="profile-info__item">
+                <span class="profile-info__label"> <svg class="icon icon--xs" aria-hidden="true">
+                        <use href="src/assets/icon/sprite.svg#location-icon"></use>
+                    </svg> Asal</span>
+                <span class="profile-info__value">
+                   
+                    Bandung, Indonesia
+                </span>
+            </div>
+            <div class="profile-info__item">
+                <span class="profile-info__label">Sekolah</span>
+                <span class="profile-info__value">SMK Jurusan Teknik Komputer dan Jaringan</span>
+            </div>
+            <div class="profile-info__item">
+                <span class="profile-info__label">Status</span>
+                <span class="profile-info__value">Siswa yang masih belajar, tapi sudah mulai berani bikin proyek
+                    sendiri</span>
+            </div>
         </div>
     </section>
 
-    <section class="tech-stack-section" id="tech-stack-section" aria-labelledby="tech-stack-title">
+    <section class="interest-section" id="interest-section" aria-labelledby="interest-title">
         <header class="section-header">
-            <h2 id="tech-stack-title" class="section-header__title">Tech Stack</h2>
+            <h2 id="interest-title" class="section-header__title">Minat</h2>
             <div class="section-header__divider"></div>
         </header>
-        <div class="chip-group" role="list" aria-label="Teknologi yang digunakan">
-            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#html-icon"></use></svg> HTML</span>
-            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#html-icon"></use></svg> CSS</span>
-            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#js-icon"></use></svg> JavaScript</span>
-            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#git-icon"></use></svg> Git</span>
-            <span class="chip" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#linux-icon"></use></svg> Linux</span>
-            <span class="chip" role="listitem">Cisco Package Tracer</span>
+        <div class="interest-list">
+            <div class="interest-card">
+                <h3 class="interest-card__title">Jaringan & Infrastruktur</h3>
+                <p class="interest-card__desc">Suka benerin yang orang lain anggap "udah fix broken"</p>
+            </div>
+            <div class="interest-card">
+                <h3 class="interest-card__title">Frontend Development</h3>
+                <p class="interest-card__desc">Bikin UI yang bikin orang bilang "wah, ini enak dilihat"</p>
+            </div>
+            <div class="interest-card">
+                <h3 class="interest-card__title">UI/UX Design</h3>
+                <p class="interest-card__desc">Karena kode yang bagus tanpa desain yang jelas itu seperti router tanpa
+                    konfigurasi</p>
+            </div>
         </div>
     </section>
 
-    <section class="tools-section" id="tools-section" aria-labelledby="tools-title">
+    <section class="hobby-section" id="hobby-section" aria-labelledby="hobby-title">
         <header class="section-header">
-            <h2 id="tools-title" class="section-header__title">Tools</h2>
+            <h2 id="hobby-title" class="section-header__title">Hobi</h2>
             <div class="section-header__divider"></div>
         </header>
-        <div class="tool-categories">
-            <article class="tool-category">
-                <header class="tool-category__header">
-                    <svg class="icon tool-category__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#code-icon"></use></svg>
-                    <h3 class="tool-category__title">Development</h3>
-                </header>
-                <ul class="tool-category__list" role="list">
-                    <li class="tool-category__item" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#vscode-icon"></use></svg> VS Code</li>
-                    <li class="tool-category__item" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#linux-icon"></use></svg> Linux</li>
-                    <li class="tool-category__item" role="listitem"><svg class="icon icon--xs" aria-hidden="true"><use href="/assets/icon/sprite.svg#git-icon"></use></svg> Git</li>
-                </ul>
-            </article>
-
-            <article class="tool-category">
-                <header class="tool-category__header">
-                    <svg class="icon tool-category__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#terminal-icon"></use></svg>
-                    <h3 class="tool-category__title">Design</h3>
-                </header>
-                <ul class="tool-category__list" role="list">
-                    <li class="tool-category__item" role="listitem">Penpot</li>
-                </ul>
-            </article>
-
-            <article class="tool-category">
-                <header class="tool-category__header">
-                    <svg class="icon tool-category__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#terminal-icon"></use></svg>
-                    <h3 class="tool-category__title">AI Tools</h3>
-                </header>
-                <ul class="tool-category__list" role="list">
-                    <li class="tool-category__item" role="listitem">OpenCode</li>
-                    <li class="tool-category__item" role="listitem">Codex</li>
-                    <li class="tool-category__item" role="listitem">Aider</li>
-                    <li class="tool-category__item" role="listitem">ChatGPT</li>
-                    <li class="tool-category__item" role="listitem">Gemini CLI</li>
-                </ul>
-            </article>
+        <div class="hobby-list">
+            <div class="hobby-card">
+                <h3 class="hobby-card__title">Main Game</h3>
+                <p class="hobby-card__desc">Kadang nge-game, kadang nge-code, kadang keduanya bareng</p>
+            </div>
+            <div class="hobby-card">
+                <h3 class="hobby-card__title">Dengerin Musik</h3>
+                <p class="hobby-card__desc">Lo-fi jadi soundtrack debugging wajib</p>
+            </div>
+            <div class="hobby-card">
+                <h3 class="hobby-card__title">Eksplor Distro Linux</h3>
+                <p class="hobby-card__desc">Collection udah kayak katalog Spotify</p>
+            </div>
         </div>
     </section>
 
-    <section class="learning-section" id="learning-section" aria-labelledby="learning-title">
+    <section class="aspiration-section" id="aspiration-section" aria-labelledby="aspiration-title">
         <header class="section-header">
-            <h2 id="learning-title" class="section-header__title">Yang Sedang Dipelajari</h2>
+            <h2 id="aspiration-title" class="section-header__title">Cita-cita</h2>
             <div class="section-header__divider"></div>
         </header>
-        <div class="learning-grid">
-            <article class="learning-card">
-                <svg class="icon learning-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#js-icon"></use></svg>
-                <h3 class="learning-card__title">JavaScript (Advanced)</h3>
-                <p class="learning-card__description">Menguasai konsep lanjutan, async patterns, dan ekosistem modern</p>
-            </article>
-
-            <article class="learning-card">
-                <svg class="icon learning-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#network-icon"></use></svg>
-                <h3 class="learning-card__title">Backend Development</h3>
-                <p class="learning-card__description">Node.js, API design, database, dan arsitektur server-side</p>
-            </article>
-
-            <article class="learning-card">
-                <svg class="icon learning-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#terminal-icon"></use></svg>
-                <h3 class="learning-card__title">AI Automation</h3>
-                <p class="learning-card__description">Integrasi LLM, agent workflows, dan otomasi pengembangan</p>
-            </article>
-
-            <article class="learning-card">
-                <svg class="icon learning-card__icon" aria-hidden="true"><use href="/assets/icon/sprite.svg#code-icon"></use></svg>
-                <h3 class="learning-card__title">UI/UX Design</h3>
-                <p class="learning-card__description">Design system, prototyping, dan user research methodology</p>
-            </article>
+        <div class="aspiration-content">
+            <p class="aspiration-text">
+                Mau jadi orang yang bisa bikin jaringan stabil & interface yang clean.
+                Gak cuma bisa troubleshoot, tapi juga bisa bikin sistem yang orang gak perlu troubleshoot.
+            </p>
+            <p class="aspiration-text aspiration-text--highlight">
+                Singkatnya: makin hari makin bisa, makin banyak yang bisa di-share.
+            </p>
         </div>
     </section>
 </main>
