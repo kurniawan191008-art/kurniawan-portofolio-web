@@ -338,6 +338,7 @@
 /* ===== INTEREST SECTION ===== */
 .interest-section {
     margin-bottom: var(--space-5xl);
+    height: 100%;
 }
 
 .interest-list {
@@ -392,6 +393,7 @@
 /* ===== HOBBY SECTION ===== */
 .hobby-section {
     margin-bottom: var(--space-5xl);
+    height: 100%;
 }
 
 .hobby-list {
@@ -447,6 +449,7 @@
 /* ===== ASPIRATION SECTION ===== */
 .aspiration-section {
     margin-bottom: var(--space-5xl);
+    height: 100%;
 }
 
 .aspiration-content {
