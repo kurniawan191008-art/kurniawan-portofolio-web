@@ -102,14 +102,11 @@
   display: block;
   padding: 10px 0 10px 90px;
   text-decoration: none;
-  /* border-bottom: 1px solid var(--primary-border-color); */
-  /* border-start-end-radius: ; */
 }
 
 .project-category a {
   padding-left: 145px;
   padding-right: 0;
-  /* background-color: #f0f0f0; */
 }
 
 .menu-item a {
