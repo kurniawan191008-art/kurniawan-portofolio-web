@@ -4,23 +4,19 @@
     height: 100%;
     box-sizing: border-box;
     font: var(--editor-content-font);
-    color: var(--primary-text-color);
-    /* overflow: auto; */
+    color: var(--neo-black);
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     gap: 10rem;
     align-items: center;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    /* border: 1px solid red; */
-    /* z-index: 1000; */
 }
 
 .home-hero,
 .about-web {
-    position: relative; /* KUNCI 1: Biar pohon ga kabur dari kotak ini */
-    overflow: hidden;   /* KUNCI 2: Biar akar pohon ga nembus ke section bawah */
+    position: relative;
+    overflow: hidden;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,13 +26,15 @@
     min-height: 100%;
 }
 
+.home-hero {
+    border-bottom: var(--neo-border-thick);
+}
 
 .home-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
-
 }
 
 .grtng-layout {
@@ -53,36 +51,38 @@
     padding-top: 0;
     height: 5.5rem;
     width: 25rem;
-    background-color: var(--primary-heading-color);
+    background-color: var(--neo-orange);
     font-size: 4.9rem;
     font-weight: 800;
     font-family: 'jetbrains mono', monospace;
-    color: var(--primary-bg-color);
-
+    color: var(--neo-white);
     line-height: 1.2;
-    box-shadow: 7px 7px var(--primary-text-color);
+    border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow-lg);
 }
 
 .greeting.datang {
     font-size: 6.9rem;
-    color: var(--primary-heading-color);
+    color: var(--neo-orange);
     line-height: 1.2;
-
 }
 
 .subtitle {
     font-size: 2rem;
     font-weight: 900;
     font-family: 'jetbrains mono', monospace;
-    color: var(--primary-heading-color);
+    color: var(--neo-black);
     line-height: .8;
     margin-bottom: 12px;
+    background: var(--neo-yellow);
+    padding: 2px 12px;
+    border: 2px solid var(--neo-black);
 }
 
 .site-desc {
     font-size: 1.15rem;
     line-height: 1.7;
-    color: var(--primary-text-color);
+    color: var(--neo-black);
     opacity: 0.9;
     max-width: 680px;
     margin-left: 45px;
@@ -103,25 +103,29 @@
     font-size: 1.05rem;
     font-weight: bold;
     text-decoration: none;
-    transition: all 0.25s ease-in-out;
-    backdrop-filter: blur(1.5px);
-    background-color: var(--tertiary-heading-color);
-    color: var(--primary-text-color) !important;
-    box-shadow: 3px 3px var(--primary-text-color);
+    transition: all 0.15s ease;
+    background-color: var(--neo-green);
+    color: var(--neo-black) !important;
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow);
 }
 
-.btn-about:hover {
-    transform: scale(1.07);
+.btn-about {
+    background-color: var(--neo-orange);
 }
 
-.btn-web:hover {
-    transform: scale(1.07);
+.btn-web {
+    background-color: var(--neo-yellow);
 }
 
+.cta-btn:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--neo-black);
+}
 
 .about-section {
-    position: relative; /* KUNCI 3: Syarat mutlak biar z-index berfungsi */
-    z-index: 10;        /* KUNCI 4: Paksa teks & tombol maju paling depan! */
+    position: relative;
+    z-index: 10;
     box-sizing: border-box;
     min-height: 100%;
     width: 80%;
@@ -131,6 +135,7 @@
     justify-content: center;
     gap: 1rem;
 }
+
 .digital-garden {
     font-size: 6rem;
     display: flex;
@@ -138,25 +143,34 @@
 }
 
 .garden {
-    color: var(--tertiary-heading-color);
+    color: var(--neo-black);
     line-height: .9;
+    background: var(--neo-green);
+    padding: 0 12px;
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow-sm);
 }
 
 .a-digital {
     line-height: .9;
-    color: var(--primary-heading-color);
+    color: var(--neo-orange);
 }
 
 .sub-heading-garden {
     font-weight: 600;
     font-size: 1.7rem;
-    color: var(--tertiary-text-color);
+    color: var(--neo-black);
+    background: var(--neo-blue);
+    padding: 4px 12px;
+    border: 2px solid var(--neo-black);
+    display: inline-block;
 }
 
 .description-garden {
     font-size: 1rem;
-    color: var(--tertiary-text-color);
-
+    font-weight: 600;
+    color: var(--neo-black);
+    line-height: 1.7;
 }
 
 .closing {
@@ -167,14 +181,19 @@
     width: 80%;
     box-sizing: border-box;
     min-height: 100%;
-    border: 1px solid;
-    /* text-align: center; */
+    /* border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow-lg); */
+    padding: 2rem;
 }
 
 .mari-berkolaborasi {
     font-size: 4.8rem;
-    color: var(--primary-heading-color);
-    /* letter-spacing: 1px; */
+    color: var(--neo-black);
+    background: var(--neo-yellow);
+    padding: 4px 16px;
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow);
+    display: inline-block;
 }
 
 
