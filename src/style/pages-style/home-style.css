@@ -4,7 +4,7 @@
     height: 100%;
     box-sizing: border-box;
     font: var(--editor-content-font);
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     display: flex;
     flex-direction: column;
     gap: 10rem;
@@ -71,7 +71,7 @@
     font-size: 2rem;
     font-weight: 900;
     font-family: 'jetbrains mono', monospace;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     line-height: .8;
     margin-bottom: 12px;
     background: var(--neo-yellow);
@@ -82,7 +82,7 @@
 .site-desc {
     font-size: 1.15rem;
     line-height: 1.7;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     opacity: 0.9;
     max-width: 680px;
     margin-left: 45px;
@@ -105,7 +105,7 @@
     text-decoration: none;
     transition: all 0.15s ease;
     background-color: var(--neo-green);
-    color: var(--neo-black) !important;
+    color: var(--primary-text-color) !important;
     border: var(--neo-border);
     box-shadow: var(--neo-shadow);
 }
@@ -143,7 +143,7 @@
 }
 
 .garden {
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     line-height: .9;
     background: var(--neo-green);
     padding: 0 12px;
@@ -159,7 +159,7 @@
 .sub-heading-garden {
     font-weight: 600;
     font-size: 1.7rem;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     background: var(--neo-blue);
     padding: 4px 12px;
     border: 2px solid var(--neo-black);
@@ -169,7 +169,7 @@
 .description-garden {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     line-height: 1.7;
 }
 
@@ -188,7 +188,7 @@
 
 .mari-berkolaborasi {
     font-size: 4.8rem;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     background: var(--neo-yellow);
     padding: 4px 16px;
     border: var(--neo-border);

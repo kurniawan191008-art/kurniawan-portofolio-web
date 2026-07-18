@@ -73,7 +73,7 @@
 
     --neo-border: 2px solid var(--neo-black);
     --neo-border-thick: 3px solid var(--neo-black);
-    --neo-shadow: 5px 5px 0px var(--neo-black);
+    --neo-shadow: 4px 4px 0px var(--neo-black);
     --neo-shadow-sm: 2px 2px 0px var(--neo-black);
-    --neo-shadow-lg: 7px 7px 0px var(--neo-black);
+    --neo-shadow-lg: 5px 5px 0px var(--neo-black);
 }

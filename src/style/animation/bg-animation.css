@@ -1,34 +1,28 @@
-/* Container utama tetep sama persis */
 .grid-glow-container {
     position: relative;
-    background-color: #fbf1c7; 
+    /* background-color: #fbf1c7; 
     
     background-image: 
-        linear-gradient(#a3a31f41, transparent 1px),
-        linear-gradient(90deg, #98981a3d, transparent 1px);
-    background-size: 50px 50px; 
+        linear-gradient(#a3a31f00, transparent 1px),
+        linear-gradient(90deg, #98981a00, transparent 1px);
+    background-size: 50px 50px;  */
     
     overflow: hidden;
     isolation: isolate; 
 }
 
-/* HAPUS .grid-glow-container::before yang lama */
-
-/* --- CLASS UNTUK KOTAK JEJAK (DI-INJECT VIA JS) --- */
 .grid-trail-box {
     position: absolute;
-    width: 49px; 
-    height: 49px;
-    background-color: var(--neo-pink); 
+    width: 89px; 
+    height: 89px;
+    background-color: var(--neo-blue); 
     
     z-index: -1;
     pointer-events: none;
     
-    /* Jalankan animasi fadeOut selama 0.6 detik */
-    animation: fadeOutBox 0.9s ease-out forwards;
+    animation: fadeOutBox 0.8s ease-out forwards;
 }
 
-/* Animasi memudar dan sedikit menyusut */
 @keyframes fadeOutBox {
     0% { 
         opacity: 1; 
@@ -36,6 +30,4 @@
     }
     100% { 
         opacity: 0; 
-        transform: scale(0.8); /* Menyusut dikit biar smooth */
-    }
-}
+        transform: scale(.3); }}
