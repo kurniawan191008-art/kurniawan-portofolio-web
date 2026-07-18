@@ -1,5 +1,5 @@
 .header {
-    border-bottom: var(--neo-border-thick);
+    border-bottom: var(--neo-border);
 }
 
 .header-name {

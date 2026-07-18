@@ -5,8 +5,8 @@
     align-items: center;
     gap: 70px;
     padding: 0 45px 0 45px;
-    border-top: var(--neo-border-thick);
-    background-color: var(--neo-white);
+    border-top: var(--neo-border);
+    /* background-color: var(--neo-white); */
 }
 
 .social-links {

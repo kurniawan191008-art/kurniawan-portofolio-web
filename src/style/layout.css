@@ -7,8 +7,7 @@
     grid-template-rows: 60px 1fr 60px;
 
     margin: 0 auto;
-    border: var(--neo-border-thick);
-    box-shadow: var(--neo-shadow-lg);
+    border: var(--neo-border);
 }
 
 .header {
@@ -22,7 +21,7 @@
 
 .sidebar {
     background-color: var(--secondary-bg-color);
-    border-right: var(--neo-border-thick);
+    border-right: var(--neo-border);
 }
 
 .editor {
