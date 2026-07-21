@@ -15,7 +15,7 @@
 
 .about-page {
     width: 100%;
-    height: calc(100dvh - 170px);
+    height: calc(100dvh - 160px);
     max-width: var(--container-max);
     margin: 0 auto;
     padding: 0px 20px 50px 40px;
@@ -36,7 +36,7 @@
 .hobby-section,
 .aspiration-section {
     /* Kasih jarak biar pas di-scroll gak ketutupan navbar */
-    scroll-margin-top: 60px;
+    scroll-margin-top: 70px;
 }
 
 @media (max-width: 1024px) {
@@ -91,7 +91,7 @@
 }
 
 .profile-hero {
-    min-height: calc(100% - 150px);
+    min-height:100%;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -99,23 +99,19 @@
     /* KUNCI 1: Biar baris 1 dan baris 2 ditarik ngumpul ke tengah */
     align-content: center;
 
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
 
 }
 
-.profile-hero__visual {
+/* .profile-hero__visual {
     position: relative;
-    border: 1px solid;
-}
+} */
 
 .profile-hero__photo-wrapper {
     width: 300px;
     height: 460px;
-    border: var(--neo-border-thick);
-    box-shadow: var(--neo-shadow-lg);
-    background: var(--neo-yellow);
     position: relative;
-    z-index: 0;
+    z-index: 2;
 }
 
 .profile-hero__photo {
@@ -124,9 +120,136 @@
     object-fit: cover;
     display: block;
     transition: transform var(--transition-base);
-    filter: contrast(1.1);
+}
+/* ===== STYLING FLOATING TERMINAL (DEKORASI) ===== */
+
+/* 1. Pastikan parent-nya relative agar terminal bisa diatur posisinya */
+.profile-hero__visual {
+    position: relative;
+    /* Memberi sedikit ruang agar terminal tidak terpotong keluar container utama */
+    padding-bottom: 20px; 
+    padding-left: 20px;
+}
+/* GANTI CSS TERMINAL SEBELUMNYA DENGAN INI */
+.profile-hero__window-terminal {
+    position: absolute;
+    z-index: 1; 
+    
+    /* Ubah proporsi jadi agak memanjang ke bawah (portrait) */
+    width: 270px;
+    height: 150px;
+    
+    background: var(--neo-white); 
+    border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow);
+    border-radius: 4px; 
+    overflow: hidden;   
+    
+    /* Hapus properti bottom yang lama */
+    bottom: auto;
+    rotate: -8deg;
+    /* Geser posisi ke kanan dan turun sedikit biar jadi efek tumpuk (stacked) */
+    top: 50px; 
+    left: 20px;   
+    
+    font-family: 'ibmplex mono', monospace;
+    font-size: 0.75rem; 
+    opacity: 0.95; 
+}
+/* 3. Styling Header Terminal (Bar Atas) */
+.terminal-header {
+    background: var(--neo-yellow); /* Warna abu-abu terang bar atas */
+    border-bottom: var(--neo-border);
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
 }
 
+/* Tombol-tombol fake (Merah, Kuning, Hijau) */
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-right: 6px;
+}
+.terminal-button.red { background: #ff5f56; }
+.terminal-button.yellow { background: #ffbd2e; }
+.terminal-button.green { background: #27c93f; }
+
+/* Judul di tengah bar */
+.terminal-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+/* 4. Styling Isi Chat Terminal */
+.terminal-body {
+    padding: 12px;
+    color: #f1f1f1; /* Warna text utama */
+    line-height: 1.4;
+}
+
+/* Warna prompt (misal: user@host) jadi Hijau */
+.cmd-prompt {
+    color: #4af626;
+}
+
+/* Warna hasil output perintah jadi Abu-abu */
+.cmd-output {
+    color: #aaaaaa;
+    margin-bottom: 4px;
+}
+
+/* Animasi kursor kedip-kedip */
+.cursor {
+    display: inline-block;
+    width: 8px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ===== RESPONSIVE HANDLING ===== */
+/* Di layar Tablet/HP, terminal mungkin ganggu kalau posisi kirinya terlalu jauh.
+   Kita atur posisinya di Media Query yang sudah kamu punya. */
+
+@media (max-width: 1024px) {
+    .profile-hero__window-terminal {
+        /* Geser ke tengah sedikit di tablet */
+        width: 300px;
+        height: 220px;
+        left: -20px;
+        bottom: -20px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Di HP, .profile-hero__visual sudah flex/justify-center, 
+       jadi kita tengahkan terminalnya tepat di belakang foto */
+    .profile-hero__visual {
+        padding: 0; /* Hapus padding tambahan tadi */
+    }
+    
+    .profile-hero__window-terminal {
+        width: 280px;
+        left: 50%;
+        transform: translateX(-50%); /* Trik nengahin absolute element */
+        bottom: -15px;
+        opacity: 0.7; /* Lebih transparan di HP biar gak numpuk */
+    }
+}
 .profile-hero__photo-wrapper:hover .profile-hero__photo {
     transform: scale(1.05);
 }
@@ -187,25 +310,35 @@
     gap: var(--space-md);
 }
 
+#nav-placeholder {
+    margin-top: var(--space-md);
+}
+
 .profile-hero__nav {
-    grid-column: 1 / -1;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     border: var(--neo-border);
-    /* box-shadow: var(--neo-shadow); */
-    margin-top: var(--space-md);
     height: 50px;
-    background: var(--secondary-bg-color);
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-        margin-bottom: var(--space-4xl);
-
+    background: var(--secondary-bg-color, var(--neo-white));
+    
+    box-sizing: border-box; /* Kunci agar border tidak merusak hitungan lebar */
+    margin: 0;
+    position: static; 
+    width: 100%;
+    
+    /* Transisi mulus saat mekar */
+    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+                right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Saat aktif melayang di atas */
+.profile-hero__nav.is-stuck {
+    position: fixed;
+    z-index: 10;
+    box-shadow: var(--neo-shadow-sm); 
+}
 .profile-hero__nav-link {
     display: flex;
     align-items: center;
@@ -217,7 +350,6 @@
     text-decoration: none;
     border-right: var(--neo-border);
     transition: all var(--transition-fast);
-
 }
 
 .profile-hero__nav-link:last-child {
@@ -445,14 +577,17 @@
 
 .hobby-card:nth-child(1) {
     background: var(--neo-green);
+    rotate: -3deg;
 }
 
 .hobby-card:nth-child(2) {
     background: var(--neo-yellow);
+    rotate: 3deg;
 }
 
 .hobby-card:nth-child(3) {
     background: var(--neo-pink);
+    rotate: -3deg;
 }
 
 .hobby-card__title {

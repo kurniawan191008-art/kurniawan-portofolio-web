@@ -4,9 +4,32 @@
             <div class="profile-hero__photo-wrapper">
                 <img class="profile-hero__photo" src="/src/assets/image/hero-image-removebg-preview.png"
                     alt="Foto profil Kurniawan" loading="eager">
-                <div class="profile-hero__accent-border"></div>
+            </div>
+            <!-- Cari div ini di HTML kamu dan ganti jadi seperti di bawah -->
+            <div class="profile-hero__window-terminal">
+                <!-- Bagian Atas Terminal (Header) -->
+                <div class="terminal-header">
+                    <span class="terminal-button red"></span>
+                    <span class="terminal-button yellow"></span>
+                    <span class="terminal-button green"></span>
+                    <div class="terminal-title">bash</div>
+                </div>
+                <!-- Bagian Isi Terminal (Body) -->
+                <div class="terminal-body">
+                    <div><span class="cmd-prompt">kurniawan@tkj:~$</span> whoami</div>
+                    <div class="cmd-output">kurniawan_siswa</div>
+                    <div><span class="cmd-prompt">kurniawan@tkj:~$</span> neofetch --os</div>
+                    <div class="cmd-output">OS: Linux (Debian-based)</div>
+                    <div><span class="cmd-prompt">kurniawan@tkj:~$</span> cd projects</div>
+                    <div><span class="cmd-prompt">kurniawan@tkj:~/projects$</span> ls -l</div>
+                    <div class="cmd-output">drwxr-xr-x web-portofolio</div>
+                    <div class="cmd-output">drwxr-xr-x config-mikrotik</div>
+                    <div class="cursor-line"><span class="cmd-prompt">kurniawan@tkj:~/projects$</span><span
+                            class="cursor">_</span></div>
+                </div>
             </div>
         </div>
+        <!-- Cari bagian ini di HTML kamu -->
         <div class="profile-hero__content">
             <header class="profile-hero__header">
                 <h1 id="profile-title" class="profile-hero__name">Hai... saya KURNIAWAN</h1>
@@ -17,26 +40,23 @@
                     <span>Subang, Indonesia</span>
                 </div>
             </div>
-            <p class="profile-hero__description">
-                Awalnya saya cuma iseng colok kabel UTP di lab jaringan. Sekarang?
-                Ketagihan debug routing jam 3 pagi dan ngeces layout CSS sambil dengerin lo-fi.
-                Percaya atau tidak, setiap network error punya cerita — dan saya suka jadi orang yang menemukan cerita
-                itu.
-            </p>
-            <div class="profile-hero__cta">
-                <a href="#" data-page="overview" class="btn btn--primary">GitHub</a>
-                <a href="mailto:kurniawan191008v2@gmail.com" class="btn btn--secondary">Email</a>
+            <!-- Navbar berada di dalam kolom kanan, dibungkus placeholder -->
+            <div id="nav-placeholder" style="height: 50px; width: 100%;">
+                <nav class="profile-hero__nav" id="dynamic-nav">
+                    <a href="#profile-section" class="profile-hero__nav-link">Profil</a>
+                    <a href="#interest-section" class="profile-hero__nav-link">Minat</a>
+                    <a href="#hobby-section" class="profile-hero__nav-link">Hobi</a>
+                    <a href="#aspiration-section" class="profile-hero__nav-link">Cita-cita</a>
+                </nav>
             </div>
 
-        </div>
-
     </section>
-    <nav class="profile-hero__nav">
+    <!-- <nav class="profile-hero__nav">
         <a href="#profile-section" class="profile-hero__nav-link">Profil</a>
         <a href="#interest-section" class="profile-hero__nav-link">Minat</a>
         <a href="#hobby-section" class="profile-hero__nav-link">Hobi</a>
         <a href="#aspiration-section" class="profile-hero__nav-link">Cita-cita</a>
-    </nav>
+    </nav> -->
     <section class="profile-section" id="profile-section" aria-labelledby="profile-title">
         <header class="section-header">
             <h2 id="profile-title" class="section-header__title">Profil</h2>
