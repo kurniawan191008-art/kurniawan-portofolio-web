@@ -1,7 +1,6 @@
 .main-parent {
     width: min(100%, 1440px);
     height: min(90dvh, 900px);
-    /* max-height: 100dvh; */
     display: grid;
     grid-template-columns: 365px 1fr;
     grid-template-rows: 60px 1fr 60px;
@@ -19,10 +18,7 @@
     background-color: var(--secondary-bg-color);
 }
 
-.sidebar {
-    background-color: var(--secondary-bg-color);
-    border-right: var(--neo-border);
-}
+/* ponytail: sidebar border-right removed here, kept in sidebar.css */
 
 .editor {
     height: 100%;

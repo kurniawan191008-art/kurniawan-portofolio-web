@@ -2,20 +2,11 @@
 @import "base/variables.css";
 @import "base/typography.css";
 
-
-
 @import "components/header.css";
 @import "components/sidebar.css";
-@import "components/editor.css";
 @import "components/footer.css";
-@import "components/tab-bar.css";
 @import "layout.css";
 @import "animation/bg-animation.css";
 
-/* @import "pages-style/home-style.css"; */
 @import "pages-style/about-style.css";
-@import "pages-style/experience-style.css";
 @import "pages-style/error-style.css";
-
-/* Media queries last so they override all other styles */
-@import "base/media.css";

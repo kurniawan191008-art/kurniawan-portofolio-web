@@ -5,7 +5,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     box-sizing: border-box;
-    background-color: var(--neo-white);
+    background-color: var(--secondary-bg-color);
     border-right: var(--neo-border-thick);
 }
 

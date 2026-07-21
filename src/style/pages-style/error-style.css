@@ -22,11 +22,6 @@
     box-shadow: var(--neo-shadow-lg);
 }
 
-.code-error {
-    color: var(--neo-red);
-    font-style: italic;
-}
-
 .error-wrapper {
     display: flex;
     flex-direction: column;

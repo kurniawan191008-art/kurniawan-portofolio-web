@@ -35,7 +35,6 @@ export async function loadPage(page)
                 return;
             }
         mainContent.innerHTML = html;
-        console.log(html.slice(0, 200));
     }catch (error) {
         mainContent.innerHTML = "<h1>500 - Internal Server Error</h1>";
         console.error(error);
@@ -59,8 +58,6 @@ export async function navigate(page) {
 }
 export function handleLocationChange() {
     const path = window.location.pathname;
-    console.log("handleLocationChange:", path);
     const page = Object.keys(routes).find(key => routes[key].path === path);
-    console.log(page);
     loadPage(page)
 }
