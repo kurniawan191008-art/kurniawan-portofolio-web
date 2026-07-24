@@ -39,7 +39,6 @@ export function initNavigation() {
 
     window.addEventListener("popstate", handleLocationChange);
 
-/* ===== LOGIC STICKY NAVBAR (FIXED KIRI-KANAN) ===== */
     document.addEventListener('scroll', (event) => {
         if (event.target && event.target.id === 'about-page') {
             const aboutPage = event.target;

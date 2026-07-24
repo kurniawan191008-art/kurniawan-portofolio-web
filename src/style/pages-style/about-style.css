@@ -1,54 +1,24 @@
-/* ponytail: transition tokens moved to variables.css if needed */
-
-@media (max-width: 1024px) {
-    :root {
-        --space-4xl: 4rem;
-    }
-}
-
-@media (max-width: 767px) {
-    :root {
-        --space-4xl: 3rem;
-        --space-5xl: 5rem;
-    }
-}
+/* ===== ABOUT PAGE STYLES ===== */
 
 .about-page {
     width: 100%;
     height: calc(100dvh - 160px);
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0px 20px 50px 40px;
-    font-family: 'jetbrains mono', monospace;
+    padding: 0 var(--space-2xl) var(--space-2xl) var(--space-2xl);
     color: var(--primary-text-color);
     background: var(--neo-white);
     scroll-behavior: smooth;
     box-sizing: border-box;
-    position: relative;
-
     overflow-y: auto;
     scrollbar-width: none;
-
 }
 
 .profile-section,
 .interest-section,
 .hobby-section,
 .aspiration-section {
-    /* Kasih jarak biar pas di-scroll gak ketutupan navbar */
-    scroll-margin-top: 70px;
-}
-
-@media (max-width: 1024px) {
-    .about-page {
-        padding: var(--space-4xl) var(--container-padding-tablet);
-    }
-}
-
-@media (max-width: 767px) {
-    .about-page {
-        padding: var(--space-4xl) var(--container-padding-mobile);
-    }
+    scroll-margin-top: calc(var(--space-2xl) + 1rem);
 }
 
 /* ===== SECTION HEADER ===== */
@@ -58,7 +28,8 @@
 }
 
 .section-header__title {
-    font: 800 2.5rem 'jetbrains mono', monospace;
+    font-size: 2.5rem;
+    font-weight: 800;
     color: var(--primary-text-color);
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -66,46 +37,42 @@
     display: inline-block;
     background: var(--neo-yellow);
     padding: var(--space-xs) var(--space-md);
-    border: var(--neo-border);
-    box-shadow: var(--neo-shadow-sm);
 }
 
 .section-header__divider {
     width: 100%;
-    height: 4px;
+    height: var(--space-xs);
     background: var(--neo-black);
     margin: var(--space-md) auto 0;
 }
 
-@media (max-width: 767px) {
-    .section-header__title {
-        font-size: 1.75rem;
-    }
-}
-
-/* ===== ICONS ===== */
-
+/* ===== ICONS & HERO ===== */
 .icon--xs {
-    width: 24px;
-    height: 24px;
+    width: var(--space-lg);
+    height: var(--space-lg);
+    color: var(--neo-purple);
 }
 
 .profile-hero {
-    min-height:100%;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
     align-items: center;
-
-    /* KUNCI 1: Biar baris 1 dan baris 2 ditarik ngumpul ke tengah */
-    align-content: center;
-
-    gap: var(--space-2xl);
-
+    position: relative;
+    z-index: 1000;
+    gap: var(--space-5xl);
+    /* border: var(--neo-border); */
+    margin-bottom: var(--space-4xl);
 }
 
-/* .profile-hero__visual {
+.profile-hero__visual {
     position: relative;
-} */
+    padding-bottom: var(--space-md);
+    padding-left: var(--space-md);
+    height: 100%;
+}
 
 .profile-hero__photo-wrapper {
     width: 300px;
@@ -120,154 +87,185 @@
     object-fit: cover;
     display: block;
     transition: transform var(--transition-base);
-}
-/* ===== STYLING FLOATING TERMINAL (DEKORASI) ===== */
-
-/* 1. Pastikan parent-nya relative agar terminal bisa diatur posisinya */
-.profile-hero__visual {
-    position: relative;
-    /* Memberi sedikit ruang agar terminal tidak terpotong keluar container utama */
-    padding-bottom: 20px; 
-    padding-left: 20px;
-}
-/* GANTI CSS TERMINAL SEBELUMNYA DENGAN INI */
-.profile-hero__window-terminal {
-    position: absolute;
-    z-index: 1; 
-    
-    /* Ubah proporsi jadi agak memanjang ke bawah (portrait) */
-    width: 270px;
-    height: 150px;
-    
-    background: var(--neo-white); 
-    border: var(--neo-border-thick);
-    box-shadow: var(--neo-shadow);
-    border-radius: 4px; 
-    overflow: hidden;   
-    
-    /* Hapus properti bottom yang lama */
-    bottom: auto;
-    rotate: -8deg;
-    /* Geser posisi ke kanan dan turun sedikit biar jadi efek tumpuk (stacked) */
-    top: 50px; 
-    left: 20px;   
-    
-    font-family: 'ibmplex mono', monospace;
-    font-size: 0.75rem; 
-    opacity: 0.95; 
-}
-/* 3. Styling Header Terminal (Bar Atas) */
-.terminal-header {
-    background: var(--neo-yellow); /* Warna abu-abu terang bar atas */
-    border-bottom: var(--neo-border);
-    height: 28px;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    position: relative;
+    filter: grayscale(100%);
 }
 
-/* Tombol-tombol fake (Merah, Kuning, Hijau) */
-.terminal-button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.2);
-    margin-right: 6px;
-}
-.terminal-button.red { background: #ff5f56; }
-.terminal-button.yellow { background: #ffbd2e; }
-.terminal-button.green { background: #27c93f; }
-
-/* Judul di tengah bar */
-.terminal-title {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    left: 0;
-    color: #333;
-    font-weight: bold;
-    font-size: 0.75rem;
-}
-
-/* 4. Styling Isi Chat Terminal */
-.terminal-body {
-    padding: 12px;
-    color: #f1f1f1; /* Warna text utama */
-    line-height: 1.4;
-}
-
-/* Warna prompt (misal: user@host) jadi Hijau */
-.cmd-prompt {
-    color: #4af626;
-}
-
-/* Warna hasil output perintah jadi Abu-abu */
-.cmd-output {
-    color: #aaaaaa;
-    margin-bottom: 4px;
-}
-
-/* Animasi kursor kedip-kedip */
-.cursor {
-    display: inline-block;
-    width: 8px;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* ===== RESPONSIVE HANDLING ===== */
-/* Di layar Tablet/HP, terminal mungkin ganggu kalau posisi kirinya terlalu jauh.
-   Kita atur posisinya di Media Query yang sudah kamu punya. */
-
-@media (max-width: 1024px) {
-    .profile-hero__window-terminal {
-        /* Geser ke tengah sedikit di tablet */
-        width: 300px;
-        height: 220px;
-        left: -20px;
-        bottom: -20px;
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 767px) {
-    /* Di HP, .profile-hero__visual sudah flex/justify-center, 
-       jadi kita tengahkan terminalnya tepat di belakang foto */
-    .profile-hero__visual {
-        padding: 0; /* Hapus padding tambahan tadi */
-    }
-    
-    .profile-hero__window-terminal {
-        width: 280px;
-        left: 50%;
-        transform: translateX(-50%); /* Trik nengahin absolute element */
-        bottom: -15px;
-        opacity: 0.7; /* Lebih transparan di HP biar gak numpuk */
-    }
-}
 .profile-hero__photo-wrapper:hover .profile-hero__photo {
     transform: scale(1.05);
 }
 
+/* ===== PHOTOCARD TERMINAL (DECORATION) ===== */
+.hero-photocard-wrapper {
+    position: relative;
+    width: 280px;
+    height: 360px;
+    margin: var(--space-md) auto;
+    z-index: 2;
+}
+
+.decor-shape {
+    position: absolute;
+    border: var(--neo-border-thick);
+    z-index: 1;
+}
+
+.decor-dots {
+    top: calc(var(--space-xl) * -1);
+    left: calc(var(--space-2xl) * -1);
+    width: 90px;
+    height: 150px;
+    background-color: var(--neo-white);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Ccircle cx='3' cy='3' r='2' fill='%23282828'/%3E%3C/svg%3E");
+}
+
+.decor-box {
+    bottom: var(--space-xs);
+    left: -50px;
+    width: 200px;
+    height: 50px;
+    z-index: 9;
+    background-color: var(--neo-blue);
+}
+
+.neo-terminal-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--neo-white);
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.terminal-header {
+    height: 32px;
+    background-color: var(--secondary-bg-color);
+    border-bottom: var(--neo-border-thick);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-sm);
+    gap: var(--space-xs);
+}
+
+/* Strict Neobrutalism mac buttons (no border-radius) */
+.mac-btn {
+    width: var(--space-sm);
+    height: var(--space-sm);
+    border: var(--neo-border);
+}
+
+.mac-btn.close {
+    background-color: var(--neo-red);
+}
+
+.mac-btn.min {
+    background-color: var(--neo-yellow);
+}
+
+.mac-btn.max {
+    background-color: var(--neo-green);
+}
+
+.terminal-title {
+    margin: 0 auto;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--neo-black);
+}
+
+.terminal-body {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border: var(--neo-border-thick);
+    filter: grayscale(100%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.neo-terminal-card:hover .profile-img {
+    filter: grayscale(0%);
+}
+
+/* Floating Badges */
+.neo-badge {
+    position: absolute;
+    background-color: var(--neo-white);
+    border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow-lg);
+    padding: var(--space-xs) var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    z-index: 10;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.badge-location {
+    top: 50px;
+    right: -80px;
+    background-color: var(--neo-yellow);
+}
+
+.badge-student {
+    top: 105px;
+    right: -80px;
+    background-color: var(--neo-green);
+}
+
+.badge-student .badge-text {
+    color: var(--neo-white);
+}
+
+.neo-badge .badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.badge-text .small {
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+.badge-text .bold {
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.neo-icon {
+    width: 20px;
+    height: 20px;
+    stroke: var(--neo-black);
+}
+
+/* ===== HERO CONTENT & NAVIGATION ===== */
 .profile-hero__content {
     max-width: 66ch;
 }
 
 .profile-hero__name {
-    font: 800 3.5rem 'jetbrains mono', monospace;
-    color: var(--primary-text-color);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-size: 6.5rem;
+    font-weight: 800;
+    color: var(--neo-green);
+    line-height: 1;
+    letter-spacing: -0.001em;
     margin-bottom: var(--space-sm);
 }
 
 .profile-hero__subtitle {
-    font: 600 1.25rem 'jetbrains mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 600;
     color: var(--primary-text-color);
     line-height: 1.4;
     margin-bottom: var(--space-lg);
@@ -277,28 +275,9 @@
     border: var(--neo-border);
 }
 
-.profile-hero__meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-lg);
-    padding-bottom: var(--space-lg);
-    border-bottom: var(--neo-border);
-}
-
-.profile-hero__location {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-xs);
-    font: 600 0.95rem 'jetbrains mono', monospace;
-    color: var(--primary-text-color);
-    background: var(--neo-green);
-    padding: var(--space-xs) var(--space-md);
-    border: 2px solid var(--neo-black);
-}
-
 .profile-hero__description {
-    font: 400 .79rem 'ibmplex mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 400;
     color: var(--primary-text-color);
     line-height: 1.7;
     margin-bottom: var(--space-xl);
@@ -312,6 +291,8 @@
 
 #nav-placeholder {
     margin-top: var(--space-md);
+    height: 50px;
+    width: 100%;
 }
 
 .profile-hero__nav {
@@ -321,35 +302,32 @@
     align-items: center;
     border: var(--neo-border);
     height: 50px;
-    background: var(--secondary-bg-color, var(--neo-white));
-    
-    box-sizing: border-box; /* Kunci agar border tidak merusak hitungan lebar */
+    background: var(--secondary-bg-color);
+    box-sizing: border-box;
     margin: 0;
-    position: static; 
+    position: static;
+    z-index: 100;
     width: 100%;
-    
-    /* Transisi mulus saat mekar */
-    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
-                right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1), right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Saat aktif melayang di atas */
 .profile-hero__nav.is-stuck {
     position: fixed;
-    z-index: 10;
-    box-shadow: var(--neo-shadow-sm); 
+    z-index: 1000;
 }
+
 .profile-hero__nav-link {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
     height: 100%;
-    font: 700 0.85rem 'jetbrains mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
     color: var(--primary-text-color);
     text-decoration: none;
     border-right: var(--neo-border);
-    transition: all var(--transition-fast);
+    transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .profile-hero__nav-link:last-child {
@@ -361,259 +339,279 @@
     color: var(--neo-white);
 }
 
-@media (max-width: 1024px) {
-    .profile-hero {
-        grid-template-columns: 1fr;
-        gap: var(--space-2xl);
-        text-align: center;
-    }
-
-    .profile-hero__visual {
-        position: static;
-        display: flex;
-        justify-content: center;
-    }
-
-    .profile-hero__photo-wrapper {
-        width: 240px;
-        height: 280px;
-    }
-
-    .profile-hero__content {
-        max-width: 100%;
-    }
-
-    .profile-hero__meta {
-        justify-content: center;
-    }
-
-    .profile-hero__cta {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 767px) {
-    .profile-hero {
-        gap: var(--space-xl);
-        margin-bottom: var(--space-4xl);
-        padding-bottom: var(--space-3xl);
-    }
-
-    .profile-hero__name {
-        font-size: 2.2rem;
-    }
-
-    .profile-hero__photo-wrapper {
-        width: 200px;
-        height: 240px;
-    }
-
-    .profile-hero__cta {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .profile-hero__cta .btn {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
 /* ===== PROFILE INFO SECTION ===== */
 .profile-section {
-    /* margin-bottom: var(--space-5xl); */
     min-height: calc(100% - 20px);
 }
 
 .profile-info {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--space-2xl);
+    align-items: stretch;
+    width: 100%;
+}
+
+.profile-info__bio {
+    background: var(--neo-white);
+    padding: var(--space-2xl);
+}
+
+.profile-info__bio p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+    color: var(--primary-text-color);
+}
+
+.profile-info__bio p:last-child {
+    margin-bottom: 0;
+}
+
+.profile-info__bio strong {
+    font-weight: 700;
+    background-color: var(--neo-yellow);
+    padding: 0 var(--space-xs);
+}
+
+/* Container Utama Kolom Kanan */
+.profile-info__timeline {
+    /* border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow-lg);
+    padding: var(--space-xl); */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper Timeline (Area Garis Vertikal) */
+.timeline-tree {
+    position: relative;
+    padding-left: 40px;
+    /* Memberi ruang untuk garis dan marker di sebelah kiri */
+    display: flex;
+    flex-direction: column;
     gap: var(--space-lg);
 }
 
-.profile-info__item {
-    background: var(--neo-white);
+/* Garis Vertikal Utama (Tulang Punggung) */
+.timeline-tree::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7px;
+    /* Menengahkannya tepat di dalam marker kotak */
+    width: 4px;
+    /* Ketebalan garis utama */
+    background: var(--neo-black);
+}
+
+/* Node/Baris Individual */
+.timeline-node {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Menyejajarkan garis cabang dengan tengah kartu */
+}
+
+/* Kotak Marker (Pengganti Lingkaran) */
+.timeline-marker {
+    position: absolute;
+    left: -40px;
+    /* Menarik kotak kembali ke posisi garis utama */
+    width: 18px;
+    height: 18px;
     border: var(--neo-border-thick);
-    padding: var(--space-lg);
-    box-shadow: var(--neo-shadow);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    z-index: 2;
+    /* Berada di atas garis vertikal */
 }
 
-.profile-info__item:hover {
-    transform: translate(3px, 3px);
-    box-shadow: 2px 2px 0px var(--neo-black);
-}
-
-.profile-info__item:nth-child(1) {
+/* Warna Marker menggunakan variabel Gruvbox Light dari variables.css */
+.timeline-marker.bg-yellow {
     background: var(--neo-yellow);
 }
 
-.profile-info__item:nth-child(2) {
-    background: var(--neo-blue);
-}
-
-.profile-info__item:nth-child(3) {
+.timeline-marker.bg-green {
     background: var(--neo-green);
 }
 
-.profile-info__item:nth-child(4) {
-    background: var(--neo-pink);
+.timeline-marker.bg-white {
+    background: var(--neo-white);
 }
 
-.icon--xs {
-    color: #8f3f71;
+/* Garis Horizontal (Cabang ke Kartu) */
+.timeline-node::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    /* Mulai dari ujung marker kotak */
+    width: 22px;
+    /* Panjang garis nyambung ke kartu */
+    height: 4px;
+    background: var(--neo-black);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
-.profile-info__label {
-    display: block;
-    font: 700 0.7rem 'jetbrains mono', monospace;
-    color: var(--primary-text-color);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+/* Kartu Konten */
+.timeline-card {
+    background: var(--neo-orange);
+    /* Aksen warna Neobrutalism */
+    padding: var(--space-md);
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+/* Elemen Teks di dalam Kartu */
+.timeline-year {
+    display: inline-block;
+    background: var(--neo-black);
+    color: var(--neo-white);
+    padding: 2px 8px;
+    font-weight: 800;
+    font-size: 0.85rem;
     margin-bottom: var(--space-xs);
-    opacity: 0.7;
 }
 
-.profile-info__value {
-    font: 600 1rem 'ibmplex mono', monospace;
-    color: var(--primary-text-color);
-    line-height: 1.5;
+.timeline-role {
+    margin: 0 0 var(--space-xs) 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--neo-black);
 }
 
-@media (max-width: 767px) {
-    .profile-info {
-        grid-template-columns: 1fr;
-    }
+.timeline-desc {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--neo-white);
+    /* Menggunakan putih agar kontras di atas orange */
 }
 
 /* ===== INTEREST SECTION ===== */
+/* ===== INTEREST SECTION ===== */
 .interest-section {
     margin-bottom: var(--space-5xl);
-    height: 100%;
 }
 
 .interest-list {
+    /* Pakai CSS Grid biar lebar kartu rapi & otomatis responsif */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    width: 100%;
 }
 
 .interest-card {
     background: var(--neo-white);
-    border: var(--neo-border-thick);
-    padding: var(--space-xl);
-    box-shadow: var(--neo-shadow);
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow-sm);
+    /* Bayangan tebal ala Neobrutalism */
+    display: flex;
+    flex-direction: column;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
+/* Efek interaktif saat di-hover */
 .interest-card:hover {
-    transform: translate(3px, 3px);
-    box-shadow: 2px 2px 0px var(--neo-black);
-}
-
-.interest-card:nth-child(1) {
-    background: var(--neo-orange);
-}
-
-.interest-card:nth-child(2) {
-    background: var(--neo-blue);
-}
-
-.interest-card:nth-child(3) {
-    background: var(--neo-purple);
+    transform: translate(4px, 4px);
+    box-shadow: var(--neo-shadow-sm);
 }
 
 .interest-card__title {
-    font: 700 1.1rem 'jetbrains mono', monospace;
-    color: var(--primary-text-color);
-    margin: 0 0 var(--space-sm) 0;
-    line-height: 1.3;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--neo-black);
+    margin: 0;
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: var(--neo-border-thick);
+    /* Garis tegas pemisah judul dan deskripsi */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Bikin warna judul selang-seling biar gak monoton */
+.interest-card:nth-child(3n+1) .interest-card__title {
+    background-color: var(--neo-green);
+}
+
+.interest-card:nth-child(3n+2) .interest-card__title {
+    background-color: var(--neo-yellow);
+}
+
+.interest-card:nth-child(3n) .interest-card__title {
+    background-color: var(--neo-blue);
+    color: var(--neo-white);
 }
 
 .interest-card__desc {
-    font: 400 0.9rem 'ibmplex mono', monospace;
+    font-size: 0.95rem;
+    font-weight: 400;
     color: var(--primary-text-color);
     line-height: 1.6;
     margin: 0;
-}
-
-@media (max-width: 1024px) {
-    .interest-list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 767px) {
-    .interest-list {
-        grid-template-columns: 1fr;
-    }
+    padding: var(--space-lg);
+    background: var(--neo-white);
+    /* Latar deskripsi tetap bersih */
 }
 
 /* ===== HOBBY SECTION ===== */
+/* ===== HOBBY SECTION ===== */
 .hobby-section {
     margin-bottom: var(--space-5xl);
-    height: 100%;
 }
 
 .hobby-list {
+    /* Pakai Grid biar ukuran kartunya adil & otomatis responsif */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-2xl); /* Gap dilebarin sedikit buat ngasih ruang rotasi */
+    width: 100%;
+    padding: var(--space-md) 0; 
 }
 
 .hobby-card {
-    background: var(--neo-white);
     border: var(--neo-border-thick);
-    padding: var(--space-xl);
     box-shadow: var(--neo-shadow);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    padding: var(--space-xl);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    position: relative;
 }
 
+/* Bikin kayak stiker/post-it yang ditempel miring */
+.hobby-card:nth-child(1) { background: var(--neo-green); transform: rotate(-3deg); }
+.hobby-card:nth-child(2) { background: var(--neo-yellow); transform: rotate(3deg); }
+.hobby-card:nth-child(3) { background: var(--neo-pink); transform: rotate(-2deg); }
+
+/* Efek Interaktif Keren: Saat di-hover, kartunya jadi lurus, naik, & bayangan nebelin */
 .hobby-card:hover {
-    transform: translate(3px, 3px);
-    box-shadow: 2px 2px 0px var(--neo-black);
-}
-
-.hobby-card:nth-child(1) {
-    background: var(--neo-green);
-    rotate: -3deg;
-}
-
-.hobby-card:nth-child(2) {
-    background: var(--neo-yellow);
-    rotate: 3deg;
-}
-
-.hobby-card:nth-child(3) {
-    background: var(--neo-pink);
-    rotate: -3deg;
+    transform: rotate(0deg) translate(-4px, -4px);
+    box-shadow: 8px 8px 0px var(--neo-black);
+    z-index: 2; /* Biar tampil paling depan saat di-hover */
 }
 
 .hobby-card__title {
-    font: 700 1.1rem 'jetbrains mono', monospace;
-    color: var(--primary-text-color);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--neo-black);
     margin: 0 0 var(--space-sm) 0;
-    line-height: 1.3;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--neo-black); /* Garis putus-putus ala kertas sobek */
+    padding-bottom: var(--space-sm);
 }
 
 .hobby-card__desc {
-    font: 400 0.9rem 'ibmplex mono', monospace;
-    color: var(--primary-text-color);
-    line-height: 1.6;
+    font-size: 0.95rem;
+    font-weight: 600; /* Ditebelin dikit biar kebaca di atas warna cerah */
+    color: var(--neo-black);
+    line-height: 1.5;
     margin: 0;
-}
-
-@media (max-width: 1024px) {
-    .hobby-list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 767px) {
-    .hobby-list {
-        grid-template-columns: 1fr;
-    }
+    padding-top: var(--space-sm);
 }
 
 /* ===== ASPIRATION SECTION ===== */
@@ -624,25 +622,24 @@
 
 .aspiration-content {
     background: var(--neo-white);
-    border: var(--neo-border-thick);
     padding: var(--space-2xl);
-    box-shadow: var(--neo-shadow-lg);
     position: relative;
 }
 
 .aspiration-content::before {
-    content: '';
+    content: 'jhg';
     position: absolute;
-    top: 10px;
-    left: 10px;
-    right: -10px;
-    bottom: -10px;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    right: calc(var(--space-sm) * -1);
+    bottom: calc(var(--space-sm) * -1);
     border: var(--neo-border);
     z-index: -1;
 }
 
 .aspiration-text {
-    font: 400 1.1rem 'ibmplex mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 400;
     color: var(--primary-text-color);
     line-height: 1.8;
     margin: 0 0 var(--space-lg) 0;
@@ -653,11 +650,11 @@
 }
 
 .aspiration-text--highlight {
-    font: 700 1.2rem 'jetbrains mono', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
     background: var(--neo-yellow);
     display: inline-block;
     padding: var(--space-xs) var(--space-md);
-    border: 2px solid var(--neo-black);
 }
 
 /* ===== BUTTONS ===== */
@@ -667,11 +664,12 @@
     justify-content: center;
     gap: var(--space-sm);
     padding: var(--space-sm) var(--space-lg);
-    font: 700 1rem 'jetbrains mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
     text-decoration: none;
     border: var(--neo-border);
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     white-space: nowrap;
 }
 
@@ -681,32 +679,9 @@
     box-shadow: var(--neo-shadow);
 }
 
-.btn--primary:hover {
-    transform: translate(3px, 3px);
-    box-shadow: 2px 2px 0px var(--neo-black);
-}
-
 .btn--secondary {
     background: var(--neo-white);
     color: var(--primary-text-color) !important;
     border: var(--neo-border);
     box-shadow: var(--neo-shadow);
-}
-
-.btn--secondary:hover {
-    transform: translate(3px, 3px);
-    box-shadow: 2px 2px 0px var(--neo-black);
-}
-
-@media (max-width: 767px) {
-    .btn {
-        padding: var(--space-sm) var(--space-md);
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 767px) {
-    .about-page {
-        padding-bottom: var(--space-4xl);
-    }
 }

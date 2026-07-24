@@ -1,3 +1,5 @@
+/* ===== HOME PAGE STYLES ===== */
+
 .home-content {
     overflow: scroll;
     width: 100%;
@@ -7,7 +9,7 @@
     color: var(--primary-text-color);
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: var(--space-5xl);
     align-items: center;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -22,12 +24,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: var(--space-xs);
     min-height: 100%;
-}
-
-.home-hero {
-    border-bottom: var(--neo-border-thick);
 }
 
 .home-title {
@@ -42,7 +40,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 9px;
+    gap: var(--space-sm);
 }
 
 .greeting.selamat {
@@ -54,11 +52,8 @@
     background-color: var(--neo-orange);
     font-size: 4.9rem;
     font-weight: 800;
-    font-family: 'jetbrains mono', monospace;
     color: var(--neo-white);
     line-height: 1.2;
-    border: var(--neo-border-thick);
-    box-shadow: var(--neo-shadow-lg);
 }
 
 .greeting.datang {
@@ -70,31 +65,28 @@
 .subtitle {
     font-size: 2rem;
     font-weight: 900;
-    font-family: 'jetbrains mono', monospace;
     color: var(--primary-text-color);
-    line-height: .8;
-    margin-bottom: 12px;
+    line-height: 0.8;
+    margin-bottom: var(--space-sm);
     background: var(--neo-yellow);
-    padding: 2px 12px;
-    border: 2px solid var(--neo-black);
+    padding: var(--space-xs) var(--space-sm);
 }
 
 .cta-container {
     display: flex;
-    gap: 20px;
-    margin-top: 15px;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
 }
 
 .cta-btn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px 20px;
-    font-family: 'jetbrains mono', monospace;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
     font-size: 1.05rem;
     font-weight: bold;
     text-decoration: none;
-    transition: all 0.15s ease;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
     background-color: var(--neo-green);
     color: var(--primary-text-color) !important;
     border: var(--neo-border);
@@ -103,15 +95,11 @@
 
 .btn-about {
     background-color: var(--neo-orange);
+    color: var(--neo-white) !important;
 }
 
 .btn-web {
     background-color: var(--neo-yellow);
-}
-
-.cta-btn:hover {
-    transform: translate(3px, 3px);
-    box-shadow: 2px 2px 0px var(--neo-black);
 }
 
 .about-section {
@@ -124,7 +112,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--space-md);
 }
 
 .digital-garden {
@@ -135,15 +123,13 @@
 
 .garden {
     color: var(--primary-text-color);
-    line-height: .9;
+    line-height: 0.9;
     background: var(--neo-green);
-    padding: 0 12px;
-    border: var(--neo-border);
-    box-shadow: var(--neo-shadow-sm);
+    padding: 0 var(--space-sm);
 }
 
 .a-digital {
-    line-height: .9;
+    line-height: 0.9;
     color: var(--neo-orange);
 }
 
@@ -152,8 +138,7 @@
     font-size: 1.7rem;
     color: var(--primary-text-color);
     background: var(--neo-blue);
-    padding: 4px 12px;
-    border: 2px solid var(--neo-black);
+    padding: var(--space-xs) var(--space-sm);
     display: inline-block;
 }
 
@@ -172,19 +157,13 @@
     width: 80%;
     box-sizing: border-box;
     min-height: 100%;
-    /* border: var(--neo-border-thick);
-    box-shadow: var(--neo-shadow-lg); */
-    padding: 2rem;
+    padding: var(--space-xl);
 }
 
 .mari-berkolaborasi {
     font-size: 4.8rem;
     color: var(--primary-text-color);
     background: var(--neo-yellow);
-    padding: 4px 16px;
-    border: var(--neo-border);
-    box-shadow: var(--neo-shadow);
+    padding: var(--space-xs) var(--space-md);
     display: inline-block;
 }
-
-

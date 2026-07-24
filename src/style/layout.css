@@ -1,12 +1,12 @@
 .main-parent {
-    width: min(100%, 1440px);
+    width: min(100%, 1550px);
     height: min(90dvh, 900px);
     display: grid;
     grid-template-columns: 365px 1fr;
     grid-template-rows: 60px 1fr 60px;
 
     margin: 0 auto;
-    border: var(--neo-border);
+    border: var(--neo-border-thick);
 }
 
 .header {

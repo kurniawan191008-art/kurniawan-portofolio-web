@@ -1,7 +1,9 @@
+/* ===== IMPORTS ===== */
 @import "base/reset.css";
 @import "base/variables.css";
 @import "base/typography.css";
 
+@import "components/grid-background.css";
 @import "components/header.css";
 @import "components/sidebar.css";
 @import "components/footer.css";
@@ -10,3 +12,174 @@
 
 @import "pages-style/about-style.css";
 @import "pages-style/error-style.css";
+
+/* ===== COMBINED NEOBRUTALISM SELECTORS ===== */
+
+/* 1. Neobrutalism Cards & Containers (Thick Border + Heavy Shadow) */
+.greeting.selamat,
+.neo-terminal-card,
+.interest-card,
+.hobby-card,
+.timeline-card,
+
+.aspiration-content,
+.error-container {
+    border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow-lg);
+}
+
+/* 2. Neobrutalism Badges & Highlight Headers */
+.subtitle,
+.garden,
+.sub-heading-garden,
+.mari-berkolaborasi,
+.section-header__title,
+.error-title,
+.aspiration-text--highlight {
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow-sm);
+}
+
+/* 3. Interactive Component Hover States */
+.cta-btn:hover,
+.btn:hover,
+.neo-badge:hover,
+.btn-home:hover,
+.btn--primary:hover,
+.btn--secondary:hover,
+.hobby-card:hover,
+.social-icon:hover {
+    transform: translate(2px, 2px);
+    box-shadow: var(--neo-shadow-sm);
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Tablet Breakpoint */
+@media (max-width: 1024px) {
+    :root {
+        --space-4xl: 4rem;
+    }
+
+    .about-page {
+        padding: var(--space-4xl) var(--container-padding-tablet);
+    }
+
+    .grid-bg::before {
+        top: calc(var(--space-4xl) * -1);
+        left: calc(var(--container-padding-tablet) * -1);
+        right: calc(var(--container-padding-tablet) * -1);
+    }
+
+    .profile-hero {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+        text-align: center;
+    }
+
+    .profile-hero__visual {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-hero__photo-wrapper {
+        width: 240px;
+        height: 280px;
+    }
+
+    .profile-hero__content {
+        max-width: 100%;
+    }
+
+    .profile-hero__cta {
+        justify-content: center;
+    }
+
+    .profile-info {
+        gap: var(--space-xl);
+    }
+
+    .interest-list,
+    .hobby-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 767px) {
+    :root {
+        --space-4xl: 3rem;
+        --space-5xl: 5rem;
+    }
+
+    .about-page {
+        padding: var(--space-4xl) var(--container-padding-mobile);
+        padding-bottom: var(--space-4xl);
+    }
+
+    .grid-bg::before {
+        top: calc(var(--space-4xl) * -1);
+        left: calc(var(--container-padding-mobile) * -1);
+        right: calc(var(--container-padding-mobile) * -1);
+    }
+
+    .section-header__title {
+        font-size: 1.75rem;
+    }
+
+    .hero-photocard-wrapper {
+        transform: scale(0.9);
+    }
+
+    .badge-location {
+        right: -20px;
+    }
+
+    .badge-student {
+        left: -20px;
+    }
+
+    .profile-hero__visual {
+        padding: var(--space-md);
+    }
+
+    .profile-hero {
+        gap: var(--space-xl);
+        margin-bottom: var(--space-4xl);
+        padding-bottom: var(--space-3xl);
+    }
+
+    .profile-hero__name {
+        font-size: 2.2rem;
+    }
+
+    .profile-hero__photo-wrapper {
+        width: 200px;
+        height: 240px;
+    }
+
+    .profile-hero__cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .profile-hero__cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-info__bio,
+    .profile-info__specs {
+        padding: var(--space-xl);
+    }
+
+    .btn {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.9rem;
+    }
+}
