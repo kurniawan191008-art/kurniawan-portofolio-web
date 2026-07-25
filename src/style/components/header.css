@@ -1,3 +1,4 @@
+/* ===== HEADER COMPONENT ===== */
 .header {
     border-bottom: var(--neo-border-thick);
 }
@@ -7,22 +8,22 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-start;
-    gap: 5px;
-    padding-left: 45px;
+    gap: var(--space-xs);
+    padding-left: var(--space-2xl);
 }
 
 .header p {
     font: var(--heading-font);
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     background: var(--neo-white);
-    padding: 2px 10px;
+    padding: var(--space-xs) var(--space-sm);
     border: var(--neo-border);
 }
 
 .header-icon {
     height: 35px;
     width: 35px;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
 }
 
 .green,
@@ -30,7 +31,7 @@
 .blue {
     height: 26px;
     width: 26px;
-    border: 2px solid var(--neo-black);
+    border: var(--neo-border);
 }
 
 .green {
@@ -48,6 +49,6 @@
 .three-dots {
     display: flex;
     flex-direction: row;
-    gap: 6px;
-    margin-right: 45px;
+    gap: var(--space-xs);
+    margin-right: var(--space-2xl);
 }

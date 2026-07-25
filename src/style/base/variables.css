@@ -1,49 +1,32 @@
 :root {
+    /* Canvas & Layout Colors */
     --canvas-color: #f9f5d7;
     --primary-bg-color: #fbf1c7;
     --secondary-bg-color: #ebdbb2;
 
-    --primary-border-color: #bdae93;
+    /* Border & Text Colors */
+    --primary-border-color: #282828;
     --secondary-border-color: #d65d0e;
-
     --primary-text-color: #282828;
     --secondary-text-color: #d79921;
-    --tertiary-text-color:#7c6f64;
+    --tertiary-text-color: #7c6f64;
 
+    /* Headings & Accents */
     --primary-heading-color: #d65d0e;
     --secondary-heading-color: #fe8019;
     --tertiary-heading-color: #98971a;
-
-
     --primary-social-color: #83a598;
 
-    /* other color */
+    /* Color Palette */
     --red: #cc241d;
     --purple: #b16286;
-    --strong-purple:#8f3f71;
-    --aqua:#689d6a;
-    --strong-aqua:#427b58;
-    --blue:#458588;
-    --strong-blue:#076678;
+    --strong-purple: #8f3f71;
+    --aqua: #689d6a;
+    --strong-aqua: #427b58;
+    --blue: #458588;
+    --strong-blue: #076678;
 
-    /* Fluid typography tokens */
-    --fs-greeting-large: clamp(2.5rem, 8vw, 4.9rem);
-    --fs-greeting-hero: clamp(3.5rem, 10vw, 6.9rem);
-    --fs-subtitle: clamp(1.2rem, 4vw, 2rem);
-    --fs-digital-garden: clamp(3rem, 8vw, 6rem);
-    --fs-mari-berkolaborasi: clamp(2.5rem, 7vw, 4.8rem);
-    --fs-heading-xl: clamp(1.8rem, 5vw, 3.5rem);
-    --fs-heading-lg: clamp(1.4rem, 3.5vw, 2.5rem);
-    --fs-body: clamp(0.9rem, 2.5vw, 1.2rem);
-    --fs-small: clamp(0.8rem, 2vw, 1rem);
-    
-    /* Responsive spacing */
-    --space-section: clamp(3rem, 10vw, 10rem);
-    --space-padding-sm: clamp(15px, 3vw, 45px);
-    --space-gap-sm: clamp(10px, 2vw, 20px);
-    --space-gap-md: clamp(15px, 4vw, 70px);
-
-    /* spacing tokens */
+    /* Spacing Tokens */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -54,14 +37,15 @@
     --space-4xl: 6rem;
     --space-5xl: 8rem;
 
-    /* container */
+    /* Container */
     --container-max: 1200px;
     --container-padding-desktop: 4rem;
     --container-padding-tablet: 2.5rem;
     --container-padding-mobile: 1.5rem;
 
-    /* neobrutalism */
+    /* Neobrutalism System */
     --neo-black: #282828;
+    --neo-brown: #a35c00;
     --neo-white: #f9f5d7;
     --neo-yellow: #d79921;
     --neo-blue: #458588;
@@ -71,9 +55,12 @@
     --neo-purple: #8f3f71;
     --neo-red: #cc241d;
 
-    --neo-border: 3px solid var(--neo-black);
-    --neo-border-thick: 4px solid var(--neo-black);
-    --neo-shadow: 5px 5px 0px var(--neo-black);
-    --neo-shadow-sm: 3px 3px 0px var(--neo-black);
-    --neo-shadow-lg: 7px 7px 0px var(--neo-black);
+    --neo-border: 2px solid var(--neo-black);
+    --neo-border-thick: 3px solid var(--neo-black);
+    --neo-shadow-sm: 2px 2px 0px var(--neo-black);
+    --neo-shadow: 4px 4px 0px var(--neo-black);
+    --neo-shadow-lg: 6px 6px 0px var(--neo-black);
+
+    --transition-fast: 100ms ease;
+    --transition-base: 150ms ease;
 }

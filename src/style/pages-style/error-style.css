@@ -1,10 +1,12 @@
+/* ===== ERROR PAGE STYLES ===== */
+
 .error-content {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    padding: 60px 80px;
+    padding: var(--space-3xl) var(--space-4xl);
     font: var(--editor-content-font);
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,27 +15,20 @@
 .error-container {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: var(--space-lg);
     max-width: 600px;
     width: 100%;
     background-color: var(--neo-white);
-    border: var(--neo-border-thick);
-    padding: 40px;
-    box-shadow: var(--neo-shadow-lg);
-}
-
-.code-error {
-    color: var(--neo-red);
-    font-style: italic;
+    padding: var(--space-2xl);
 }
 
 .error-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: var(--space-md);
     text-align: center;
-    margin-top: 10px;
+    margin-top: var(--space-xs);
 }
 
 .error-image {
@@ -43,39 +38,36 @@
     border: var(--neo-border);
 }
 
-.error-image[src=""], .error-image:not([src]) {
+.error-image[src=""],
+.error-image:not([src]) {
     display: none;
 }
 
 .error-title {
     font-size: 2.2rem;
     font-weight: 700;
-    font-family: 'jetbrains mono', monospace;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     line-height: 1.2;
     background: var(--neo-red);
-    padding: 4px 16px;
-    border: var(--neo-border);
-    box-shadow: var(--neo-shadow-sm);
+    padding: var(--space-xs) var(--space-md);
 }
 
 .error-desc {
     font-size: 1.05rem;
     line-height: 1.6;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     font-weight: 600;
 }
 
 .error-actions {
-    margin-top: 10px;
+    margin-top: var(--space-xs);
 }
 
 .btn-home {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 26px;
-    font-family: 'jetbrains mono', monospace;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
@@ -83,10 +75,5 @@
     color: var(--neo-white) !important;
     border: var(--neo-border);
     box-shadow: var(--neo-shadow);
-    transition: all 0.15s ease;
-}
-
-.btn-home:hover {
-    transform: translate(3px, 3px);
-    box-shadow: 2px 2px 0px var(--neo-black);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
 }

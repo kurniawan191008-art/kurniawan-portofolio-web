@@ -1,12 +1,12 @@
+/* ===== FOOTER COMPONENT ===== */
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 70px;
-    padding: 0 45px 0 45px;
+    gap: var(--space-4xl);
+    padding: 0 var(--space-2xl);
     border-top: var(--neo-border-thick);
-    background-color: var(--neo-white);
 }
 
 .social-links {
@@ -14,8 +14,8 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 15px;
-    padding: 10px 0 10px 0;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
 }
 
 .social-icon {
@@ -25,15 +25,15 @@
     align-items: center;
     width: 34px;
     height: 34px;
-    padding: 4px;
-    color: var(--neo-black);
-    border: 2px solid var(--neo-black);
-    transition: all 0.15s ease;
+    padding: var(--space-xs);
+    color: var(--primary-text-color);
+    border: var(--neo-border);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .social-icon:hover {
     transform: translate(3px, 3px);
-    box-shadow: 2px 2px 0px var(--neo-black);
+    box-shadow: var(--neo-shadow-sm);
 }
 
 .copyright,
@@ -43,6 +43,6 @@
     justify-content: center;
     align-items: center;
     font: var(--footer-font);
-    color: var(--neo-black);
-    font-size: .9rem;
+    color: var(--primary-text-color);
+    font-size: 0.9rem;
 }

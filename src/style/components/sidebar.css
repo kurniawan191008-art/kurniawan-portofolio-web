@@ -1,3 +1,4 @@
+/* ===== SIDEBAR COMPONENT ===== */
 .sidebar {
     overflow: auto;
     display: flex;
@@ -5,7 +6,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     box-sizing: border-box;
-    background-color: var(--neo-white);
+    background-color: var(--secondary-bg-color);
     border-right: var(--neo-border-thick);
 }
 
@@ -15,15 +16,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 80px 0 80px 0;
-    border-bottom: var(--neo-border);
+    padding: var(--space-4xl) 0;
+    border-bottom: var(--neo-border-thick);
 }
 
 .profile img {
     width: 100px;
     height: 100px;
-    margin: 0 0 0 45px;
-    border: var(--neo-border);
+    margin-left: var(--space-2xl);
+    border: var(--neo-border-thick);
     box-shadow: var(--neo-shadow-sm);
 }
 
@@ -32,34 +33,34 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 5px;
+    gap: var(--space-xs);
 }
 
 .profile .name-n-bio h1 {
-    margin-left: 15px;
+    margin-left: var(--space-sm);
     font: var(--profile-name-font);
     font-weight: 700;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
 }
 
 .profile .name-n-bio p {
-    margin-left: 15px;
+    margin-left: var(--space-sm);
     font: var(--profile-bio-font);
-    color: var(--neo-black);
+    color: var(--primary-text-color);
 }
 
 .profile .name-n-bio span {
     height: 3px;
     width: 100%;
-    background-color: var(--neo-black);
+    background-color: var(--primary-text-color);
 }
 
 .explorer {
     width: 100%;
-    padding: 0 0 0 55px;
-    margin: 30px 0 10px 0;
+    padding-left: var(--space-2xl);
+    margin: var(--space-xl) 0 var(--space-xs) 0;
     font: var(--explorer-font);
-    color: var(--neo-black);
+    color: var(--primary-text-color);
 }
 
 .nav-bar {
@@ -67,9 +68,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 35px 0 0 0;
+    padding-top: var(--space-xl);
     font: var(--navbar-font);
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     overflow-y: auto;
 }
 
@@ -79,62 +80,60 @@
 
 .folder-btn {
     all: unset;
-
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: var(--space-sm);
     width: 100%;
     box-sizing: border-box;
-
-    padding: 10px 0 10px 50px;
+    padding: var(--space-sm) 0 var(--space-sm) var(--space-2xl);
     cursor: pointer;
-    transition: background 0.1s ease;
+    transition: background var(--transition-fast);
 }
 
 .folder-btn:hover {
     background: var(--neo-yellow);
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     border-left: var(--neo-border);
-    padding-left: 47px;
+    padding-left: calc(var(--space-2xl) - 3px);
 }
 
 .folder-btn:hover .icon,
 .folder-btn:hover .chevron {
-    color: var(--neo-black);
+    color: var(--primary-text-color);
 }
 
 .nav-bar a {
     display: block;
-    padding: 10px 0 10px 90px;
+    padding: var(--space-sm) 0 var(--space-sm) calc(var(--space-2xl) + 40px);
     text-decoration: none;
-    transition: background 0.1s ease;
+    transition: background var(--transition-fast);
 }
 
 .nav-bar a:hover {
     background: var(--neo-yellow);
-    color: var(--neo-black);
+    color: var(--primary-text-color);
     border-left: var(--neo-border);
-    padding-left: 87px;
+    padding-left: calc(var(--space-2xl) + 37px);
 }
 
 .nav-bar a:hover .icon {
-    color: var(--neo-black);
+    color: var(--primary-text-color);
 }
 
 .project-category a {
-    padding-left: 145px;
+    padding-left: calc(var(--space-2xl) + 95px);
     padding-right: 0;
 }
 
 .project-category a:hover {
-    padding-left: 142px;
+    padding-left: calc(var(--space-2xl) + 92px);
 }
 
 .menu-item a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: var(--space-sm);
 }
 
 .icon,
@@ -142,17 +141,14 @@
     width: 25px;
     height: 25px;
     flex-shrink: 0;
-    color: var(--neo-black);
+    color: var(--primary-text-color);
 }
 
 .project-category {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-
-    transition:
-        max-height .19s ease,
-        opacity .19s ease;
+    transition: max-height var(--transition-base), opacity var(--transition-base);
 }
 
 .folder.show .project-category {
@@ -161,7 +157,7 @@
 }
 
 .chevron {
-    transition: transform .19s ease;
+    transition: transform var(--transition-base);
 }
 
 .folder.show .chevron {

@@ -1,121 +1,208 @@
 <main class="about-page" id="about-page">
-    <section class="profile-hero" id="profile-hero" aria-labelledby="profile-title">
+    <section class="profile-hero grid-bg" id="profile-hero" aria-labelledby="profile-title">
         <div class="profile-hero__visual">
-            <div class="profile-hero__photo-wrapper grid-glow-container">
-                <img class="profile-hero__photo" src="/src/assets/image/hero-image-removebg-preview.png"
-                    alt="Foto profil Kurniawan" loading="eager">
-                <div class="profile-hero__accent-border"></div>
+            <!-- Container Utama Photocard Terminal -->
+            <div class="hero-photocard-wrapper">
+
+                <!-- 1. Elemen Dekorasi -->
+                <div class="decor-shape decor-dots"></div>
+                <div class="decor-shape decor-box"></div>
+
+                <!-- 2. Terminal Card Utama -->
+                <div class="neo-terminal-card">
+                    <!-- Header Terminal -->
+                    <div class="terminal-header">
+                        <div class="mac-btn close"></div>
+                        <div class="mac-btn min"></div>
+                        <div class="mac-btn max"></div>
+                        <div class="terminal-title">guest@kurniawan:~</div>
+                    </div>
+                    <!-- Body Gambar -->
+                    <div class="terminal-body">
+                        <img src="/src/assets/image/hero-image-removebg-preview.png" alt="Kurniawan's Profile"
+                            class="profile-img">
+                    </div>
+                </div>
+
+                <!-- 3. Badge 1: Based in Subang -->
+                <div class="neo-badge badge-location">
+                    <svg class="neo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <div class="badge-text">
+                        <span class="small">BASED IN</span>
+                        <span class="bold">SUBANG, INDONESIA</span>
+                    </div>
+                </div>
+
+                <!-- 4. Badge 2: Student of SMK -->
+                <div class="neo-badge badge-student">
+                    <svg class="neo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    <div class="badge-text">
+                        <span class="small">STUDENT OF</span>
+                        <span class="bold">SMK GEMA NUSANTARA</span>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="profile-hero__content">
             <header class="profile-hero__header">
-                <h1 id="profile-title" class="profile-hero__name">Hai... nama saya KURNIAWAN</h1>
-                <p class="profile-hero__subtitle">Siswa Teknik Komputer dan Jaringan</p>
+                <span>Hi... I'm </span>
+                <h1 id="profile-title" class="profile-hero__name">KURNIAWAN</h1>
+                <p class="profile-hero__subtitle">Computer & Network Engineering Student</p>
             </header>
-            <div class="profile-hero__meta">
-                <div class="profile-hero__location">
-                    <span>Subang, Indonesia</span>
-                </div>
-            </div>
-            <p class="profile-hero__description">
-                Awalnya saya cuma iseng colok kabel UTP di lab jaringan. Sekarang?
-                Ketagihan debug routing jam 3 pagi dan ngeces layout CSS sambil dengerin lo-fi.
-                Percaya atau tidak, setiap network error punya cerita — dan saya suka jadi orang yang menemukan cerita
-                itu.
-            </p>
-            <div class="profile-hero__cta">
-                <a href="#" data-page="overview" class="btn btn--primary">GitHub</a>
-                <a href="mailto:kurniawan191008v2@gmail.com" class="btn btn--secondary">Email</a>
+
+            <div id="nav-placeholder">
+                <nav class="profile-hero__nav" id="dynamic-nav">
+                    <a href="#profile-section" class="profile-hero__nav-link">Profile</a>
+                    <a href="#interest-section" class="profile-hero__nav-link">Interests</a>
+                    <a href="#hobby-section" class="profile-hero__nav-link">Hobbies</a>
+                    <a href="#aspiration-section" class="profile-hero__nav-link">Aspirations</a>
+                </nav>
             </div>
         </div>
     </section>
-
     <section class="profile-section" id="profile-section" aria-labelledby="profile-title">
         <header class="section-header">
-            <h2 id="profile-title" class="section-header__title">Profil</h2>
+            <h2 id="profile-title" class="section-header__title">Profile</h2>
             <div class="section-header__divider"></div>
         </header>
         <div class="profile-info">
-            <div class="profile-info__item">
-                <span class="profile-info__label">Nama</span>
-                <span class="profile-info__value">Kurniawan</span>
+            <!-- Kolom Kiri: Biografi Utama -->
+            <div class="profile-info__bio">
+                <p>
+                    Hello! I am a student at
+                    <strong>Gema Nusantara 1 Pabuaran</strong>
+                    Vocational High School
+                    majoring
+                    in Computer and Network Engineering.
+                    Here, I learn how to build network
+                    infrastructure, configure systems, and maintain local networks. As a network engineering student, I
+                    emphasize data security, strong efficiency, and
+                    problem solving
+                </p>
+                <p>
+                    Alongside that, I have a strong interest in web development, particularly <span>front-end</span>. I
+                    am
+                    self-taught in building websites from scratch all the way to deployment. For me, a website is an
+                    identity in the digital world.
+                </p>
+                <p>
+                    In addition, my other interests lie in <span>AI and workflow automation</span>—the keys to
+                    efficiency and
+                    productivity in today's digital era.
+                </p>
             </div>
-            <div class="profile-info__item">
-                <span class="profile-info__label"> <svg class="icon icon--xs" aria-hidden="true">
-                        <use href="src/assets/icon/sprite.svg#location-icon"></use>
-                    </svg> Asal</span>
-                <span class="profile-info__value">
-                   
-                    Bandung, Indonesia
-                </span>
+
+            <!-- Kolom Kanan: Spesifikasi / Data Singkat -->
+            <div class="profile-info__timeline">
+
+                <div class="timeline-tree">
+                    <!-- Item 2026 -->
+                    <div class="timeline-node">
+                        <div class="timeline-marker bg-yellow"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-year">2026</span>
+                            <h4 class="timeline-role">Front-End Dev</h4>
+                            <p class="timeline-desc">Starting a portfolio web project</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2025 -->
+                    <div class="timeline-node">
+                        <div class="timeline-marker bg-green"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-year">2025</span>
+                            <h4 class="timeline-role">Front Office Administrator</h4>
+                            <p class="timeline-desc">Internship at the Cihambulu Village Head's office</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2024 -->
+                    <div class="timeline-node">
+                        <div class="timeline-marker bg-white"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-year">2024</span>
+                            <h4 class="timeline-role">Computer & Network Engineering major</h4>
+                            <p class="timeline-desc">Entered in Gema Nusantara 1 Pabuaran Vocational High School</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="profile-info__item">
-                <span class="profile-info__label">Sekolah</span>
-                <span class="profile-info__value">SMK Jurusan Teknik Komputer dan Jaringan</span>
-            </div>
-            <div class="profile-info__item">
-                <span class="profile-info__label">Status</span>
-                <span class="profile-info__value">Siswa yang masih belajar, tapi sudah mulai berani bikin proyek
-                    sendiri</span>
-            </div>
-        </div>
     </section>
 
     <section class="interest-section" id="interest-section" aria-labelledby="interest-title">
         <header class="section-header">
-            <h2 id="interest-title" class="section-header__title">Minat</h2>
+            <h2 id="interest-title" class="section-header__title">Interests</h2>
             <div class="section-header__divider"></div>
         </header>
         <div class="interest-list">
             <div class="interest-card">
-                <h3 class="interest-card__title">Jaringan & Infrastruktur</h3>
-                <p class="interest-card__desc">Suka benerin yang orang lain anggap "udah fix broken"</p>
+                <h3 class="interest-card__title">Networking</h3>
+                <p class="interest-card__desc">Building, configuring, and securing reliable local network
+                    infrastructures.</p>
             </div>
             <div class="interest-card">
-                <h3 class="interest-card__title">Frontend Development</h3>
-                <p class="interest-card__desc">Bikin UI yang bikin orang bilang "wah, ini enak dilihat"</p>
+                <h3 class="interest-card__title">Web Dev</h3>
+                <p class="interest-card__desc">Crafting responsive, high-performance front-end interfaces with modern
+                    web standards.</p>
             </div>
             <div class="interest-card">
                 <h3 class="interest-card__title">UI/UX Design</h3>
-                <p class="interest-card__desc">Karena kode yang bagus tanpa desain yang jelas itu seperti router tanpa
-                    konfigurasi</p>
+                <p class="interest-card__desc">Designing intuitive digital experiences that seamlessly balance
+                    functionality and aesthetics.</p>
+            </div>
+            <div class="interest-card">
+                <h3 class="interest-card__title">Automation & AI</h3>
+                <p class="interest-card__desc">Streamlining repetitive workflows and boosting productivity through
+                    modern AI tools.</p>
             </div>
         </div>
     </section>
 
     <section class="hobby-section" id="hobby-section" aria-labelledby="hobby-title">
         <header class="section-header">
-            <h2 id="hobby-title" class="section-header__title">Hobi</h2>
+            <h2 id="hobby-title" class="section-header__title">Hobbies</h2>
             <div class="section-header__divider"></div>
         </header>
         <div class="hobby-list">
             <div class="hobby-card">
-                <h3 class="hobby-card__title">Main Game</h3>
-                <p class="hobby-card__desc">Kadang nge-game, kadang nge-code, kadang keduanya bareng</p>
+                <h3 class="hobby-card__title">Gaming</h3>
+                <p class="hobby-card__desc">Sharpening strategic thinking, fast decision-making, and problem-solving
+                    under pressure.</p>
             </div>
             <div class="hobby-card">
-                <h3 class="hobby-card__title">Dengerin Musik</h3>
-                <p class="hobby-card__desc">Lo-fi jadi soundtrack debugging wajib</p>
+                <h3 class="hobby-card__title">Tech Exploration</h3>
+                <p class="hobby-card__desc">Experimenting with Linux distributions, open-source tools, and personal side
+                    projects.</p>
             </div>
             <div class="hobby-card">
-                <h3 class="hobby-card__title">Eksplor Distro Linux</h3>
-                <p class="hobby-card__desc">Collection udah kayak katalog Spotify</p>
+                <h3 class="hobby-card__title">Music</h3>
+                <p class="hobby-card__desc">Maintaining focus and deep-work flow state with instrumentals and Lo-Fi
+                    beats.</p>
             </div>
         </div>
     </section>
 
     <section class="aspiration-section" id="aspiration-section" aria-labelledby="aspiration-title">
         <header class="section-header">
-            <h2 id="aspiration-title" class="section-header__title">Cita-cita</h2>
+            <h2 id="aspiration-title" class="section-header__title">Aspirations</h2>
             <div class="section-header__divider"></div>
         </header>
         <div class="aspiration-content">
             <p class="aspiration-text">
-                Mau jadi orang yang bisa bikin jaringan stabil & interface yang clean.
-                Gak cuma bisa troubleshoot, tapi juga bisa bikin sistem yang orang gak perlu troubleshoot.
+                To become a highly versatile technology professional who can seamlessly bridge multiple domains—from
+                network infrastructure and front-end development to AI-driven automation.
             </p>
             <p class="aspiration-text aspiration-text--highlight">
-                Singkatnya: makin hari makin bisa, makin banyak yang bisa di-share.
+                An adaptable problem-solver ready to tackle complex tech challenges from every angle.
             </p>
         </div>
     </section>
