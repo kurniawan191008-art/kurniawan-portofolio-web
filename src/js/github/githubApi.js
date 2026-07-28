@@ -27,11 +27,6 @@ export function getRepos() {
     );
 }
 
-export function getEvents() {
-    return fetchJson(
-        `https://api.github.com/users/${USERNAME}/events/public`
-    );
-}
 
 export function getContributions() {
     return fetchJson(

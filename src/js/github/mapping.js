@@ -1,6 +1,6 @@
-import { getUser, getRepos, getEvents, getContributions } from "./githubApi.js";
+import { getUser, getRepos, getContributions } from "./githubApi.js";
 
-export function mapGithubData(user, repos, events, contributions) {
+export function mapGithubData(user, repos, contributions) {
     return {
         name: user.login,
         totalRepos: user.public_repos,
@@ -9,6 +9,5 @@ export function mapGithubData(user, repos, events, contributions) {
             0
         ),
         totalContributions: contributions.totalContributions,
-        // latestActivity: mapLatestActivity(events),
     };
 }
