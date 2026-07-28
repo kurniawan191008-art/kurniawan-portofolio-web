@@ -2,6 +2,7 @@
   "name": "kurniawan-portofolio",
   "version": "1.0.0",
   "description": "this is a private project",
+  "type": "module",
   "main": "index.html",
   "scripts": {
     "private": "true",
