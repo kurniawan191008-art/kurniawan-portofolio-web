@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Hero Layout (Sesuai Wireframe Baru)
+   ========================================================================== */
+.overview {
+    height: 100%;
+}
+
+.overview-hero-secion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 80px);
+    gap: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+}
+
+/* --- 1. Top Marquee Bar --- */
+.hero-top-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--neo-blue);
+    color: var(--neo-white);
+    border-bottom: var(--neo-border-thick);
+    font-family: var(--navbar-font);
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.marquee-label {
+    background-color: var(--neo-yellow);
+    color: var(--neo-black);
+    padding: var(--space-sm) var(--space-lg);
+    border-right: var(--neo-border-thick);
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.hero-marquee {
+    padding: var(--space-sm) 0;
+    text-transform: uppercase;
+}
+
+/* --- 2. Hero Center Container --- */
+.overview-hero-section__header {
+    position: relative;
+    /* Penting untuk posisi absolute gambar floating */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    width: 100%;
+    padding: var(--space-3xl) var(--space-md);
+}
+
+.hero-text-content {
+    position: relative;
+    z-index: 2;
+    /* Agar teks berada di atas gambar floating */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    gap: var(--space-md);
+    max-width: 700px;
+}
+
+.hero-subtitle-top,
+.hero-subtitle-bottom {
+    font-family: var(--editor-content-font);
+    color: var(--primary-text-color);
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+
+}
+
+/* Headline Hollow / Outline Text */
+.hero-title-hollow {
+    font-family: var(--heading-font);
+    font-size: 7.7rem;
+    font-weight: 800;
+    margin: 0;
+    color: transparent;
+    -webkit-text-stroke: 3.6px var(--neo-black);
+    letter-spacing: 2px;
+    line-height: 1;
+    text-align: start;
+}
+
+/* --- Floating Rotated Images --- */
+.hero-img {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: var(--neo-white);
+    border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    /* Di belakang teks */
+}
+
+/* Positioning & Rotation */
+.hero-img--left {
+    top: 5%;
+    left: 10%;
+    transform: rotate(-25deg);
+}
+
+.hero-img--left img {
+    object-fit: contain;
+    height: 100%;
+}
+
+.hero-img--right {
+    bottom: 10%;
+    right: 25%;
+    transform: rotate(15deg);
+}
+
+/* --- CTA Buttons --- */
+.hero-cta-group {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+}
+
+.neo-btn {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: var(--space-sm) var(--space-2xl);
+    background-color: var(--neo-blue);
+    color: var(--neo-black);
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow);
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.neo-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px var(--neo-black);
+}
+
+/* --- 3. Sticky Navbar (<nav>) --- */
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: calc(100% - var(--space-2xl));
+    max-width: var(--container-max);
+    margin: 0 auto;
+    background-color: var(--neo-blue);
+    color: var(--neo-black);
+    border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow);
+    padding: var(--space-md);
+    text-align: center;
+    font-family: var(--navbar-font);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .hero-title-hollow {
+        font-size: 4.5rem;
+    }
+
+    .hero-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-img--left {
+        left: 5%;
+    }
+
+    .hero-img--right {
+        right: 5%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-title-hollow {
+        font-size: 3rem;
+        -webkit-text-stroke: 2px var(--neo-black);
+    }
+
+    /* Sembunyikan atau sesuaikan posisi gambar di layar HP agar tidak menutupi teks */
+    .hero-img {
+        width: 90px;
+        height: 90px;
+        opacity: 0.6;
+    }
+
+    .hero-img--left {
+        top: 0%;
+        left: 0%;
+    }
+
+    .hero-img--right {
+        bottom: 0%;
+        right: 0%;
+    }
+
+    .navbar-sticky {
+        width: calc(100% - var(--space-md));
+    }
+}
