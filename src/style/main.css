@@ -10,6 +10,8 @@
 @import "layout.css";
 @import "animation/bg-animation.css";
 
+@import "github-calendar/dist/github-calendar-responsive.css";
+
 @import "pages-style/about-style.css";
 @import "pages-style/error-style.css";
 @import "pages-style/overview-style.css";

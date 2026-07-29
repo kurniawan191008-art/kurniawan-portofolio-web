@@ -35,6 +35,7 @@ export async function loadPage(page)
                 return;
             }
         mainContent.innerHTML = html;
+        document.dispatchEvent(new CustomEvent("page:loaded"));
     }catch (error) {
         mainContent.innerHTML = "<h1>500 - Internal Server Error</h1>";
         console.error(error);

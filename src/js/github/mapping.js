@@ -1,5 +1,3 @@
-import { getUser, getRepos, getContributions } from "./githubApi.js";
-
 export function mapGithubData(user, repos, contributions) {
     return {
         name: user.login,

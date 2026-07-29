@@ -21,6 +21,9 @@
     "url": "https://github.com/kurniawan191008-art/kurniawan-portofolio-web/issues"
   },
   "homepage": "https://github.com/kurniawan191008-art/kurniawan-portofolio-web#readme",
+  "dependencies": {
+    "github-calendar": "^2.3.4"
+  },
   "devDependencies": {
     "vite": "^8.1.3"
   }

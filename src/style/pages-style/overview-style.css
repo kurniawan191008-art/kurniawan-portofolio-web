@@ -82,7 +82,7 @@
     font-weight: 800;
     margin: 0;
     color: transparent;
-    -webkit-text-stroke: 3.6px var(--neo-black);
+    -webkit-text-stroke: 5.6px var(--neo-blue);
     letter-spacing: 2px;
     line-height: 1;
     text-align: start;
@@ -190,6 +190,129 @@
     }
 }
 
+/* --- 4. GitHub Overview Section --- */
+.github-overview {
+    max-width: var(--container-max);
+    padding: var(--space-xl) var(--space-md);
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.github-overview__title {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--neo-black);
+    margin: 0 0 var(--space-sm);
+    text-transform: uppercase;
+}
+
+.github-overview__desc {
+    font-family: var(--editor-content-font);
+    color: var(--tertiary-text-color);
+    margin: 0 0 var(--space-xl);
+}
+
+.github-overview__content {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-lg);
+    align-items: flex-start;
+}
+
+.stat-parent {
+    flex: 0 0 330px;
+    /* Diperlebar dari 260px */
+}
+
+.github-calendar__parent {
+    flex: 1;
+    min-width: 0;
+}
+
+.github-calendar {
+    width: fit-content;
+    height: auto;
+    border: var(--neo-border);
+    padding: var(--space-lg);
+    overflow-x: scroll;
+    box-shadow: var(--neo-shadow);
+
+}
+
+.github-calendar .graph {
+    width: 100%;
+    overflow-x: scroll;
+
+}
+
+.github-calendar .contrib-column {
+    font-family: var(--editor-content-font);
+    color: var(--primary-text-color);
+}
+
+.github-calendar .contrib-legend .text-muted a,
+.github-calendar a[href*="contributions"],
+.github-calendar a[href*="year-link"],
+.github-calendar .show-on-focus {
+    display: none;
+}
+
+.github-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-sm);
+    /* */
+}
+
+.github-stat-card:nth-child(1) {
+    grid-column: span 2;
+}
+
+.github-stat-card:nth-child(2) {
+    grid-column: span 3;
+}
+
+/* Baris 2: Card 3 (2/5 - Sempit) + Card 4 (3/5 - Lebar) */
+.github-stat-card:nth-child(3) {
+    grid-column: span 3;
+}
+
+.github-stat-card:nth-child(4) {
+    grid-column: span 2;
+}
+
+.github-stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-md);
+    background-color: var(--primary-bg-color);
+    border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow);
+}
+
+.github-stat-card__number {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--neo-orange);
+    line-height: 1;
+}
+
+.github-stat-card__label {
+    font-family: var(--editor-content-font);
+    font-size: 0.65rem;
+    color: var(--tertiary-text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 @media (max-width: 767px) {
     .hero-title-hollow {
         font-size: 3rem;
@@ -215,5 +338,27 @@
 
     .navbar-sticky {
         width: calc(100% - var(--space-md));
+    }
+
+    .github-overview {
+        padding: var(--space-md);
+        margin: var(--space-xl) var(--space-sm);
+    }
+
+    .github-overview__content {
+        flex-direction: column;
+    }
+
+    .stat-parent {
+        flex: none;
+        width: 100%;
+    }
+
+    .github-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .github-overview__title {
+        font-size: 1.5rem;
     }
 }

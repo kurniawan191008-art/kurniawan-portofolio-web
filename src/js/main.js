@@ -1,9 +1,14 @@
 import { initNavigation } from "./navigation.js";
 import { handleLocationChange } from "./router.js";
 import { initGlow } from "./animation.js";
-// import { initGithubData } from "./github.js";
+import { initGithub } from "./github/github.js";
+
 initGlow();
 initNavigation();
 handleLocationChange();
-// initGithubData();
 
+document.addEventListener("page:loaded", () => {
+    if (window.location.pathname === "/overview") {
+        initGithub();
+    }
+});
