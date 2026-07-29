@@ -2,7 +2,14 @@
    Hero Layout (Sesuai Wireframe Baru)
    ========================================================================== */
 .overview {
-    height: 100%;
+    width: 100%;
+    height: calc(100dvh - 210px);
+    max-width: var(--container-max);
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .overview-hero-secion {
@@ -152,7 +159,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    width: calc(100% - var(--space-2xl));
+    width: 100%;
     max-width: var(--container-max);
     margin: 0 auto;
     background-color: var(--neo-blue);
@@ -211,17 +218,56 @@
     text-transform: uppercase;
 }
 
+.github-overview__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-lg);
+    border-bottom: var(--neo-border);
+    padding-bottom: var(--space-2xl);
+    margin-bottom: var(--space-xl);
+}
+
+.github-profile {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-shrink: 0;
+}
+
+.github-avatar {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow);
+}
+
+.github-username {
+    font-family: var(--editor-content-font);
+    font-weight: 600;
+    color: var(--neo-orange);
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.github-username:hover {
+    text-decoration: underline;
+}
+
 .github-overview__desc {
     font-family: var(--editor-content-font);
     color: var(--tertiary-text-color);
-    margin: 0 0 var(--space-xl);
+    margin: 0;
+    text-align: center;
 }
 
 .github-overview__content {
     display: flex;
     flex-direction: row;
     gap: var(--space-lg);
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .stat-parent {
@@ -232,21 +278,24 @@
 .github-calendar__parent {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
 }
 
 .github-calendar {
     width: fit-content;
-    height: auto;
+    max-width: 100%;
+    overflow-x: auto;
     border: var(--neo-border);
-    padding: var(--space-lg);
-    overflow-x: scroll;
     box-shadow: var(--neo-shadow);
-
+    padding: var(--space-sm) var(--space-xl) var(--space-xl) var(--space-sm);
 }
 
 .github-calendar .graph {
     width: 100%;
     overflow-x: scroll;
+    box-sizing: border-box;
 
 }
 
@@ -343,6 +392,11 @@
     .github-overview {
         padding: var(--space-md);
         margin: var(--space-xl) var(--space-sm);
+    }
+
+    .github-overview__header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .github-overview__content {

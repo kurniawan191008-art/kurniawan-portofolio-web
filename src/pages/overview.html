@@ -1,4 +1,4 @@
-<main class="overview ">
+<main class="overview  grid-bg">
     <header class="overview-hero-secion ">
         <div class="hero-top-bar">
             <span class="marquee-label">Find me in</span>
@@ -36,9 +36,14 @@
     <nav class="navbar-sticky">
         Navbar-sticky
     </nav>
-    <section class="github-overview grid-bg">
+    <section class="github-overview">
         <h2 class="github-overview__title">READ MY GITHUB</h2>
-        <p class="github-overview__desc">My contribution activity on GitHub</p>
+        <div class="github-overview__header">
+            <div class="github-profile">
+                <img class="github-avatar" id="github-avatar" src="" alt="">
+                <a class="github-username" id="github-username" href="" target="_blank"></a>
+            </div>
+        </div>
         <div class="github-overview__content">
             <div class="stat-parent">
                 <div class="stat-parent">
@@ -67,6 +72,7 @@
                 </div>
             </div>
             <div class="github-calendar__parent">
+                <p class="github-overview__desc">My contribution activity on GitHub</p>
                 <div class="github-calendar"></div>
             </div>
         </div>

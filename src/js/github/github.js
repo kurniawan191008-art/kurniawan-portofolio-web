@@ -20,7 +20,20 @@ export async function initGithub() {
         getRepos().catch(() => null),
     ]);
 
-    if (user) setStat("repos", user.public_repos);
+    if (user) {
+        setStat("repos", user.public_repos);
+
+        const avatar = document.getElementById("github-avatar");
+        const usernameLink = document.getElementById("github-username");
+        if (avatar) {
+            avatar.src = user.avatar_url;
+            avatar.alt = user.login;
+        }
+        if (usernameLink) {
+            usernameLink.textContent = `@${user.login}`;
+            usernameLink.href = `https://github.com/${user.login}`;
+        }
+    }
     if (repos) {
         const totalStars = repos.reduce(
             (sum, r) => sum + r.stargazers_count,
