@@ -51,7 +51,7 @@
     width: 25rem;
     background-color: var(--neo-orange);
     font-size: 4.9rem;
-    font-weight: 800;
+    font-weight: var(--fw-800);
     color: var(--neo-white);
     line-height: 1.2;
 }
@@ -64,7 +64,7 @@
 
 .subtitle {
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: var(--fw-900);
     color: var(--primary-text-color);
     line-height: 0.8;
     margin-bottom: var(--space-sm);
@@ -76,30 +76,6 @@
     display: flex;
     gap: var(--space-md);
     margin-top: var(--space-md);
-}
-
-.cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-sm) var(--space-md);
-    font-size: 1.05rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-    background-color: var(--neo-green);
-    color: var(--primary-text-color) !important;
-    border: var(--neo-border);
-    box-shadow: var(--neo-shadow);
-}
-
-.btn-about {
-    background-color: var(--neo-orange);
-    color: var(--neo-white) !important;
-}
-
-.btn-web {
-    background-color: var(--neo-yellow);
 }
 
 .about-section {
@@ -134,7 +110,7 @@
 }
 
 .sub-heading-garden {
-    font-weight: 600;
+    font-weight: var(--fw-600);
     font-size: 1.7rem;
     color: var(--primary-text-color);
     background: var(--neo-blue);
@@ -144,7 +120,7 @@
 
 .description-garden {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: var(--fw-600);
     color: var(--primary-text-color);
     line-height: 1.7;
 }

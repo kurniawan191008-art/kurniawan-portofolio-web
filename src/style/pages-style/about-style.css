@@ -29,7 +29,7 @@
 
 .section-header__title {
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: var(--fw-800);
     color: var(--primary-text-color);
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -154,7 +154,7 @@
 .terminal-title {
     margin: 0 auto;
     font-size: 0.7rem;
-    font-weight: 700;
+    font-weight: var(--fw-700);
     letter-spacing: -0.5px;
     color: var(--neo-black);
 }
@@ -184,8 +184,6 @@
 .neo-badge {
     position: absolute;
     background-color: var(--neo-white);
-    border: var(--neo-border-thick);
-    box-shadow: var(--neo-shadow-lg);
     padding: var(--space-xs) var(--space-sm);
     display: flex;
     align-items: center;
@@ -218,12 +216,12 @@
 
 .badge-text .small {
     font-size: 0.6rem;
-    font-weight: 700;
+    font-weight: var(--fw-700);
 }
 
 .badge-text .bold {
     font-size: 0.7rem;
-    font-weight: 800;
+    font-weight: var(--fw-800);
 }
 
 .neo-icon {
@@ -239,7 +237,7 @@
 
 .profile-hero__name {
     font-size: 6.5rem;
-    font-weight: 800;
+    font-weight: var(--fw-800);
     color: var(--neo-green);
     line-height: 1;
     letter-spacing: -0.001em;
@@ -248,7 +246,7 @@
 
 .profile-hero__subtitle {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: var(--fw-600);
     color: var(--primary-text-color);
     line-height: 1.4;
     margin-bottom: var(--space-lg);
@@ -297,7 +295,7 @@
     flex: 1;
     height: 100%;
     font-size: 0.85rem;
-    font-weight: 700;
+    font-weight: var(--fw-700);
     color: var(--primary-text-color);
     text-decoration: none;
     border-right: var(--neo-border);
@@ -333,7 +331,7 @@
 
 .profile-info__bio p {
     font-size: .94rem;
-    font-weight: 600;
+    font-weight: var(--fw-600);
     line-height: 1.8;
     margin-bottom: var(--space-lg);
     color: var(--primary-text-color);
@@ -344,7 +342,7 @@
 }
 
 .profile-info__bio p span {
-    font-weight: 700;
+    font-weight: var(--fw-700);
     padding: 0 calc(var(--space-xs) - 1rem);
     border: var(--neo-border);
     display: inline-block;
@@ -362,7 +360,7 @@
 }
 
 .profile-info__bio strong {
-    font-weight: 700;
+    font-weight: var(--fw-700);
     background-color: var(--neo-yellow);
     padding: 0 var(--space-xs);
     border: var(--neo-border);
@@ -462,7 +460,7 @@
     background: var(--neo-black);
     color: var(--neo-white);
     padding: 2px 8px;
-    font-weight: 800;
+    font-weight: var(--fw-800);
     font-size: 0.85rem;
     margin-bottom: var(--space-xs);
 }
@@ -470,7 +468,7 @@
 .timeline-role {
     margin: 0 0 var(--space-xs) 0;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: var(--fw-700);
     color: var(--neo-black);
 }
 
@@ -507,13 +505,13 @@
 
 /* Efek interaktif saat di-hover */
 .interest-card:hover {
-    transform: translate(4px, 4px);
+    transform: translate(var(--nudge-lg), var(--nudge-lg));
     box-shadow: var(--neo-shadow-sm);
 }
 
 .interest-card__title {
     font-size: 1.25rem;
-    font-weight: 800;
+    font-weight: var(--fw-800);
     color: var(--neo-black);
     margin: 0;
     padding: var(--space-md) var(--space-lg);
@@ -602,7 +600,7 @@
 
 .hobby-card__title {
     font-size: 1.4rem;
-    font-weight: 800;
+    font-weight: var(--fw-800);
     color: var(--neo-black);
     margin: 0 0 var(--space-sm) 0;
     text-transform: uppercase;
@@ -613,7 +611,7 @@
 
 .hobby-card__desc {
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: var(--fw-600);
     /* Ditebelin dikit biar kebaca di atas warna cerah */
     color: var(--neo-black);
     line-height: 1.5;
@@ -658,37 +656,9 @@
 
 .aspiration-text--highlight {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: var(--fw-700);
     background: var(--neo-yellow);
     display: inline-block;
     padding: var(--space-xs) var(--space-md);
 }
 
-/* ===== BUTTONS ===== */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-sm);
-    padding: var(--space-sm) var(--space-lg);
-    font-size: 1rem;
-    font-weight: 700;
-    text-decoration: none;
-    border: var(--neo-border);
-    cursor: pointer;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-    white-space: nowrap;
-}
-
-.btn--primary {
-    background: var(--neo-orange);
-    color: var(--primary-text-color) !important;
-    box-shadow: var(--neo-shadow);
-}
-
-.btn--secondary {
-    background: var(--neo-white);
-    color: var(--primary-text-color) !important;
-    border: var(--neo-border);
-    box-shadow: var(--neo-shadow);
-}

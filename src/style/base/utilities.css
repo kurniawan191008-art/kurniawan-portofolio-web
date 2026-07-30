@@ -1,0 +1,23 @@
+/* ===== UTILITY CLASSES ===== */
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.scroll-area {
+    overflow-y: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}

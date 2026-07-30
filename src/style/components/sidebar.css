@@ -39,7 +39,7 @@
 .profile .name-n-bio h1 {
     margin-left: var(--space-sm);
     font: var(--profile-name-font);
-    font-weight: 700;
+    font-weight: var(--fw-700);
     color: var(--primary-text-color);
 }
 
@@ -90,15 +90,16 @@
     transition: background var(--transition-fast);
 }
 
-.folder-btn:hover {
+.folder-btn:hover,
+.nav-bar a:hover {
     background: var(--neo-yellow);
     color: var(--primary-text-color);
     border-left: var(--neo-border);
-    padding-left: calc(var(--space-2xl) - 3px);
 }
 
 .folder-btn:hover .icon,
-.folder-btn:hover .chevron {
+.folder-btn:hover .chevron,
+.nav-bar a:hover .icon {
     color: var(--primary-text-color);
 }
 
@@ -109,24 +110,25 @@
     transition: background var(--transition-fast);
 }
 
+.folder-btn:hover {
+    padding-left: calc(var(--space-2xl) - 3px);
+}
+
 .nav-bar a:hover {
-    background: var(--neo-yellow);
-    color: var(--primary-text-color);
-    border-left: var(--neo-border);
     padding-left: calc(var(--space-2xl) + 37px);
 }
 
-.nav-bar a:hover .icon {
-    color: var(--primary-text-color);
-}
-
 .project-category a {
-    padding-left: calc(var(--space-2xl) + 95px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-sm);
+    padding-left: calc(var(--space-2xl) + 80px);
     padding-right: 0;
 }
 
 .project-category a:hover {
-    padding-left: calc(var(--space-2xl) + 92px);
+    padding-left: calc(var(--space-2xl) + 77px);
 }
 
 .menu-item a {

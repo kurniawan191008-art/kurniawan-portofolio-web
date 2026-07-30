@@ -1,0 +1,52 @@
+/* ===== BUTTON COMPONENT ===== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 1rem;
+    font-weight: var(--fw-700);
+    text-decoration: none;
+    border: var(--neo-border);
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    white-space: nowrap;
+}
+
+.btn:hover {
+    transform: translate(var(--nudge-sm), var(--nudge-sm));
+    box-shadow: var(--neo-shadow-sm);
+}
+
+.btn--primary {
+    background: var(--neo-orange);
+    color: var(--neo-white) !important;
+    box-shadow: var(--neo-shadow);
+}
+
+.btn--secondary {
+    background: var(--neo-white);
+    color: var(--primary-text-color) !important;
+    box-shadow: var(--neo-shadow);
+}
+
+.btn--accent {
+    background: var(--neo-yellow);
+    color: var(--primary-text-color) !important;
+    box-shadow: var(--neo-shadow);
+}
+
+.btn--blue {
+    background: var(--neo-blue);
+    color: var(--neo-white) !important;
+    box-shadow: var(--neo-shadow);
+}
+
+@media (max-width: 767px) {
+    .btn {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.9rem;
+    }
+}

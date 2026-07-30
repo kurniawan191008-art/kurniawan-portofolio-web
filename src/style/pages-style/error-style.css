@@ -63,17 +63,4 @@
     margin-top: var(--space-xs);
 }
 
-.btn-home {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-sm) var(--space-lg);
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    background-color: var(--neo-orange);
-    color: var(--neo-white) !important;
-    border: var(--neo-border);
-    box-shadow: var(--neo-shadow);
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
+

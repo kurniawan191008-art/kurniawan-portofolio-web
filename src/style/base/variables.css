@@ -63,4 +63,13 @@
 
     --transition-fast: 100ms ease;
     --transition-base: 150ms ease;
+
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --fw-900: 900;
+
+    --nudge-sm: 2px;
+    --nudge-md: 3px;
+    --nudge-lg: 4px;
 }
