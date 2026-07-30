@@ -27,6 +27,9 @@
     gap: var(--space-xs);
     min-height: 100%;
 }
+.about-web{
+    background-color: var(--neo-white);
+}
 
 .home-title {
     display: flex;
@@ -98,9 +101,9 @@
 }
 
 .garden {
-    color: var(--primary-text-color);
+    color: var(--neo-white);
     line-height: 0.9;
-    background: var(--neo-green);
+    background: var(--tertiary-heading-color);
     padding: 0 var(--space-sm);
 }
 
@@ -141,5 +144,333 @@
     color: var(--primary-text-color);
     background: var(--neo-yellow);
     padding: var(--space-xs) var(--space-md);
+    margin-bottom: var(--space-xs);
     display: inline-block;
+}
+
+/* ===== BLOOMING FLOWERS ===== */
+
+.about-web-decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bloom-flower {
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    opacity: 0;
+    animation: none;
+}
+
+.about-web.in-view .bloom-flower {
+    animation: bloom 1s ease-out forwards;
+}
+
+.bloom-flower::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: var(--neo-border);
+}
+
+.bloom-flower::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: var(--neo-border);
+}
+
+.bloom-flower__center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: var(--neo-border);
+    z-index: 1;
+}
+
+/* === Daisy-type: extra petals via .bloom-flower__petal === */
+.bloom-flower--daisy .bloom-flower__petal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 0.5rem;
+    border: var(--neo-border);
+    transform: translate(-50%, -50%);
+}
+
+.bloom-flower--daisy .bloom-flower__petal:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.bloom-flower--daisy .bloom-flower__petal:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* ===== RED — bottom left ===== */
+.bloom-flower--red {
+    bottom: 12%;
+    left: 6%;
+    width: 3.5rem;
+    height: 3.5rem;
+    animation-delay: 0.2s;
+}
+
+.bloom-flower--red::before {
+    width: 100%;
+    height: 0.8rem;
+    background: var(--neo-red);
+}
+
+.bloom-flower--red::after {
+    width: 0.8rem;
+    height: 100%;
+    background: var(--neo-red);
+}
+
+.bloom-flower--red .bloom-flower__center {
+    width: 1rem;
+    height: 1rem;
+    background: var(--neo-white);
+}
+
+/* ===== YELLOW — right mid ===== */
+.bloom-flower--yellow {
+    bottom: 45%;
+    right: 10%;
+    width: 3rem;
+    height: 3rem;
+    animation-delay: 0.6s;
+}
+
+.bloom-flower--yellow::before {
+    width: 100%;
+    height: 0.7rem;
+    background: var(--neo-yellow);
+}
+
+.bloom-flower--yellow::after {
+    width: 0.7rem;
+    height: 100%;
+    background: var(--neo-yellow);
+}
+
+.bloom-flower--yellow .bloom-flower__center {
+    width: 0.85rem;
+    height: 0.85rem;
+    background: var(--neo-red);
+}
+
+/* ===== PURPLE — top right ===== */
+.bloom-flower--purple {
+    top: 10%;
+    right: 30%;
+    width: 6rem;
+    height: 6rem;
+    animation-delay: 1s;
+}
+
+.bloom-flower--purple::before {
+    width: 100%;
+    height: 1.9rem;
+    background: var(--neo-pink);
+}
+
+.bloom-flower--purple::after {
+    width: 1.9rem;
+    height: 100%;
+    background: var(--neo-pink);
+}
+
+.bloom-flower--purple .bloom-flower__center {
+    width: 1.9rem;
+    height: 1.9rem;
+    background: var(--neo-red);
+}
+
+/* ===== ORANGE — left mid ===== */
+.bloom-flower--orange {
+    top: 35%;
+    left: 5%;
+    width: 3rem;
+    height: 3rem;
+    animation-delay: 1.4s;
+}
+
+.bloom-flower--orange::before {
+    width: 100%;
+    height: 0.6rem;
+    background: var(--neo-orange);
+}
+
+.bloom-flower--orange::after {
+    width: 0.6rem;
+    height: 100%;
+    background: var(--secondary-heading-color);
+}
+
+.bloom-flower--orange .bloom-flower__center {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: var(--neo-white);
+}
+
+/* ===== BLUE — bottom right ===== */
+.bloom-flower--blue {
+    bottom: 18%;
+    right: 6%;
+    width: 3rem;
+    height: 3rem;
+    animation-delay: 0.4s;
+}
+
+.bloom-flower--blue::before {
+    width: 100%;
+    height: 0.7rem;
+    background: var(--neo-blue);
+}
+
+.bloom-flower--blue::after {
+    width: 0.7rem;
+    height: 100%;
+    background: var(--neo-blue);
+}
+
+.bloom-flower--blue .bloom-flower__center {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: var(--neo-yellow);
+}
+
+/* ===== GREEN — top left ===== */
+.bloom-flower--green {
+    top: 10%;
+    left: 8%;
+    width: 3rem;
+    height: 3rem;
+    animation-delay: 1.8s;
+}
+
+.bloom-flower--green::before {
+    width: 100%;
+    height: 0.6rem;
+    background: var(--neo-green);
+}
+
+.bloom-flower--green::after {
+    width: 0.6rem;
+    height: 100%;
+    background: var(--neo-green);
+}
+
+.bloom-flower--green .bloom-flower__center {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: var(--neo-white);
+}
+
+/* ===== WHITE DAISY — bottom center ===== */
+.bloom-flower--white {
+    bottom: 8%;
+    left: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    animation-delay: 1.2s;
+    transform: translateX(-50%);
+}
+
+.bloom-flower--white .bloom-flower__petal {
+    background: var(--primary-bg-color);
+}
+
+.bloom-flower--white .bloom-flower__center {
+    width: 0.9rem;
+    height: 0.9rem;
+    background: var(--neo-orange);
+}
+
+/* ===== PINK — center right ===== */
+.bloom-flower--pink {
+    bottom: 55%;
+    right: 20%;
+    width: 2.5rem;
+    height: 2.5rem;
+    animation-delay: 2s;
+}
+
+.bloom-flower--pink::before {
+    width: 100%;
+    height: 0.5rem;
+    background: var(--neo-pink);
+}
+
+.bloom-flower--pink::after {
+    width: 0.5rem;
+    height: 100%;
+    background: var(--neo-pink);
+}
+
+.bloom-flower--pink .bloom-flower__center {
+    width: 0.7rem;
+    height: 0.7rem;
+    background: var(--neo-blue);
+}
+
+@keyframes bloom {
+    0% {
+        transform: scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.15) rotate(5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .bloom-flower--yellow,
+    .bloom-flower--orange,
+    .bloom-flower--green,
+    .bloom-flower--pink {
+        display: none;
+    }
+
+    .bloom-flower--red {
+        bottom: 8%;
+        left: 4%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .bloom-flower--purple {
+        top: 4%;
+        right: 4%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .bloom-flower--blue {
+        bottom: 15%;
+        right: 4%;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .bloom-flower--white {
+        bottom: 5%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 }
