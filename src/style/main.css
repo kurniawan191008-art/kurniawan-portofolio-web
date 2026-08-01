@@ -5,6 +5,7 @@
 @import "base/utilities.css";
 
 @import "components/grid-background.css";
+@import "components/dot-background.css";
 @import "components/header.css";
 @import "components/sidebar.css";
 @import "components/footer.css";

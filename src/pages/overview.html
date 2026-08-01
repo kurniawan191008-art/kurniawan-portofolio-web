@@ -36,7 +36,7 @@
     <nav class="navbar-sticky">
         Navbar-sticky
     </nav>
-    <section class="github-overview">
+    <section class="github-overview ">
         <div class="github-overview__header">
             <div class="github-profile">
                 <img class="github-avatar" id="github-avatar" src="" alt="">
@@ -77,42 +77,74 @@
     <section class="project-section">
             <h2 class="project-section__title">Projects</h2>
             <div class="project-grid">
-                <article class="project-card">
-                    <div class="project-card__header">
-                        <h3 class="project-card__title">Portofolio Web</h3>
+                <article class="project-card project-card--completed">
+                    <div class="project-card__media">
+                        <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=800&q=80" alt="Portofolio Web" loading="lazy">
                         <span class="project-card__status project-card__status--completed">Completed</span>
                     </div>
-                    <p class="project-card__desc">Personal portfolio website with real-time GitHub integration and neobrutalism design.</p>
-                    <a href="https://github.com/kurniawan191008-art/kurniawan-portofolio-web" target="_blank" class="btn btn--primary">View Repo</a>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Portofolio Web</h3>
+                        <div class="project-card__tech">
+                            <span class="project-card__tech-item project-card__tech-item--html">
+                                <svg class="project-card__tech-icon"><use href="src/assets/icon/sprite.svg#html-icon"></use></svg>
+                                HTML5
+                            </span>
+                            <span class="project-card__tech-item project-card__tech-item--css">
+                                <svg class="project-card__tech-icon"><use href="src/assets/icon/sprite.svg#css-icon"></use></svg>
+                                CSS3
+                            </span>
+                            <span class="project-card__tech-item project-card__tech-item--js">
+                                <svg class="project-card__tech-icon"><use href="src/assets/icon/sprite.svg#js-icon"></use></svg>
+                                JavaScript
+                            </span>
+                        </div>
+                        <p class="project-card__desc">Personal portfolio website with real-time GitHub integration and neobrutalism design.</p>
+                        <a href="https://github.com/kurniawan191008-art/kurniawan-portofolio-web" target="_blank" class="btn btn--primary">View Repo</a>
+                    </div>
                 </article>
-                <article class="project-card">
-                    <div class="project-card__header">
-                        <h3 class="project-card__title">SMK Gema Nusantara 1 Pabuaran Landing Page</h3>
+                <article class="project-card project-card--ongoing">
+                    <div class="project-card__media">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80" alt="SMK Gema Nusantara 1 Pabuaran Landing Page" loading="lazy">
                         <span class="project-card__status project-card__status--ongoing">Ongoing</span>
                     </div>
-                    <p class="project-card__desc">Landing page for SMK Gema Nusantara 1 Pabuaran.</p>
-                    <a href="#" target="_blank" class="btn btn--accent">View Repo</a>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">SMK Gema Nusantara 1 Pabuaran Landing Page</h3>
+                        <div class="project-card__tech">
+                            <span class="project-card__tech-item project-card__tech-item--tailwind">
+                                <svg class="project-card__tech-icon"><use href="src/assets/icon/sprite.svg#tailwindcss-icon"></use></svg>
+                                TailwindCSS
+                            </span>
+                        </div>
+                        <p class="project-card__desc">Landing page for SMK Gema Nusantara 1 Pabuaran.</p>
+                        <a href="#" target="_blank" class="btn btn--accent">View Repo</a>
+                    </div>
                 </article>
-                <article class="project-card">
-                    <div class="project-card__header">
+                <article class="project-card project-card--coming">
+                    <div class="project-card__media project-card__media--placeholder">
+                        <span class="project-card__media-text">Coming Soon</span>
+                    </div>
+                    <div class="project-card__body">
                         <h3 class="project-card__title">Exam Browser Project</h3>
-                        <span class="project-card__status project-card__status--coming">Coming Soon</span>
+                        <p class="project-card__desc">A secure browser-based exam application for schools.</p>
                     </div>
-                    <p class="project-card__desc">A secure browser-based exam application for schools.</p>
                 </article>
-                <article class="project-card">
-                    <div class="project-card__header">
+                <article class="project-card project-card--coming">
+                    <div class="project-card__media project-card__media--placeholder">
+                        <span class="project-card__media-text">Coming Soon</span>
+                    </div>
+                    <div class="project-card__body">
                         <h3 class="project-card__title">Landing Page Template Prompt</h3>
-                        <span class="project-card__status project-card__status--coming">Coming Soon</span>
+                        <p class="project-card__desc">A reusable prompt template for generating landing pages.</p>
                     </div>
-                    <p class="project-card__desc">A reusable prompt template for generating landing pages.</p>
                 </article>
-                <article class="project-card">
-                    <div class="project-card__header">
-                        <h3 class="project-card__title">Mini Project Web</h3>
-                        <span class="project-card__status project-card__status--coming">Coming Soon</span>
+                <article class="project-card project-card--coming">
+                    <div class="project-card__media project-card__media--placeholder">
+                        <span class="project-card__media-text">Coming Soon</span>
                     </div>
-                    <p class="project-card__desc">A collection of mini web development projects.</p>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Mini Project Web</h3>
+                        <p class="project-card__desc">A collection of mini web development projects.</p>
+                    </div>
                 </article>
             </div>
         </section>
