@@ -8,12 +8,8 @@
     padding: 0 var(--space-2xl) var(--space-2xl) var(--space-2xl);
     color: var(--primary-text-color);
     background: var(--neo-white);
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    overflow-y: auto;
-    scrollbar-width: none;
 }
-
+.profile-hero,
 .profile-section,
 .interest-section,
 .hobby-section,
@@ -61,7 +57,7 @@
     width: 100%;
     align-items: center;
     position: relative;
-    z-index: 1000;
+    z-index: 10;
     gap: var(--space-5xl);
     /* border: var(--neo-border); */
     margin-bottom: var(--space-4xl);
@@ -100,7 +96,7 @@
     width: 280px;
     height: 360px;
     margin: var(--space-md) auto;
-    z-index: 2;
+    z-index: 1;
 }
 
 .decor-shape {
@@ -261,12 +257,6 @@
     gap: var(--space-md);
 }
 
-#nav-placeholder {
-    margin-top: var(--space-md);
-    height: 50px;
-    width: 100%;
-}
-
 .profile-hero__nav {
     display: flex;
     flex-direction: row;
@@ -277,17 +267,11 @@
     background: var(--secondary-bg-color);
     box-sizing: border-box;
     margin: 0;
-    position: static;
+    position: sticky;
     z-index: 100;
     width: 100%;
     transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1), right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.profile-hero__nav.is-stuck {
-    position: fixed;
-    z-index: 1000;
-}
-
 .profile-hero__nav-link {
     display: flex;
     align-items: center;

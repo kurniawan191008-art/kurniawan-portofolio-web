@@ -27,6 +27,12 @@ export function getRepos() {
     );
 }
 
+export function getRecentEvents(perPage = 30) {
+    return fetchJson(
+        `https://api.github.com/users/${USERNAME}/events/public?per_page=${perPage}`
+    );
+}
+
 
 export function getContributions() {
     return fetchJson(

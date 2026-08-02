@@ -1,5 +1,5 @@
-<main class="overview  grid-bg">
-    <header class="overview-hero-secion ">
+<main class="overview grid-bg scroll-area">
+    <header class="overview-hero-secion " id="home">
         <div class="hero-top-bar">
             <span class="marquee-label">Find me in</span>
             <marquee behavior="scroll" direction="left" class="hero-marquee">
@@ -33,127 +33,153 @@
 
 
     </header>
-    <nav class="navbar-sticky">
-        <ul class="navbar-anchor-list">
-            <li><a href="#github" class="navbar-anchor-link">GitHub</a></li>
-            <li><a href="#projects" class="navbar-anchor-link">Projects</a></li>
-            <li><a href="#skills" class="navbar-anchor-link">Skills</a></li>
-            <li><a href="#tech-stack" class="navbar-anchor-link">Tech Stack</a></li>
-            <li><a href="#tools" class="navbar-anchor-link">Tools</a></li>
+    <nav class="navbar-sticky sticky-top uppercase">
+        <ul class="anchor-list">
+            <li><a href="#home" class="anchor-link">Home</a></li>
+            <li><a href="#github" class="anchor-link">GitHub</a></li>
+            <li><a href="#projects" class="anchor-link">Projects</a></li>
+            <li><a href="#skills" class="anchor-link">Skills</a></li>
+            <li><a href="#tech-stack" class="anchor-link">Tech Stack</a></li>
+            <li><a href="#tools" class="anchor-link">Tools</a></li>
         </ul>
     </nav>
     <section class="github-overview" id="github">
-        <div class="github-overview__header">
-            <div class="github-profile">
-                <img class="github-avatar" id="github-avatar" src="" alt="">
-                <a class="github-username" id="github-username" href="" target="_blank"></a>
-            </div>
-        </div>
         <div class="github-overview__content">
-            <div class="stat-parent">
+            <div class="left-element__parent">
+                <div class="github-overview__header">
+                    <div class="github-profile">
+                        <img class="github-avatar" id="github-avatar" src="" alt="">
+                        <a class="github-username" id="github-username" href="" target="_blank"></a>
+                    </div>
+                </div>
                 <div class="stat-parent">
-                    <div class="github-stats">
-                        <div class="github-stat-card" data-stat="stars">
-                            <span class="github-stat-card__number">-</span>
-                            <span class="github-stat-card__label">Stars</span>
-                        </div>
-                        <div class="github-stat-card" data-stat="repos">
-                            <span class="github-stat-card__number">-</span>
-                            <span class="github-stat-card__label">Repositories</span>
-                        </div>
-                        <div class="github-stat-card" data-stat="contributions">
-                            <span class="github-stat-card__number">-</span>
-                            <span class="github-stat-card__label">Contributions</span>
-                        </div>
+                    <div class="stat-parent">
+                        <div class="github-stats">
+                            <div class="github-stat-card" data-stat="stars">
+                                <span class="github-stat-card__number">-</span>
+                                <span class="github-stat-card__label">Stars</span>
+                            </div>
+                            <div class="github-stat-card" data-stat="repos">
+                                <span class="github-stat-card__number">-</span>
+                                <span class="github-stat-card__label">Repositories</span>
+                            </div>
+                            <div class="github-stat-card" data-stat="contributions">
+                                <span class="github-stat-card__number">-</span>
+                                <span class="github-stat-card__label">Contributions</span>
+                            </div>
 
-                        <div class="github-stat-card" data-stat="projects">
-                            <span class="github-stat-card__number">1</span>
-                            <span class="github-stat-card__label">Projects Completed</span>
+                            <div class="github-stat-card" data-stat="projects">
+                                <span class="github-stat-card__number">1</span>
+                                <span class="github-stat-card__label">Projects Completed</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="github-calendar__parent">
-                <p class="github-overview__desc">My contribution activity on GitHub</p>
-                <div class="github-calendar"></div>
-            </div>
-        </div>
 
+            </div>
+            <div class="right-element__parent">
+                <div class="github-repos">
+                    <h2 class="github-repos__title">REPOSITORIES</h2>
+                    <div class="repo-list" id="repo-list"></div>
+                </div>
+                <div class="github-calendar__parent">
+                    <p class="github-overview__desc">My contribution activity on GitHub</p>
+                    <div class="github-calendar"></div>
+                </div>
+                <div class="recent-activity">
+                    <h2 class="recent-activity__title">RECENT ACTIVITY</h2>
+                    <ul class="activity-list" id="activity-list"></ul>
+                </div>
+            </div>
+
+        </div>
     </section>
     <section class="project-section" id="projects">
-            <h2 class="project-section__title">Projects</h2>
-            <div class="project-grid">
-                <article class="project-card project-card--completed">
-                    <div class="project-card__media">
-                        <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=800&q=80" alt="Portofolio Web" loading="lazy">
-                        <span class="project-card__status project-card__status--completed">Completed</span>
+        <h2 class="project-section__title">Projects</h2>
+        <div class="project-grid">
+            <article class="project-card project-card--completed">
+                <div class="project-card__media">
+                    <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=800&q=80"
+                        alt="Portofolio Web" loading="lazy">
+                    <span class="project-card__status project-card__status--completed">Completed</span>
+                </div>
+                <div class="project-card__body">
+                    <h3 class="project-card__title">Portofolio Web</h3>
+                    <div class="project-card__tech">
+                        <span class="project-card__tech-item project-card__tech-item--html">
+                            <svg class="project-card__tech-icon">
+                                <use href="src/assets/icon/sprite.svg#html-icon"></use>
+                            </svg>
+                            HTML5
+                        </span>
+                        <span class="project-card__tech-item project-card__tech-item--css">
+                            <svg class="project-card__tech-icon">
+                                <use href="src/assets/icon/sprite.svg#css-icon"></use>
+                            </svg>
+                            CSS3
+                        </span>
+                        <span class="project-card__tech-item project-card__tech-item--js">
+                            <svg class="project-card__tech-icon">
+                                <use href="src/assets/icon/sprite.svg#js-icon"></use>
+                            </svg>
+                            JavaScript
+                        </span>
                     </div>
-                    <div class="project-card__body">
-                        <h3 class="project-card__title">Portofolio Web</h3>
-                        <div class="project-card__tech">
-                            <span class="project-card__tech-item project-card__tech-item--html">
-                                <svg class="project-card__tech-icon"><use href="src/assets/icon/sprite.svg#html-icon"></use></svg>
-                                HTML5
-                            </span>
-                            <span class="project-card__tech-item project-card__tech-item--css">
-                                <svg class="project-card__tech-icon"><use href="src/assets/icon/sprite.svg#css-icon"></use></svg>
-                                CSS3
-                            </span>
-                            <span class="project-card__tech-item project-card__tech-item--js">
-                                <svg class="project-card__tech-icon"><use href="src/assets/icon/sprite.svg#js-icon"></use></svg>
-                                JavaScript
-                            </span>
-                        </div>
-                        <p class="project-card__desc">Personal portfolio website with real-time GitHub integration and neobrutalism design.</p>
-                        <a href="https://github.com/kurniawan191008-art/kurniawan-portofolio-web" target="_blank" class="btn btn--primary">View Repo</a>
+                    <p class="project-card__desc">Personal portfolio website with real-time GitHub integration and
+                        neobrutalism design.</p>
+                    <a href="https://github.com/kurniawan191008-art/kurniawan-portofolio-web" target="_blank"
+                        class="btn btn--primary">View Repo</a>
+                </div>
+            </article>
+            <article class="project-card project-card--ongoing">
+                <div class="project-card__media">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80"
+                        alt="SMK Gema Nusantara 1 Pabuaran Landing Page" loading="lazy">
+                    <span class="project-card__status project-card__status--ongoing">Ongoing</span>
+                </div>
+                <div class="project-card__body">
+                    <h3 class="project-card__title">SMK Gema Nusantara 1 Pabuaran Landing Page</h3>
+                    <div class="project-card__tech">
+                        <span class="project-card__tech-item project-card__tech-item--tailwind">
+                            <svg class="project-card__tech-icon">
+                                <use href="src/assets/icon/sprite.svg#tailwindcss-icon"></use>
+                            </svg>
+                            TailwindCSS
+                        </span>
                     </div>
-                </article>
-                <article class="project-card project-card--ongoing">
-                    <div class="project-card__media">
-                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80" alt="SMK Gema Nusantara 1 Pabuaran Landing Page" loading="lazy">
-                        <span class="project-card__status project-card__status--ongoing">Ongoing</span>
-                    </div>
-                    <div class="project-card__body">
-                        <h3 class="project-card__title">SMK Gema Nusantara 1 Pabuaran Landing Page</h3>
-                        <div class="project-card__tech">
-                            <span class="project-card__tech-item project-card__tech-item--tailwind">
-                                <svg class="project-card__tech-icon"><use href="src/assets/icon/sprite.svg#tailwindcss-icon"></use></svg>
-                                TailwindCSS
-                            </span>
-                        </div>
-                        <p class="project-card__desc">Landing page for SMK Gema Nusantara 1 Pabuaran.</p>
-                        <a href="#" target="_blank" class="btn btn--accent">View Repo</a>
-                    </div>
-                </article>
-                <article class="project-card project-card--coming">
-                    <div class="project-card__media project-card__media--placeholder">
-                        <span class="project-card__media-text">Coming Soon</span>
-                    </div>
-                    <div class="project-card__body">
-                        <h3 class="project-card__title">Exam Browser Project</h3>
-                        <p class="project-card__desc">A secure browser-based exam application for schools.</p>
-                    </div>
-                </article>
-                <article class="project-card project-card--coming">
-                    <div class="project-card__media project-card__media--placeholder">
-                        <span class="project-card__media-text">Coming Soon</span>
-                    </div>
-                    <div class="project-card__body">
-                        <h3 class="project-card__title">Landing Page Template Prompt</h3>
-                        <p class="project-card__desc">A reusable prompt template for generating landing pages.</p>
-                    </div>
-                </article>
-                <article class="project-card project-card--coming">
-                    <div class="project-card__media project-card__media--placeholder">
-                        <span class="project-card__media-text">Coming Soon</span>
-                    </div>
-                    <div class="project-card__body">
-                        <h3 class="project-card__title">Mini Project Web</h3>
-                        <p class="project-card__desc">A collection of mini web development projects.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
+                    <p class="project-card__desc">Landing page for SMK Gema Nusantara 1 Pabuaran.</p>
+                    <a href="#" target="_blank" class="btn btn--accent">View Repo</a>
+                </div>
+            </article>
+            <article class="project-card project-card--coming">
+                <div class="project-card__media project-card__media--placeholder">
+                    <span class="project-card__media-text">Coming Soon</span>
+                </div>
+                <div class="project-card__body">
+                    <h3 class="project-card__title">Exam Browser Project</h3>
+                    <p class="project-card__desc">A secure browser-based exam application for schools.</p>
+                </div>
+            </article>
+            <article class="project-card project-card--coming">
+                <div class="project-card__media project-card__media--placeholder">
+                    <span class="project-card__media-text">Coming Soon</span>
+                </div>
+                <div class="project-card__body">
+                    <h3 class="project-card__title">Landing Page Template Prompt</h3>
+                    <p class="project-card__desc">A reusable prompt template for generating landing pages.</p>
+                </div>
+            </article>
+            <article class="project-card project-card--coming">
+                <div class="project-card__media project-card__media--placeholder">
+                    <span class="project-card__media-text">Coming Soon</span>
+                </div>
+                <div class="project-card__body">
+                    <h3 class="project-card__title">Mini Project Web</h3>
+                    <p class="project-card__desc">A collection of mini web development projects.</p>
+                </div>
+            </article>
+        </div>
+    </section>
 
     <section class="skill-section" id="skills">
 
