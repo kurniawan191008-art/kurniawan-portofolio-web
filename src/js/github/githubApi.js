@@ -32,10 +32,3 @@ export function getRecentEvents(perPage = 30) {
         `https://api.github.com/users/${USERNAME}/events/public?per_page=${perPage}`
     );
 }
-
-
-export function getContributions() {
-    return fetchJson(
-        `https://github-contributions-api.deno.dev/${USERNAME}.json`
-    );
-}

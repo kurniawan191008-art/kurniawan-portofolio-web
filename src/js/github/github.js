@@ -11,6 +11,17 @@ function setStat(selector, value) {
     if (el) el.textContent = value;
 }
 
+function fillProfileField(id, value) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (value) {
+        el.textContent = value;
+        el.style.display = "";
+    } else {
+        el.style.display = "none";
+    }
+}
+
 const LANGUAGE_COLORS = {
     JavaScript: "#f1e05a",
     TypeScript: "#3178c6",
@@ -234,6 +245,19 @@ export async function initGithub() {
         if (usernameLink) {
             usernameLink.textContent = `@${user.login}`;
             usernameLink.href = `https://github.com/${user.login}`;
+        }
+        fillProfileField("github-name", user.name || user.login);
+        fillProfileField("github-bio", user.bio);
+
+        const locationEl = document.getElementById("github-location");
+        if (locationEl) {
+            const locationRow = locationEl.closest(".github-profile__location");
+            if (user.location) {
+                locationEl.textContent = user.location;
+                if (locationRow) locationRow.style.display = "";
+            } else if (locationRow) {
+                locationRow.style.display = "none";
+            }
         }
     }
     if (repos) {
