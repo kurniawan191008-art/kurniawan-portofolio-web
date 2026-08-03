@@ -13,6 +13,7 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
+
 /* ===== HERO SECTION ===== */
 .hero-content {
     position: relative;
@@ -106,9 +107,15 @@
     padding: var(--space-md);
 }
 
+
 @keyframes marquee-scroll {
-    0%   { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* ===== SHARED HERO / ABOUT-WEB LAYOUT ===== */
@@ -479,10 +486,12 @@
         transform: scale(0) rotate(-45deg);
         opacity: 0;
     }
+
     60% {
         transform: scale(1.15) rotate(5deg);
         opacity: 1;
     }
+
     100% {
         transform: scale(1) rotate(0deg);
         opacity: 1;

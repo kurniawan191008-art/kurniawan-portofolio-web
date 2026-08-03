@@ -180,7 +180,7 @@
 /* --- 4. GitHub Overview Section --- */
 .github-overview {
     max-width: var(--container-max);
-    padding: var(--space-xl) var(--space-md);
+    padding: var(--space-xl) var(--space-xl);
     background-color: var(--neo-white);
     width: 100%;
     height: 100%;
@@ -313,7 +313,9 @@
     overflow-x: auto;
     border: var(--neo-border);
     box-shadow: var(--neo-shadow);
-    padding: var(--space-sm) var(--space-xl) var(--space-xl) var(--space-sm);
+    padding: var(--space-xl) var(--space-xl) var(--space-xl) var(--space-xl);
+
+    box-sizing: border-box;
 }
 
 .github-calendar .graph {
