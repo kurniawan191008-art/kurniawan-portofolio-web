@@ -204,9 +204,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-xs);
+    gap: var(--space-sm);
     min-width: 100%;
     border: var(--neo-border);
+    box-shadow: var(--neo-shadow);
     padding: var(--space-sm);
 }
 
@@ -313,7 +314,7 @@
     overflow-x: auto;
     border: var(--neo-border);
     box-shadow: var(--neo-shadow);
-    padding: var(--space-xl) var(--space-xl) var(--space-xl) var(--space-xl);
+    padding: var(--space-xl) var(--space-xs) var(--space-xl) var(--space-xl);
 
     box-sizing: border-box;
 }
