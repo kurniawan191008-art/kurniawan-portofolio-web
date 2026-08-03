@@ -46,35 +46,6 @@
     gap: var(--space-sm);
 }
 
-.greeting.selamat {
-    display: inline-block;
-    text-align: center;
-    padding-top: 0;
-    height: 5.5rem;
-    width: 25rem;
-    background-color: var(--neo-orange);
-    font-size: 4.9rem;
-    font-weight: var(--fw-800);
-    color: var(--neo-white);
-    line-height: 1.2;
-}
-
-.greeting.datang {
-    font-size: 6.9rem;
-    color: var(--neo-orange);
-    line-height: 1.2;
-}
-
-.subtitle {
-    font-size: 2rem;
-    font-weight: var(--fw-900);
-    color: var(--primary-text-color);
-    line-height: 0.8;
-    margin-bottom: var(--space-sm);
-    background: var(--neo-yellow);
-    padding: var(--space-xs) var(--space-sm);
-}
-
 .cta-container {
     display: flex;
     gap: var(--space-md);
