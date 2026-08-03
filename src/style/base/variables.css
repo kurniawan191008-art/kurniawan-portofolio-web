@@ -60,6 +60,7 @@
     --neo-shadow-sm: 2px 2px 0px var(--neo-black);
     --neo-shadow: 4px 4px 0px var(--neo-black);
     --neo-shadow-lg: 6px 6px 0px var(--neo-black);
+    --neo-shadow-sp: 30px 30px 0px var(--neo-black);
 
     --transition-fast: 100ms ease;
     --transition-base: 150ms ease;

@@ -2,7 +2,7 @@ import { getUser, getRepos, getRecentEvents } from "./githubApi.js";
 import GitHubCalendar from "github-calendar";
 
 const USERNAME = "kurniawan191008-art";
-const PROXY_URL = `https://api.bloggify.net/gh-calendar/?username=${USERNAME}`;
+const PROXY_URL = `https://proxy.cors.sh/https://github.com/users/${USERNAME}/contributions`;
 
 function setStat(selector, value) {
     const el = document.querySelector(

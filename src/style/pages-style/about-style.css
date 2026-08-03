@@ -8,13 +8,14 @@
     padding: 0 var(--space-2xl) var(--space-2xl) var(--space-2xl);
     color: var(--primary-text-color);
     background: var(--neo-white);
+    scroll-behavior: smooth;
 }
 .profile-hero,
 .profile-section,
 .interest-section,
 .hobby-section,
 .aspiration-section {
-    scroll-margin-top: calc(var(--space-2xl) + 1rem);
+    scroll-margin-top: 5rem;
 }
 
 /* ===== SECTION HEADER ===== */

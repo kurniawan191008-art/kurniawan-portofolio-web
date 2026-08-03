@@ -16,3 +16,24 @@
     background-attachment: fixed;
     z-index: -1;
 }
+
+.grid-bg-str {
+    position: relative;
+    z-index: 1;
+}
+
+.grid-bg-str::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--space-2xl) * -1);
+    right: calc(var(--space-2xl) * -1);
+    /* Warna dasar latar belakang */
+    background-image:
+        linear-gradient(to right, #000000 1px, transparent 1px),
+        linear-gradient(to bottom,rgb(0, 0, 0)b 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+    z-index: -1;
+}
