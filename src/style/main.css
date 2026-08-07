@@ -94,6 +94,10 @@
         max-width: 100%;
     }
 
+    .profile-hero__name {
+        font-size: 5rem;
+    }
+
     .profile-hero__cta {
         justify-content: center;
     }
@@ -153,7 +157,7 @@
     }
 
     .profile-hero__name {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
 
     .profile-hero__photo-wrapper {

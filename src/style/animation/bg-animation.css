@@ -8,7 +8,7 @@
     position: absolute;
     width: 89px; 
     height: 89px;
-    background-color: var(--neo-blue); 
+    background-color: var(--neo-black); 
     
     z-index: -1;
     pointer-events: none;
