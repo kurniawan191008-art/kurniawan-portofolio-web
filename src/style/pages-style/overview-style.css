@@ -566,13 +566,116 @@
     background: var(--neo-white);
 }
 
-.project-section__title {
+.project-section__title,
+.skill-section__title {
     font-family: var(--heading-font);
     font-size: 2rem;
     font-weight: var(--fw-800);
     color: var(--neo-black);
     margin: 0 0 var(--space-lg);
     text-transform: uppercase;
+}
+
+/* --- 5b. Skills Section --- */
+.skill-section {
+    padding: var(--space-xl) var(--space-md);
+    max-width: var(--container-max);
+    margin: 0 auto;
+    width: 100%;
+    background: var(--neo-white);
+}
+
+.skill-section__subtitle {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    font-weight: var(--fw-800);
+    color: var(--neo-black);
+    margin: var(--space-2xl) 0 var(--space-lg);
+    text-transform: uppercase;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-md);
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background-color: var(--neo-white);
+    border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow);
+    text-align: center;
+}
+
+.skill-card__icon {
+    width: 40px;
+    height: 40px;
+    color: var(--neo-orange);
+}
+
+.skill-card__name {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    font-weight: var(--fw-700);
+    color: var(--neo-black);
+    margin: 0;
+}
+
+.skill-card__level {
+    font-family: var(--editor-content-font);
+    font-size: 0.65rem;
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: var(--space-xs) var(--space-sm);
+    border: var(--neo-border);
+    white-space: nowrap;
+}
+
+.skill-card__level--beginner {
+    background: var(--neo-green);
+    color: var(--neo-white);
+}
+
+.skill-card__level--intermediate {
+    background: var(--neo-yellow);
+    color: var(--neo-black);
+}
+
+.skill-card__level--advanced {
+    background: var(--neo-orange);
+    color: var(--neo-white);
+}
+
+.skill-card__chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-xs);
+}
+
+.skill-card__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-family: var(--editor-content-font);
+    font-size: 0.7rem;
+    font-weight: var(--fw-700);
+    color: var(--primary-text-color);
+    border: var(--neo-border);
+    background-color: var(--primary-bg-color);
+    padding: var(--space-xs) var(--space-sm);
+    white-space: nowrap;
+}
+
+.skill-card--soft {
+    gap: var(--space-xs);
 }
 
 .project-grid {

@@ -78,18 +78,16 @@ function renderRepos(repos) {
                 (repo) => `
             <a href="${escapeHtml(repo.html_url)}" target="_blank" rel="noopener noreferrer" class="repo-card">
                 <h3 class="repo-card__name">${escapeHtml(repo.name)}</h3>
-                <p class="repo-card__desc">${
-                    repo.description
+                <p class="repo-card__desc">${repo.description
                         ? escapeHtml(repo.description)
                         : "No description"
-                }</p>
+                    }</p>
                 <div class="repo-card__meta">
-                    ${
-                        repo.language
-                            ? `<span class="repo-card__lang"><span class="repo-card__dot" style="background-color: ${languageColor(
-                                  repo.language
-                              )}"></span>${escapeHtml(repo.language)}</span>`
-                            : ""
+                    ${repo.language
+                        ? `<span class="repo-card__lang"><span class="repo-card__dot" style="background-color: ${languageColor(
+                            repo.language
+                        )}"></span>${escapeHtml(repo.language)}</span>`
+                        : ""
                     }
                     <span class="repo-card__stars"><svg class="repo-card__icon"><use href="src/assets/icon/sprite.svg#star-icon"></use></svg>${repo.stargazers_count}</span>
                     <span class="repo-card__forks"><svg class="repo-card__icon"><use href="src/assets/icon/sprite.svg#git-fork-icon"></use></svg>${repo.forks_count}</span>
@@ -170,8 +168,9 @@ function formatActivity(event) {
             if (event.payload.action !== "opened") return null;
             return `Opened PR "<a href="${escapeHtml(event.payload.pull_request.html_url)}" target="_blank" rel="noopener noreferrer" class="activity-item__link">${escapeHtml(event.payload.pull_request.title)}</a>" in ${repoLink}`;
         case "IssuesEvent":
-            if (event.payload.action !== "opened") return null;
-            return `Opened issue "<a href="${escapeHtml(event.payload.issue.html_url)}" target="_blank" rel="noopener noreferrer" class="activity-item__link">${escapeHtml(event.payload.issue.title)}</a>" in ${repoLink}`;
+            if (event.payload.action !== "opened")
+                return null;
+                return `Opened issue "<a href="${escapeHtml(event.payload.issue.html_url)}" target="_blank" rel="noopener noreferrer" class="activity-item__link">${escapeHtml(event.payload.issue.title)}</a>" in ${repoLink}`;
         case "IssueCommentEvent":
             return `Commented on "<a href="${escapeHtml(event.payload.issue.html_url)}" target="_blank" rel="noopener noreferrer" class="activity-item__link">${escapeHtml(event.payload.issue.title)}</a>" in ${repoLink}`;
         case "ReleaseEvent":
@@ -235,6 +234,7 @@ export async function initGithub() {
 
     if (user) {
         setStat("repos", user.public_repos);
+        setStat("follower", user.followers);
 
         const avatar = document.getElementById("github-avatar");
         const usernameLink = document.getElementById("github-username");
@@ -274,7 +274,6 @@ export async function initGithub() {
     try {
         const htmlPromise = fetch(PROXY_URL).then((r) => r.text());
 
-        // Render graph via GitHubCalendar using same fetch
         GitHubCalendar(".github-calendar", USERNAME, {
             responsive: true,
             tooltips: true,

@@ -16,24 +16,24 @@ document.addEventListener("page:loaded", () => {
     }
 });
 
-function initBloom() {
-    const section = document.getElementById("about-web");
-    const container = document.getElementById("home-content");
-    if (!section || !container) return;
+// function initBloom() {
+//     const section = document.getElementById("about-web");
+//     const container = document.getElementById("home-content");
+//     if (!section || !container) return;
 
-    let triggered = false;
+//     let triggered = false;
 
-    function checkScroll() {
-        if (triggered) return;
-        const rect = section.getBoundingClientRect();
-        const containerRect = container.getBoundingClientRect();
-        if (rect.top < containerRect.bottom - 100) {
-            triggered = true;
-            section.classList.add("in-view");
-            container.removeEventListener("scroll", checkScroll);
-        }
-    }
+//     function checkScroll() {
+//         if (triggered) return;
+//         const rect = section.getBoundingClientRect();
+//         const containerRect = container.getBoundingClientRect();
+//         if (rect.top < containerRect.bottom - 100) {
+//             triggered = true;
+//             section.classList.add("in-view");
+//             container.removeEventListener("scroll", checkScroll);
+//         }
+//     }
 
-    checkScroll();
-    container.addEventListener("scroll", checkScroll, { passive: true });
-}
+//     checkScroll();
+//     container.addEventListener("scroll", checkScroll, { passive: true });
+// }
