@@ -894,13 +894,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: var(--space-sm);
-    padding: var(--space-lg);
+    justify-content: start;
+    gap: var(--space-lg);
+    /* padding: var(--space-lg); */
     background-color: var(--neo-white);
     border: var(--neo-border-thick);
     box-shadow: var(--neo-shadow);
     text-align: center;
+
+}
+
+.skill-card__header {
+    border-bottom: var(--neo-border);
+    width: 100%;
+    min-height: 30%;
+    max-height: 50%;
 }
 
 .skill-card__icon {
