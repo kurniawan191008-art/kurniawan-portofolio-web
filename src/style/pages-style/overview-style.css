@@ -893,22 +893,21 @@
 .skill-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: start;
     gap: var(--space-lg);
-    /* padding: var(--space-lg); */
+    padding: var(--space-lg);
     background-color: var(--neo-white);
     border: var(--neo-border-thick);
     box-shadow: var(--neo-shadow);
-    text-align: center;
 
 }
 
 .skill-card__header {
     border-bottom: var(--neo-border);
     width: 100%;
-    min-height: 30%;
-    max-height: 50%;
+    min-height: 50%;
+    max-height: 70%;
 }
 
 .skill-card__icon {
@@ -954,7 +953,7 @@
 .skill-card__chips {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     gap: var(--space-xs);
 }
 
