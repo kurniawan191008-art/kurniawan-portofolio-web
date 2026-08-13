@@ -11,9 +11,6 @@ document.addEventListener("page:loaded", () => {
     if (window.location.pathname === "/overview") {
         initGithub();
     }
-    if (window.location.pathname === "/") {
-        initBloom();
-    }
 });
 
 // function initBloom() {

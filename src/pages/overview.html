@@ -115,7 +115,8 @@
             <div class="project-section__heading">
                 <h2 class="project-section__title">Projects</h2>
             </div>
-            <a href="https://github.com/kurniawan191008-art" target="_blank" class="btn btn--primary">View All</a>
+            <a href="https://github.com/kurniawan191008-art?tab=repositories" target="_blank"
+                class="btn btn--primary">View All</a>
         </div>
         <div class="project-grid">
             <article class="project-card project-card--featured">
@@ -185,7 +186,8 @@
                     <p class="project-card__desc">A collection of mini web development projects.</p>
                 </div>
             </article>
-            <a href="https://github.com/kurniawan191008-art" target="_blank" class="project-card project-card--more">
+            <a href="https://github.com/kurniawan191008-art?tab=repositories" target="_blank"
+                class="project-card project-card--more">
                 <span class="project-card__more-text">+ More Projects</span>
             </a>
         </div>
@@ -194,39 +196,20 @@
     <section class="skill-section" id="skills">
         <div class="skill-section__header-bar">
             <h2 class="skill-section__title">
-                <svg class="skill-section__title-icon"><use href="src/assets/icon/sprite.svg#brain-icon"></use></svg>
-                SKILLS &amp; COMPETENCIES
+                <svg class="skill-section__title-icon">
+                    <use href="src/assets/icon/sprite.svg#brain-icon"></use>
+                </svg>
+                SKILLS AND SERVICE
             </h2>
-            <span class="skill-section__badge">3 DOMAINS • 4 SOFT SKILLS</span>
         </div>
 
         <div class="skill-grid">
-            <article class="skill-card skill-card--frontend">
-                <div class="skill-card__accent-bar skill-card__accent-bar--yellow"></div>
-                <div class="skill-card__header">
-                    <div class="skill-card__icon-box skill-card__icon-box--yellow">
-                        <svg class="skill-card__icon"><use href="src/assets/icon/sprite.svg#code-icon"></use></svg>
-                    </div>
-                    <div class="skill-card__info">
-                        <h3 class="skill-card__name">Front-End Dev</h3>
-                        <div class="skill-card__meta">
-                            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card__chips">
-                    <span class="skill-chip"><svg class="skill-chip__icon"><use href="src/assets/icon/sprite.svg#html-icon"></use></svg> HTML5</span>
-                    <span class="skill-chip"><svg class="skill-chip__icon"><use href="src/assets/icon/sprite.svg#css-icon"></use></svg> CSS3</span>
-                    <span class="skill-chip"><svg class="skill-chip__icon"><use href="src/assets/icon/sprite.svg#js-icon"></use></svg> JavaScript</span>
-                    <span class="skill-chip"><svg class="skill-chip__icon"><use href="src/assets/icon/sprite.svg#tailwindcss-icon"></use></svg> TailwindCSS</span>
-                </div>
-            </article>
-
             <article class="skill-card skill-card--network">
-                <div class="skill-card__accent-bar skill-card__accent-bar--blue"></div>
                 <div class="skill-card__header">
                     <div class="skill-card__icon-box skill-card__icon-box--blue">
-                        <svg class="skill-card__icon"><use href="src/assets/icon/sprite.svg#network-icon"></use></svg>
+                        <svg class="skill-card__icon">
+                            <use href="src/assets/icon/sprite.svg#network-icon"></use>
+                        </svg>
                     </div>
                     <div class="skill-card__info">
                         <h3 class="skill-card__name">Network Eng.</h3>
@@ -240,16 +223,95 @@
                     <span class="skill-chip">IP Addressing</span>
                     <span class="skill-chip">Subnetting</span>
                     <span class="skill-chip">Routing &amp; Switching</span>
-                    <span class="skill-chip">VLAN</span>
+                    <span class="skill-chip">LAN &amp; VLAN</span>
+                    <span class="skill-chip">Mikrotik config</span>
+                    <span class="skill-chip">Network Architecture</span>
+                    <span class="skill-chip">Topology Design</span>
                     <span class="skill-chip">Troubleshooting</span>
+                </div>
+            </article>
+            <article class="skill-card skill-card--sysadmin">
+                <div class="skill-card__header">
+                    <div class="skill-card__icon-box">
+                        <svg class="skill-card__icon">
+                            <use href="src/assets/icon/sprite.svg#gear-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="skill-card__info">
+                        <h3 class="skill-card__name">SysAdmin</h3>
+                        <div class="skill-card__meta">
+                            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card__chips">
+                    <span class="skill-chip">Windows &amp; Linux Administration</span>
+                    <span class="skill-chip">OS Installation</span>
+                    <span class="skill-chip">File &amp; Storage Management</span>
+                    <span class="skill-chip">Backup &amp; Restore</span>
+                    <span class="skill-chip">Network Config</span>
+                    <span class="skill-chip">Troubleshooting</span>
+                </div>
+            </article>
+            <article class="skill-card skill-card--system-design">
+                <div class="skill-card__header">
+                    <div class="skill-card__icon-box">
+                        <svg class="skill-card__icon">
+                            <use href="src/assets/icon/sprite.svg#git-fork-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="skill-card__info">
+                        <h3 class="skill-card__name">System Design</h3>
+                        <div class="skill-card__meta">
+                            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card__chips">
+                    <span class="skill-chip">System Architecture</span>
+                    <span class="skill-chip">Client-Server Architecture</span>
+                    <span class="skill-chip">Data Flow</span>
+                    <span class="skill-chip">Flowchart</span>
+                    <span class="skill-chip">API Integration</span>
+                </div>
+            </article>
+
+            <article class="skill-card skill-card--frontend">
+                <div class="skill-card__header">
+                    <div class="skill-card__icon-box skill-card__icon-box--yellow">
+                        <svg class="skill-card__icon">
+                            <use href="src/assets/icon/sprite.svg#code-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="skill-card__info">
+                        <h3 class="skill-card__name">Front-End Dev</h3>
+                        <div class="skill-card__meta">
+                            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card__chips">
+                    <span class="skill-chip"><svg class="skill-chip__icon">
+                            <use href="src/assets/icon/sprite.svg#html-icon"></use>
+                        </svg> HTML5</span>
+                    <span class="skill-chip"><svg class="skill-chip__icon">
+                            <use href="src/assets/icon/sprite.svg#css-icon"></use>
+                        </svg> CSS3</span>
+                    <span class="skill-chip"><svg class="skill-chip__icon">
+                            <use href="src/assets/icon/sprite.svg#js-icon"></use>
+                        </svg> JavaScript</span>
+                    <span class="skill-chip"><svg class="skill-chip__icon">
+                            <use href="src/assets/icon/sprite.svg#tailwindcss-icon"></use>
+                        </svg> TailwindCSS</span>
                 </div>
             </article>
 
             <article class="skill-card skill-card--data">
-                <div class="skill-card__accent-bar skill-card__accent-bar--purple"></div>
                 <div class="skill-card__header">
-                    <div class="skill-card__icon-box skill-card__icon-box--purple">
-                        <svg class="skill-card__icon"><use href="src/assets/icon/sprite.svg#database-icon"></use></svg>
+                    <div class="skill-card__icon-box">
+                        <svg class="skill-card__icon">
+                            <use href="src/assets/icon/sprite.svg#database-icon"></use>
+                        </svg>
                     </div>
                     <div class="skill-card__info">
                         <h3 class="skill-card__name">Data Processing</h3>
@@ -264,36 +326,30 @@
                     <span class="skill-chip">Filtering &amp; Sorting</span>
                 </div>
             </article>
+
+
         </div>
 
         <h3 class="skill-section__subtitle">Soft Skills &amp; Attributes</h3>
         <div class="skill-grid skill-grid--soft">
             <article class="soft-skill-card soft-skill-card--orange">
-                <div class="soft-skill-card__header">
-                    <svg class="soft-skill-card__icon"><use href="src/assets/icon/sprite.svg#experience-icon"></use></svg>
-                    <h4 class="soft-skill-card__name">Teamwork</h4>
-                </div>
+                <h4 class="soft-skill-card__name">Teamwork</h4>
                 <p class="soft-skill-card__desc">Collaborative mindset &amp; cross-functional synergy</p>
             </article>
             <article class="soft-skill-card soft-skill-card--green">
-                <div class="soft-skill-card__header">
-                    <svg class="soft-skill-card__icon"><use href="src/assets/icon/sprite.svg#terminal-icon"></use></svg>
-                    <h4 class="soft-skill-card__name">Communication</h4>
-                </div>
+                <h4 class="soft-skill-card__name">Communication</h4>
                 <p class="soft-skill-card__desc">Clear technical docs &amp; transparent discussion</p>
             </article>
             <article class="soft-skill-card soft-skill-card--yellow">
-                <div class="soft-skill-card__header">
-                    <svg class="soft-skill-card__icon"><use href="src/assets/icon/sprite.svg#vscode-icon"></use></svg>
-                    <h4 class="soft-skill-card__name">Time Management</h4>
-                </div>
-                <p class="soft-skill-card__desc">Structured workflows &amp; milestone delivery</p>
+                <h4 class="soft-skill-card__name">Self Learning</h4>
+                <p class="soft-skill-card__desc">Independent research &amp; continuous skill growth</p>
+            </article>
+            <article class="soft-skill-card soft-skill-card--blue">
+                <h4 class="soft-skill-card__name">Problem Solving</h4>
+                <p class="soft-skill-card__desc">Analytical thinking &amp; structured troubleshooting</p>
             </article>
             <article class="soft-skill-card soft-skill-card--pink">
-                <div class="soft-skill-card__header">
-                    <svg class="soft-skill-card__icon"><use href="src/assets/icon/sprite.svg#brain-icon"></use></svg>
-                    <h4 class="soft-skill-card__name">Adaptability</h4>
-                </div>
+                <h4 class="soft-skill-card__name">Adaptability</h4>
                 <p class="soft-skill-card__desc">Rapid tool acquisition &amp; agile problem solving</p>
             </article>
         </div>
@@ -302,6 +358,9 @@
 
     </section>
     <section class="tools-section" id="tools">
+
+    </section>
+    <section class="contact-section">
 
     </section>
 </main>

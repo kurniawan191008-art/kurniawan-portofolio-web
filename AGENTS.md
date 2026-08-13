@@ -30,7 +30,7 @@ Design system: see `DESIGN.md` for palette, typography, spacing, borders, layout
 - `package-lock.json` is gitignored. Run `npm install` after clone.
 - Pages are fetched via `fetch()` — they won't work with `file://` protocol.
 - SVG icons use a sprite at `assets/icon/sprite.svg`.
-- `home-style.css` is loaded via `<link>` in `index.html`, NOT imported in `main.css`. Other page styles (about, error) are imported in `main.css`. Check both places when editing CSS.
+- `home-style.css` is loaded via `<link>` in `index.html`, NOT imported in `main.css`. Other page styles (about, overview, error) are imported in `main.css`. Check both places when editing CSS.
 - Page fragments must not contain `<html>`, `<head>`, or `<body>` — they inject into `#main-content` via `innerHTML`.
 - Router treats any fetched HTML containing `id="main-parent"` as a 404 fallback. Don't reuse that ID in page fragments.
 - CSS import order in `main.css`: reset → variables → typography → components → layout → animation → page-specific. Page styles come last.
