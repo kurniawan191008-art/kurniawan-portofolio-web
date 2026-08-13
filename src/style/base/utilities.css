@@ -37,7 +37,6 @@
     background-color: var(--neo-yellow);
     color: var(--neo-black);
     border: var(--neo-border-thick);
-    box-shadow: var(--neo-shadow);
     padding: var(--space-md);
     text-align: center;
     font-family: var(--navbar-font);

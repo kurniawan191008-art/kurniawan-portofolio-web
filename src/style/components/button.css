@@ -44,6 +44,11 @@
     box-shadow: var(--neo-shadow);
 }
 
+.btn--sm {
+    padding: var(--space-xs) var(--space-md);
+    font-size: 0.8rem;
+}
+
 @media (max-width: 767px) {
     .btn {
         padding: var(--space-sm) var(--space-md);

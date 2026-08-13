@@ -111,15 +111,16 @@
         </div>
     </section>
     <section class="project-section" id="projects">
-        <h2 class="project-section__title">Projects</h2>
+        <div class="project-section__header">
+            <div class="project-section__heading">
+                <h2 class="project-section__title">Projects</h2>
+            </div>
+            <a href="https://github.com/kurniawan191008-art" target="_blank" class="btn btn--primary">View All</a>
+        </div>
         <div class="project-grid">
-            <article class="project-card project-card--completed">
-                <div class="project-card__media">
-                    <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=800&q=80"
-                        alt="Portofolio Web" loading="lazy">
-                    <span class="project-card__status project-card__status--completed">Completed</span>
-                </div>
+            <article class="project-card project-card--featured">
                 <div class="project-card__body">
+                    <span class="project-card__status project-card__status--completed">Completed</span>
                     <h3 class="project-card__title">Portofolio Web</h3>
                     <div class="project-card__tech">
                         <span class="project-card__tech-item project-card__tech-item--html">
@@ -144,16 +145,12 @@
                     <p class="project-card__desc">Personal portfolio website with real-time GitHub integration and
                         neobrutalism design.</p>
                     <a href="https://github.com/kurniawan191008-art/kurniawan-portofolio-web" target="_blank"
-                        class="btn btn--primary">View Repo</a>
+                        class="btn btn--primary btn--sm">View Repo</a>
                 </div>
             </article>
             <article class="project-card project-card--ongoing">
-                <div class="project-card__media">
-                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80"
-                        alt="SMK Gema Nusantara 1 Pabuaran Landing Page" loading="lazy">
-                    <span class="project-card__status project-card__status--ongoing">Ongoing</span>
-                </div>
                 <div class="project-card__body">
+                    <span class="project-card__status project-card__status--ongoing">Ongoing</span>
                     <h3 class="project-card__title">SMK Gema Nusantara 1 Pabuaran Landing Page</h3>
                     <div class="project-card__tech">
                         <span class="project-card__tech-item project-card__tech-item--tailwind">
@@ -164,127 +161,140 @@
                         </span>
                     </div>
                     <p class="project-card__desc">Landing page for SMK Gema Nusantara 1 Pabuaran.</p>
-                    <a href="#" target="_blank" class="btn btn--accent">View Repo</a>
+                    <span class="btn btn--accent btn--sm" aria-disabled="true">Repository soon</span>
                 </div>
             </article>
             <article class="project-card project-card--coming">
-                <div class="project-card__media project-card__media--placeholder">
-                    <span class="project-card__media-text">Coming Soon</span>
-                </div>
                 <div class="project-card__body">
+                    <span class="project-card__status project-card__status--coming">Coming Soon</span>
                     <h3 class="project-card__title">Exam Browser Project</h3>
                     <p class="project-card__desc">A secure browser-based exam application for schools.</p>
                 </div>
             </article>
             <article class="project-card project-card--coming">
-                <div class="project-card__media project-card__media--placeholder">
-                    <span class="project-card__media-text">Coming Soon</span>
-                </div>
                 <div class="project-card__body">
+                    <span class="project-card__status project-card__status--coming">Coming Soon</span>
                     <h3 class="project-card__title">Landing Page Template Prompt</h3>
                     <p class="project-card__desc">A reusable prompt template for generating landing pages.</p>
                 </div>
             </article>
             <article class="project-card project-card--coming">
-                <div class="project-card__media project-card__media--placeholder">
-                    <span class="project-card__media-text">Coming Soon</span>
-                </div>
                 <div class="project-card__body">
+                    <span class="project-card__status project-card__status--coming">Coming Soon</span>
                     <h3 class="project-card__title">Mini Project Web</h3>
                     <p class="project-card__desc">A collection of mini web development projects.</p>
                 </div>
             </article>
+            <a href="https://github.com/kurniawan191008-art" target="_blank" class="project-card project-card--more">
+                <span class="project-card__more-text">+ More Projects</span>
+            </a>
         </div>
     </section>
 
     <section class="skill-section" id="skills">
-        <h2 class="skill-section__title">Skills</h2>
+        <div class="skill-section__header-bar">
+            <h2 class="skill-section__title">
+                <svg class="skill-section__title-icon"><use href="src/assets/icon/sprite.svg#brain-icon"></use></svg>
+                SKILLS &amp; COMPETENCIES
+            </h2>
+            <span class="skill-section__badge">3 DOMAINS • 4 SOFT SKILLS</span>
+        </div>
+
         <div class="skill-grid">
-            <article class="skill-card">
-
+            <article class="skill-card skill-card--frontend">
+                <div class="skill-card__accent-bar skill-card__accent-bar--yellow"></div>
                 <div class="skill-card__header">
-                    <svg class="skill-card__icon">
-                        <use href="src/assets/icon/sprite.svg#code-icon"></use>
-                    </svg>
-                    <h3 class="skill-card__name">Front-End</h3>
-                    <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
-
+                    <div class="skill-card__icon-box skill-card__icon-box--yellow">
+                        <svg class="skill-card__icon"><use href="src/assets/icon/sprite.svg#code-icon"></use></svg>
+                    </div>
+                    <div class="skill-card__info">
+                        <h3 class="skill-card__name">Front-End Dev</h3>
+                        <div class="skill-card__meta">
+                            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-card__chips">
-                    <span class="skill-card__chip">HTML</span>
-                    <span class="skill-card__chip">CSS</span>
-                    <span class="skill-card__chip">JavaScript</span>
-                    <span class="skill-card__chip">TailwindCSS</span>
+                    <span class="skill-chip"><svg class="skill-chip__icon"><use href="src/assets/icon/sprite.svg#html-icon"></use></svg> HTML5</span>
+                    <span class="skill-chip"><svg class="skill-chip__icon"><use href="src/assets/icon/sprite.svg#css-icon"></use></svg> CSS3</span>
+                    <span class="skill-chip"><svg class="skill-chip__icon"><use href="src/assets/icon/sprite.svg#js-icon"></use></svg> JavaScript</span>
+                    <span class="skill-chip"><svg class="skill-chip__icon"><use href="src/assets/icon/sprite.svg#tailwindcss-icon"></use></svg> TailwindCSS</span>
                 </div>
             </article>
-            <article class="skill-card">
 
+            <article class="skill-card skill-card--network">
+                <div class="skill-card__accent-bar skill-card__accent-bar--blue"></div>
                 <div class="skill-card__header">
-                    <svg class="skill-card__icon">
-                        <use href="src/assets/icon/sprite.svg#network-icon"></use>
-                    </svg>
-                    <h3 class="skill-card__name">Network Engineering</h3>
-                    <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
-
+                    <div class="skill-card__icon-box skill-card__icon-box--blue">
+                        <svg class="skill-card__icon"><use href="src/assets/icon/sprite.svg#network-icon"></use></svg>
+                    </div>
+                    <div class="skill-card__info">
+                        <h3 class="skill-card__name">Network Eng.</h3>
+                        <div class="skill-card__meta">
+                            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="skill-card__chips">
-                    <span class="skill-card__chip">IP Addressing</span>
-                    <span class="skill-card__chip">Subnetting</span>
-                    <span class="skill-card__chip">Routing &amp; Switching</span>
-                    <span class="skill-card__chip">VLAN</span>
-                    <span class="skill-card__chip">Troubleshooting</span>
+                    <span class="skill-chip">IP Addressing</span>
+                    <span class="skill-chip">Subnetting</span>
+                    <span class="skill-chip">Routing &amp; Switching</span>
+                    <span class="skill-chip">VLAN</span>
+                    <span class="skill-chip">Troubleshooting</span>
                 </div>
             </article>
-            <article class="skill-card">
 
+            <article class="skill-card skill-card--data">
+                <div class="skill-card__accent-bar skill-card__accent-bar--purple"></div>
                 <div class="skill-card__header">
-                    <svg class="skill-card__icon">
-                        <use href="src/assets/icon/sprite.svg#brain-icon"></use>
-                    </svg>
-                    <h3 class="skill-card__name">Problem Solving</h3>
-                    <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
-
+                    <div class="skill-card__icon-box skill-card__icon-box--purple">
+                        <svg class="skill-card__icon"><use href="src/assets/icon/sprite.svg#database-icon"></use></svg>
+                    </div>
+                    <div class="skill-card__info">
+                        <h3 class="skill-card__name">Data Processing</h3>
+                        <div class="skill-card__meta">
+                            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-card__chips">
-                    <span class="skill-card__chip">Critical Thinking</span>
-                    <span class="skill-card__chip">Debugging</span>
-                    <span class="skill-card__chip">Root Cause Analysis</span>
-                </div>
-            </article>
-            <article class="skill-card">
-
-                <div class="skill-card__header">
-                    <svg class="skill-card__icon">
-                        <use href="src/assets/icon/sprite.svg#database-icon"></use>
-                    </svg>
-                    <h3 class="skill-card__name">Basic Data Processing</h3>
-                    <span class="skill-card__level skill-card__level--beginner">Beginner</span>
-
-                </div>
-                <div class="skill-card__chips">
-                    <span class="skill-card__chip">Spreadsheets</span>
-                    <span class="skill-card__chip">Data Cleaning</span>
-                    <span class="skill-card__chip">Filtering &amp; Sorting</span>
+                    <span class="skill-chip">Spreadsheets</span>
+                    <span class="skill-chip">Data Cleaning</span>
+                    <span class="skill-chip">Filtering &amp; Sorting</span>
                 </div>
             </article>
         </div>
-        <h3 class="skill-section__subtitle">Soft Skills</h3>
-        <div class="skill-grid">
-            <article class="skill-card skill-card--soft">
-                <h3 class="skill-card__name">Teamwork</h3>
-                <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+
+        <h3 class="skill-section__subtitle">Soft Skills &amp; Attributes</h3>
+        <div class="skill-grid skill-grid--soft">
+            <article class="soft-skill-card soft-skill-card--orange">
+                <div class="soft-skill-card__header">
+                    <svg class="soft-skill-card__icon"><use href="src/assets/icon/sprite.svg#experience-icon"></use></svg>
+                    <h4 class="soft-skill-card__name">Teamwork</h4>
+                </div>
+                <p class="soft-skill-card__desc">Collaborative mindset &amp; cross-functional synergy</p>
             </article>
-            <article class="skill-card skill-card--soft">
-                <h3 class="skill-card__name">Communication</h3>
-                <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <article class="soft-skill-card soft-skill-card--green">
+                <div class="soft-skill-card__header">
+                    <svg class="soft-skill-card__icon"><use href="src/assets/icon/sprite.svg#terminal-icon"></use></svg>
+                    <h4 class="soft-skill-card__name">Communication</h4>
+                </div>
+                <p class="soft-skill-card__desc">Clear technical docs &amp; transparent discussion</p>
             </article>
-            <article class="skill-card skill-card--soft">
-                <h3 class="skill-card__name">Time Management</h3>
-                <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <article class="soft-skill-card soft-skill-card--yellow">
+                <div class="soft-skill-card__header">
+                    <svg class="soft-skill-card__icon"><use href="src/assets/icon/sprite.svg#vscode-icon"></use></svg>
+                    <h4 class="soft-skill-card__name">Time Management</h4>
+                </div>
+                <p class="soft-skill-card__desc">Structured workflows &amp; milestone delivery</p>
             </article>
-            <article class="skill-card skill-card--soft">
-                <h3 class="skill-card__name">Adaptability</h3>
-                <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <article class="soft-skill-card soft-skill-card--pink">
+                <div class="soft-skill-card__header">
+                    <svg class="soft-skill-card__icon"><use href="src/assets/icon/sprite.svg#brain-icon"></use></svg>
+                    <h4 class="soft-skill-card__name">Adaptability</h4>
+                </div>
+                <p class="soft-skill-card__desc">Rapid tool acquisition &amp; agile problem solving</p>
             </article>
         </div>
     </section>

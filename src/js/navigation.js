@@ -13,15 +13,13 @@ export function initNavigation() {
 
     document.addEventListener("click", (event) => {
 
-        // 1. Handle link untuk pindah halaman SPA (Router)
         const pageLink = event.target.closest("[data-page]");
         if (pageLink) {
             event.preventDefault();
             navigate(pageLink.dataset.page);
-            return; // Berhenti di sini, jangan lanjut ke bawah
+            return;
         }
 
-        // 2. Handle link untuk dropdown / scroll section (Anchor / Hashtag)
         const anchorLink = event.target.closest('a[href^="#"]');
         if (anchorLink) {
             event.preventDefault(); 
