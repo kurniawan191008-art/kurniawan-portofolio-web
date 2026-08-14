@@ -22,25 +22,25 @@
 
 .btn--primary {
     background: var(--neo-orange);
-    color: var(--neo-white) !important;
+    color: var(--neo-white);
     box-shadow: var(--neo-shadow);
 }
 
 .btn--secondary {
     background: var(--neo-white);
-    color: var(--primary-text-color) !important;
+    color: var(--primary-text-color);
     box-shadow: var(--neo-shadow);
 }
 
 .btn--accent {
     background: var(--neo-yellow);
-    color: var(--primary-text-color) !important;
+    color: var(--primary-text-color);
     box-shadow: var(--neo-shadow);
 }
 
 .btn--blue {
     background: var(--neo-blue);
-    color: var(--neo-white) !important;
+    color: var(--neo-white);
     box-shadow: var(--neo-shadow);
 }
 

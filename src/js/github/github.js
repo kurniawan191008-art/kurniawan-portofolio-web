@@ -222,14 +222,23 @@ function renderActivity(events) {
             : `<li class="activity-item"><span class="activity-item__text">No recent activity</span></li>`;
 }
 
+let userPromise = null;
+let reposPromise = null;
+let eventsPromise = null;
+let calendarHtmlPromise = null;
+
 export async function initGithub() {
     const container = document.querySelector(".github-calendar");
     if (!container) return;
 
+    userPromise ??= getUser().catch(() => null);
+    reposPromise ??= getRepos().catch(() => null);
+    eventsPromise ??= getRecentEvents().catch(() => null);
+
     const [user, repos, events] = await Promise.all([
-        getUser().catch(() => null),
-        getRepos().catch(() => null),
-        getRecentEvents().catch(() => null),
+        userPromise,
+        reposPromise,
+        eventsPromise,
     ]);
 
     if (user) {
@@ -272,17 +281,16 @@ export async function initGithub() {
     renderActivity(events);
 
     try {
-        const htmlPromise = fetch(PROXY_URL).then((r) => r.text());
+        calendarHtmlPromise ??= fetch(PROXY_URL).then((r) => r.text());
 
         GitHubCalendar(".github-calendar", USERNAME, {
             responsive: true,
             tooltips: true,
             global_stats: false,
-            proxy: () => htmlPromise,
-            getCalendar: () => htmlPromise,
+            getCalendar: () => calendarHtmlPromise,
         });
 
-        const html = await htmlPromise;
+        const html = await calendarHtmlPromise;
         const div = document.createElement("div");
         div.innerHTML = html;
 

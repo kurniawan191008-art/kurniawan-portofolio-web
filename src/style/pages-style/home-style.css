@@ -76,7 +76,6 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 3rem;
     overflow: hidden;
     z-index: 1;
     border-right: var(--neo-border);

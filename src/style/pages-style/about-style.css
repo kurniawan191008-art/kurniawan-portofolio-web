@@ -645,7 +645,7 @@
 }
 
 .aspiration-content::before {
-    content: 'jhg';
+    content: "";
     position: absolute;
     top: var(--space-sm);
     left: var(--space-sm);
