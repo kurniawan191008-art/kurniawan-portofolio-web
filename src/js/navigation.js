@@ -1,5 +1,11 @@
 import { handleLocationChange, navigate } from "./router.js";
 
+function setActive(page) {
+    document.querySelectorAll(".nav-bar a[data-page]").forEach((link) => {
+        link.classList.toggle("active", link.dataset.page === page);
+    });
+}
+
 export function initNavigation() {
 
     const folder = document.querySelector(".folder");
@@ -16,7 +22,9 @@ export function initNavigation() {
         const pageLink = event.target.closest("[data-page]");
         if (pageLink) {
             event.preventDefault();
-            navigate(pageLink.dataset.page);
+            const page = pageLink.dataset.page;
+            navigate(page);
+            setActive(page);
             return;
         }
 
@@ -36,5 +44,9 @@ export function initNavigation() {
     });
 
     window.addEventListener("popstate", handleLocationChange);
-    
+
+    document.addEventListener("page:loaded", (e) => {
+        setActive(e.detail.page);
+    });
+
 }

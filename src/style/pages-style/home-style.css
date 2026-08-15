@@ -12,6 +12,8 @@
     align-items: center;
     scroll-behavior: smooth;
     scrollbar-width: none;
+
+    border: var(--neo-border);
 }
 
 /* ===== HERO SECTION ===== */
