@@ -8,50 +8,163 @@
     border-right: var(--neo-border-thick);
 }
 
-/* .sidebar .profile {
-    height: 20%;
+/* ===== PROFILE CARD (NEOBRUTALIST ID) ===== */
+.sidebar .profile {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-4xl) 0;
+    padding: var(--space-md);
     border-bottom: var(--neo-border-thick);
+    gap: var(--space-md);
+
+    background: var(--neo-white);
 }
 
-.profile img {
-    width: 100px;
-    height: 100px;
-    margin-left: var(--space-2xl);
+.profile-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
     border: var(--neo-border-thick);
     box-shadow: var(--neo-shadow);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.profile img:hover {
-    transform: translate(var(--nudge-sm), var(--nudge-sm));
-    box-shadow: var(--neo-shadow-sm);
+.profile-pic:hover {
+    transform: rotate(0deg) translate(var(--nudge-sm), var(--nudge-sm));
+    box-shadow: var(--neo-shadow-lg);
 }
 
-.profile .name-n-bio {
+.sidebar .profile .profile-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
     gap: var(--space-xs);
+    min-width: 0;
 }
 
-.profile .name-n-bio h1 {
-    margin-left: var(--space-sm);
+.sidebar .profile .profile-info h1 {
     font: var(--profile-name-font);
+    font-size: 1.3rem;
     font-weight: var(--fw-700);
     color: var(--primary-text-color);
 }
 
-.profile .name-n-bio p {
-    margin-left: var(--space-sm);
+.sidebar .profile .profile-info h1:hover {
+    transform: rotate(0deg) translate(var(--nudge-sm), var(--nudge-sm));
+    box-shadow: none;
+}
+
+.sidebar .profile .profile-info .username {
     font: var(--profile-bio-font);
+    font-size: .6rem;
+    color: var(--neo-orange);
+    font-weight: var(--fw-600);
+    word-break: break-all;
+}
+
+.sidebar .profile .profile-info .location {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font: var(--profile-bio-font);
+    font-size: .7rem;
+    color: var(--neo-white);
+    background: var(--neo-green);
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow-sm);
+    padding: var(--space-xs) var(--space-sm);
+    width: fit-content;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.sidebar .profile .profile-info .location:hover {
+    transform: translate(var(--nudge-sm), var(--nudge-sm));
+    box-shadow: none;
+}
+
+.sidebar .profile .profile-info .location .icon {
+    width: 14px;
+    height: 14px;
+    color: var(--neo-white);
+}
+
+.major {
+    font: var(--profile-bio-font);
+    font-weight: var(--fw-600);
+    color: var(--neo-white);
+    background: var(--neo-blue);
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow-sm);
+    padding: var(--space-xs) var(--space-sm);
+    text-align: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.major:hover {
+    transform: translate(var(--nudge-sm), var(--nudge-sm));
+    box-shadow: none;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xs);
+}
+
+.cta-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: var(--space-sm) var(--space-xs);
+    font: var(--navbar-font);
+    font-size: 0.65rem;
+    font-weight: var(--fw-700);
+    text-decoration: none;
     color: var(--primary-text-color);
-} */
+    background: var(--neo-white);
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.cta-btn:hover {
+    background: var(--neo-orange);
+    color: var(--neo-white);
+    transform: translate(var(--nudge-sm), var(--nudge-sm));
+    box-shadow: none;
+}
+
+.cta-btn:hover .icon {
+    color: var(--neo-white);
+}
+
+.cta-btn .icon {
+    width: 18px;
+    height: 18px;
+    color: var(--primary-text-color);
+    transition: color var(--transition-fast);
+}
+
+.cta-btn--primary {
+    background: var(--neo-orange);
+    color: var(--neo-white);
+}
+
+.cta-btn--primary .icon {
+    color: var(--neo-white);
+}
+
+.cta-btn--primary:hover {
+    background: var(--primary-text-color);
+    color: var(--neo-white);
+}
 
 .explorer {
     width: 100%;
