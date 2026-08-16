@@ -12,8 +12,7 @@
 .sidebar .profile {
     display: flex;
     flex-direction: column;
-    padding: var(--space-md);
-    border-bottom: var(--neo-border-thick);
+    padding: var(--space-lg);
     gap: var(--space-md);
 
     background: var(--neo-white);
@@ -150,7 +149,6 @@
 
 .explorer {
     width: 100%;
-    margin: var(--space-xs) 0 var(--space-xs) 0;
     padding: var(--space-xs) var(--space-md);
     font: var(--explorer-font);
     color: var(--neo-white);
@@ -165,7 +163,6 @@
     flex-direction: column;
     align-items: center;
     gap: var(--space-md);
-    padding-top: var(--space-xl);
     font: var(--navbar-font);
     color: var(--primary-text-color);
     overflow-y: auto;
