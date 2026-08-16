@@ -3,7 +3,6 @@
 .about-page {
     width: 100%;
     height: calc(100dvh - 160px);
-    max-width: var(--container-max);
     margin: 0 auto;
     color: var(--primary-text-color);
     background: var(--neo-white);

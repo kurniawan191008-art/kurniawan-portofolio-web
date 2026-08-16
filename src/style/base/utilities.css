@@ -32,7 +32,6 @@
 
 .navbar-sticky {
     width: 100%;
-    max-width: var(--container-max);
     margin: 0 auto;
     background-color: var(--neo-yellow);
     color: var(--neo-black);
