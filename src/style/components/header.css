@@ -9,7 +9,7 @@
     align-items: flex-end;
     justify-content: flex-start;
     gap: var(--space-xs);
-    padding-left: var(--space-2xl);
+    padding-left: var(--space-md);
 }
 
 .header p {
