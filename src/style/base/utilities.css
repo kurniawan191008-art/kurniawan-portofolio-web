@@ -38,7 +38,7 @@
     border: var(--neo-border-thick);
     padding: var(--space-md);
     text-align: center;
-    font-family: var(--navbar-font);
+    font: var(--navbar-font);
     font-size: 1.25rem;
     font-weight: var(--fw-700);
 }
@@ -56,7 +56,7 @@
 .anchor-link {
     color: var(--neo-white);
     text-decoration: none;
-    font-family: var(--navbar-font);
+    font: var(--navbar-font);
     font-size: 0.95rem;
     font-weight: var(--fw-700);
     padding: var(--space-xs) var(--space-md);

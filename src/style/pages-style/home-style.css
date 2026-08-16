@@ -34,7 +34,7 @@
 }
 
 .hero-title__line {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-weight: 900;
     font-size: 8rem;
     padding: var(--space-xs) var(--space-md);
@@ -62,7 +62,7 @@
 }
 
 .hero-subtitle {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--neo-white);
@@ -97,7 +97,7 @@
 .hero-marquee__track span {
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    font-family: var(--navbar-font);
+    font: var(--navbar-font);
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -511,10 +511,6 @@
 @media (max-width: 767px) {
     .hero-title__line {
         font-size: 3rem;
-    }
-
-    .hero-marquee {
-        width: 2rem;
     }
 
     .hero-subtitle {

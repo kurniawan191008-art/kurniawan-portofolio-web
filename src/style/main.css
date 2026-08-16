@@ -22,7 +22,6 @@
 /* ===== COMBINED NEOBRUTALISM SELECTORS ===== */
 
 /* 1. Neobrutalism Cards & Containers (Thick Border + Heavy Shadow) */
-.greeting.selamat,
 .neo-terminal-card,
 .interest-card,
 .hobby-card,
@@ -35,7 +34,6 @@
 }
 
 /* 2. Neobrutalism Badges & Highlight Headers */
-.subtitle,
 .garden,
 .sub-heading-garden,
 .mari-berkolaborasi,

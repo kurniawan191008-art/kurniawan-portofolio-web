@@ -20,7 +20,7 @@
     background-color: var(--neo-orange);
     color: var(--neo-white);
     border-bottom: var(--neo-border-thick);
-    font-family: var(--navbar-font);
+    font: var(--navbar-font);
     font-weight: var(--fw-700);
     overflow: hidden;
 
@@ -84,7 +84,7 @@
 
 .hero-subtitle-top,
 .hero-subtitle-bottom {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     color: var(--tertiary-text-color);
     margin: 0;
     font-size: 1.1rem;
@@ -96,7 +96,7 @@
 
 /* Headline Hollow / Outline Text */
 .hero-title-hollow {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 7.7rem;
     font-weight: var(--fw-800);
     margin: 0;
@@ -189,7 +189,7 @@
 }
 
 .github-profile__name {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 1.4rem;
     font-weight: var(--fw-800);
     color: var(--neo-black);
@@ -198,7 +198,7 @@
 }
 
 .github-profile__bio {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.85rem;
     color: var(--tertiary-text-color);
     margin: 0;
@@ -210,7 +210,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.75rem;
     color: var(--tertiary-text-color);
     margin: 0;
@@ -231,7 +231,7 @@
 }
 
 .github-username {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-weight: var(--fw-600);
     color: var(--neo-orange);
     font-size: 1.02rem;
@@ -244,7 +244,7 @@
 }
 
 .github-overview__desc {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     color: var(--tertiary-text-color);
     margin: 0;
     text-align: center;
@@ -304,7 +304,7 @@
 }
 
 .github-calendar .contrib-column {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     color: var(--primary-text-color);
 }
 
@@ -351,7 +351,7 @@
 }
 
 .github-stat-card__number {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 2.5rem;
     font-weight: var(--fw-800);
     color: var(--neo-orange);
@@ -359,7 +359,7 @@
 }
 
 .github-stat-card__label {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.65rem;
     color: var(--tertiary-text-color);
     text-transform: uppercase;
@@ -369,7 +369,7 @@
 
 .github-repos__title,
 .recent-activity__title {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 1rem;
     font-weight: var(--fw-800);
     color: var(--neo-black);
@@ -393,7 +393,7 @@
 }
 
 .repo-card__name {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 1rem;
     font-weight: var(--fw-700);
     color: var(--neo-orange);
@@ -402,7 +402,7 @@
 }
 
 .repo-card__desc {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.8rem;
     color: var(--tertiary-text-color);
     margin: 0;
@@ -415,7 +415,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: var(--space-sm);
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.75rem;
     font-weight: var(--fw-600);
     color: var(--tertiary-text-color);
@@ -497,7 +497,7 @@
 .activity-item__text {
     flex: 1;
     margin: 0;
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.8rem;
     color: var(--primary-text-color);
     word-break: break-word;
@@ -519,7 +519,7 @@
 }
 
 .activity-item__time {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.7rem;
     color: var(--tertiary-text-color);
     white-space: nowrap;
@@ -558,7 +558,7 @@
 
 .project-section__title,
 .skill-section__title {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 2rem;
     font-weight: var(--fw-800);
     color: var(--neo-black);
@@ -574,7 +574,7 @@
 }
 
 .project-section__intro {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.85rem;
     color: var(--tertiary-text-color);
     margin: 0;
@@ -618,7 +618,7 @@
     align-self: flex-start;
     order: -1;
     margin-bottom: var(--space-xs);
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.7rem;
     font-weight: var(--fw-700);
     text-transform: uppercase;
@@ -655,7 +655,7 @@
 }
 
 .project-card__title {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 1rem;
     font-weight: var(--fw-700);
     color: var(--neo-black);
@@ -663,7 +663,7 @@
 }
 
 .project-card__desc {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.8rem;
     color: var(--tertiary-text-color);
     margin: 0;
@@ -685,7 +685,7 @@
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.65rem;
     font-weight: var(--fw-700);
     color: var(--primary-text-color);
@@ -726,7 +726,7 @@
     color: var(--neo-black);
     text-decoration: none;
     text-transform: uppercase;
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-weight: var(--fw-800);
     font-size: 1.1rem;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
@@ -837,7 +837,7 @@
 }
 
 .skill-section__title {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 1.25rem;
     font-weight: var(--fw-800);
     color: var(--neo-white);
@@ -855,7 +855,7 @@
     fill: var(--neo-yellow);
 }
 .skill-section__subtitle {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 1.1rem;
     font-weight: var(--fw-800);
     color: var(--neo-black);
@@ -935,7 +935,7 @@
 }
 
 .skill-card__name {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 1.3rem;
     font-weight: var(--fw-800);
     color: var(--neo-black);
@@ -952,7 +952,7 @@
 }
 
 .skill-card__level {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.8rem;
     font-weight: var(--fw-800);
     text-transform: uppercase;
@@ -989,7 +989,7 @@
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.68rem;
     font-weight: var(--fw-700);
     color: var(--neo-black);
@@ -1035,7 +1035,7 @@
 .soft-skill-card--pink { border-top: 4px solid var(--neo-pink); }
 
 .soft-skill-card__name {
-    font-family: var(--heading-font);
+    font: var(--heading-font);
     font-size: 0.95rem;
     font-weight: var(--fw-800);
     color: var(--neo-black);
@@ -1044,7 +1044,7 @@
 }
 
 .soft-skill-card__desc {
-    font-family: var(--editor-content-font);
+    font: var(--editor-content-font);
     font-size: 0.72rem;
     color: var(--neo-black);
     margin: 0;

@@ -20,12 +20,6 @@
     border: var(--neo-border);
 }
 
-.header-icon {
-    height: 35px;
-    width: 35px;
-    color: var(--primary-text-color);
-}
-
 .green,
 .red,
 .blue {
