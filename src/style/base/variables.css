@@ -55,6 +55,7 @@
     --neo-red: #cc241d;
 
     --neo-border: 2px solid var(--neo-black);
+    --neo-border__orange:2px solid var(--neo-orange);
     --neo-border-thick: 3px solid var(--neo-black);
     --neo-shadow-sm: 2px 2px 0px var(--neo-black);
     --neo-shadow: 4px 4px 0px var(--neo-black);

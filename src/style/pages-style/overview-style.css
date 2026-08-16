@@ -127,12 +127,6 @@
     border: var(--neo-border);
 }
 
-.hero-img--right {
-    bottom: 10%;
-    right: 10%;
-    transform: rotate(15deg);
-}
-
 /* --- CTA Buttons --- */
 .hero-cta-group {
     display: flex;

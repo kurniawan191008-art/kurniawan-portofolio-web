@@ -340,6 +340,7 @@
 
 .profile-info__bio {
     padding-right: var(--space-2xl);
+    text-align: center;
 }
 
 .profile-info__bio p {

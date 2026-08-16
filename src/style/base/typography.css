@@ -28,7 +28,7 @@
 }
 :root{
     --heading-font: 700 1.5rem 'jetbrains mono', monospace;
-    --navbar-font: 400 1rem 'jetbrains mono', monospace;
+    --navbar-font: 600 1rem 'jetbrains mono', monospace;
     --profile-name-font: 700 2rem 'jetbrains mono', monospace;
     --profile-bio-font: 400 .9rem 'jetbrains mono', monospace;
     --explorer-font: 400 1.19rem 'jetbrains mono', monospace;

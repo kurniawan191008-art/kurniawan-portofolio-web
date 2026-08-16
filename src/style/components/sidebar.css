@@ -8,7 +8,7 @@
     border-right: var(--neo-border-thick);
 }
 
-.sidebar .profile {
+/* .sidebar .profile {
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -51,17 +51,16 @@
     margin-left: var(--space-sm);
     font: var(--profile-bio-font);
     color: var(--primary-text-color);
-}
+} */
 
 .explorer {
     width: 100%;
-    margin: var(--space-xl) 0 var(--space-xs) 0;
+    margin: var(--space-xs) 0 var(--space-xs) 0;
     padding: var(--space-xs) var(--space-md);
     font: var(--explorer-font);
     color: var(--neo-white);
     background: var(--neo-black);
     border: var(--neo-border);
-    box-shadow: var(--neo-shadow-sm);
 }
 
 .nav-bar {
@@ -70,22 +69,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--space-md);
     padding-top: var(--space-xl);
     font: var(--navbar-font);
     color: var(--primary-text-color);
     overflow-y: auto;
 
-    border: var(--neo-border);
 }
 
 .nav-bar .menu-list {
     list-style: none;
     width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
 }
 
 .folder-btn {
-    all: unset;
+    width: 200px;
+    /* all: unset; */
     display: flex;
+    font: var(--navbar-font);
     align-items: center;
     gap: var(--space-sm);
     box-sizing: border-box;
@@ -110,21 +114,20 @@
 .nav-bar a {
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 200px;
     text-align: center;
     gap: var(--space-sm);
     padding: var(--space-xs) var(--space-sm);
     text-decoration: none;
-    border: 2px solid transparent;
+    border: var(--neo-border);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+
+    background: var(--neo-white);
+
 }
 
 .nav-bar a:hover {
-    background: var(--neo-yellow);
-    border: var(--neo-border);
-    box-shadow: var(--neo-shadow-sm);
-    transform: translate(var(--nudge-sm), var(--nudge-sm));
+    border: var(--neo-border__orange);
 }
 
 .nav-bar a:hover .icon {
@@ -135,7 +138,6 @@
     background: var(--neo-orange);
     color: var(--neo-white);
     border: var(--neo-border);
-    box-shadow: var(--neo-shadow-sm);
 }
 
 .nav-bar a.active .icon {
@@ -148,6 +150,8 @@
     align-items: center;
     gap: var(--space-sm);
     padding-right: 0;
+    width: 167px;
+
 }
 
 .menu-item a {
@@ -157,10 +161,20 @@
     gap: var(--space-sm);
 }
 
+.menu-item.folder {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    width: 100%;
+
+}
+
 .icon,
 .chevron {
     width: 25px;
     height: 25px;
+    stroke-width: 2;
+    font-weight: 900;
     flex-shrink: 0;
     color: var(--primary-text-color);
     transition: color var(--transition-fast);
@@ -168,9 +182,15 @@
 
 .project-category {
     max-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
     overflow: hidden;
     opacity: 0;
     transition: max-height var(--transition-base), opacity var(--transition-base);
+    list-style: none;
+
+    padding-left: var(--space-xl);
 }
 
 .folder.show .project-category {
