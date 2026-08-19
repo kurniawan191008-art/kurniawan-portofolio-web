@@ -1,6 +1,8 @@
 .overview {
     width: 100%;
     height: 100%;
+    min-width: 0;
+    overflow-x: hidden;
 
 }
 
@@ -1050,4 +1052,287 @@
     margin: 0;
     line-height: 1.4;
     opacity: 0.85;
+}
+
+/* ==========================================================================
+   6. Tech Stack & Tools (Marquee Bars)
+   ========================================================================== */
+.tech-stack_section,
+.tools-section {
+    width: 100%;
+    padding: var(--space-xl) 0;
+}
+.tech-stack_section{
+    transform: rotate(1deg);
+}
+.tools-section{
+    transform: rotate(-1deg);
+}
+.marquee-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    gap: var(--space-2xl);
+    overflow-x: hidden;
+    border-top: var(--neo-border-thick);
+    border-bottom: var(--neo-border-thick);
+    background-color: var(--neo-black);
+}
+
+.marquee-label {
+    height: 100%;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background-color: transparent;
+    font: var(--navbar-font);
+    font-size: 0.9rem;
+    font-weight: var(--fw-800);
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.marquee-label__icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.marquee-viewport {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-track {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xl);
+    width: max-content;
+    padding: var(--space-lg) 0;
+    will-change: transform;
+}
+
+.marquee-track--right {
+    animation: marquee-right 35s linear infinite;
+}
+
+.marquee-track--left {
+    animation: marquee-left 35s linear infinite;
+}
+
+.marquee-viewport:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font: var(--editor-content-font);
+    font-size: 0.85rem;
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.marquee-item__icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.marquee-bar--tech .marquee-label,
+.marquee-bar--tech .marquee-item,
+.marquee-bar--tech .marquee-item__icon {
+    color: var(--neo-yellow);
+}
+
+.marquee-bar--tools .marquee-label,
+.marquee-bar--tools .marquee-item,
+.marquee-bar--tools .marquee-item__icon {
+    color: var(--neo-green);
+}
+
+@keyframes marquee-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes marquee-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==========================================================================
+   7. Contact Section
+   ========================================================================== */
+.contact-section {
+    width: 100%;
+    padding: var(--space-3xl) var(--space-md);
+    background: var(--primary-bg-color);
+    display: flex;
+    justify-content: center;
+}
+
+.contact-panel {
+    width: min(100%, 840px);
+    background-color: var(--neo-white);
+    border: var(--neo-border-thick);
+    box-shadow: var(--neo-shadow-lg);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-panel__header {
+    padding: var(--space-xl);
+    background-color: var(--neo-black);
+    color: var(--neo-white);
+    border-bottom: var(--neo-border-thick);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.contact-panel__title {
+    font: var(--heading-font);
+    font-size: 2rem;
+    font-weight: var(--fw-800);
+    color: var(--neo-yellow);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.contact-panel__lead {
+    font: var(--editor-content-font);
+    font-size: 0.85rem;
+    color: var(--neo-white);
+    margin: 0;
+    line-height: 1.5;
+    max-width: 480px;
+}
+
+.contact-panel__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    flex: 1;
+}
+
+.contact-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    border: var(--neo-border);
+    box-shadow: var(--neo-shadow);
+    padding: var(--space-md);
+}
+
+.contact-meta__row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin: 0;
+    font: var(--editor-content-font);
+    font-size: 0.9rem;
+    color: var(--primary-text-color);
+}
+
+.contact-meta__row a {
+    color: var(--neo-orange);
+    font-weight: var(--fw-600);
+    text-decoration: none;
+}
+
+.contact-meta__row a:hover {
+    text-decoration: underline;
+}
+
+.contact-meta__icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.contact-panel__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.contact-panel__socials {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: auto;
+}
+
+.contact-panel__socials a {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--neo-border);
+    background-color: var(--primary-bg-color);
+    box-shadow: var(--neo-shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contact-panel__socials a:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--neo-shadow);
+    background-color: var(--neo-yellow);
+}
+
+.contact-panel__social-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.contact-panel__status {
+    align-self: flex-start;
+    font: var(--editor-content-font);
+    font-size: 0.7rem;
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: var(--space-xs) var(--space-sm);
+    border: var(--neo-border);
+    background-color: var(--neo-green);
+    color: var(--neo-white);
+    white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+    .marquee-bar {
+        flex-direction: column;
+    }
+
+    .marquee-label {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-panel__cta .btn {
+        flex: 1 1 100%;
+    }
+
+    .contact-panel__title {
+        font-size: 1.5rem;
+    }
 }
